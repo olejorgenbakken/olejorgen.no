@@ -1,6 +1,6 @@
 export const work = [
  {
-  business: 'Work 1',
+  company: 'Work 1',
   position: 'Position 1',
   summary: 'Work 1 summary',
   startDate: '2021-01-01',
@@ -13,7 +13,7 @@ export const work = [
   ],
  },
  {
-  business: 'Work 2',
+  company: 'Work 2',
   position: 'Position 2',
   summary: 'Work 2 summary',
   startDate: '2021-01-01',
@@ -30,7 +30,8 @@ export const work = [
 export const projects = [
  {
   name: 'Project 1',
-  description: 'Project 1 description',
+  position: "Position 1",
+  summary: 'Project 1 description',
   startDate: '2021-01-01',
   endDate: '2021-01-01',
   url: 'https://www.example.com',
@@ -47,6 +48,7 @@ export const education = [
   institution: 'Education 1',
   area: 'Education 1 area',
   summary: 'Education 1 summary',
+  url: 'https://www.example.com',
   startDate: '2021-01-01',
   endDate: '2021-01-01',
   courses: [
