@@ -1,12 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --color-primary: #0070f3;
+  --color-secondary: #ff0070;
+
+  --color-background: #fff;
+  --color-text: #000;
+  --color-text-secondary: #555;
+  --color-border: #eaeaea;
+
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-secondary);
+
+
+  --font-family-sans: 'Inter', sans-serif;
+
+  --font-size-base: 16px;
+  --font-size-lg: calc(var(--font-size-base) * 1.25);
+  --font-size-sm: calc(var(--font-size-base) * 0.875);
+
+  --line-height-base: 1.5;
+  --line-height-lg: calc(var(--line-height-base) * 1.5);
+  --line-height-sm: calc(var(--line-height-base) * 0.875);
+
+  --border-radius: 0.25rem;
+  --border-radius-lg: 0.3rem;
+  --border-radius-sm: 0.2rem;
+
+  --transition: all 0.2s ease-in-out;
+
+  --spacing: 1rem;
+  --spacing-0: 0;
+  --spacing-1: calc(var(--spacing) * 0.25);
+  --spacing-2: calc(var(--spacing) * 0.5);
+  --spacing-3: calc(var(--spacing) * 0.75);
+  --spacing-4: var(--spacing);
+  --spacing-5: calc(var(--spacing) * 1.25);
+  --spacing-6: calc(var(--spacing) * 1.5);
+  --spacing-7: calc(var(--spacing) * 1.75);
+  --spacing-8: calc(var(--spacing) * 2);
+
+  --mobile: 640px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --widescreen: 1280px;
+  --fullhd: 1536px;
+
+  --max-width: var(--desktop);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
 
 a {
-  color: inherit;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -15,12 +68,10 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  body {
-    color: white;
-    background: black;
+  :root {
+    --color-background: #000;
+    --color-text: #fff;
+    --color-text-secondary: #ccc;
+    --color-border: #444;
   }
 }
