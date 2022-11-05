@@ -161,7 +161,7 @@ export const volunteering = [
   role: 'Volunteer',
   startDate: 'jun. 2019',
   endDate: 'jun. 2019',
-  url: 'https://www.vinstracountry.no/',
+  url: 'https://countryfestivalenvinstra.no/',
  },
  {
   company: 'X2 Extreme Sports Festival',
