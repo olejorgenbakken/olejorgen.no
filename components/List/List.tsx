@@ -6,19 +6,19 @@ import styles from '../../styles/components/list.module.css';
 interface ListProps {
  children: React.ReactNode;
  /**
-  * List type
+  * List style 
   * @default 'none'
-  * @type 'bullet' | 'number' | 'none'
+  * @style 'bullet' | 'number' | 'none'
   */
- type?: "bullet" | "number" | "none";
+ style?: "bullet" | "number" | "none";
 }
 
-function List({ children, type = "none" }: ListProps) {
+function List({ children, style = "none" }: ListProps) {
  return (
   <ul
    style={{
-    listStyleType: type === "bullet" ? "disc" : type === "number" ? "decimal" : "none",
-    paddingLeft: type === "bullet" ? "var(--spacing-4)" : type === "number" ? "var(--spacing-4)" : "var(--spacing-0)",
+    listStyleType: style === "bullet" ? "disc" : style === "number" ? "decimal" : "none",
+    paddingLeft: style === "bullet" ? "var(--spacing-4)" : style === "number" ? "var(--spacing-4)" : "var(--spacing-0)",
    }}
    className={styles.list}
   >

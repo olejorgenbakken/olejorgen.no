@@ -2,6 +2,7 @@
 import Text from '../../Text/Text';
 import Stack from '../../Stack/Stack';
 import List from '../../List/List';
+import Tag from '../../Tag/Tag';
 
 interface WorkProps {
  place: string,
@@ -22,9 +23,9 @@ function Entry({ place, role, startDate, endDate, url, summary, highlights }: Wo
    </Stack>
    <Text as='h4'>{role}</Text>
    {summary && <Text>{summary}</Text>}
-   {highlights && <List>
-    {highlights.map((highlight, index) => <Text key={index}>{highlight}</Text>)}
-   </List>}
+   {highlights && <Stack as='ol' wrap='wrap'>
+    {highlights.slice().sort().map((highlight, index) => <li><Tag key={index}>{highlight}</Tag></li>)}
+   </Stack>}
   </Stack >
  );
 }

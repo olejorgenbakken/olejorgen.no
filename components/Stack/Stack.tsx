@@ -10,7 +10,7 @@ interface StackProps {
   * @default 'div'
   * @type 'div' | 'section' | 'article' | 'main' | 'aside' | 'header' | 'footer' | 'nav'
   */
- as?: 'div' | 'section' | 'article' | 'main' | 'aside' | 'header' | 'footer' | 'nav',
+ as?: 'div' | 'section' | 'article' | 'main' | 'aside' | 'header' | 'footer' | 'nav' | 'ul' | 'ol',
  /**
   * The direction of the stack.
   * @default 'row'
