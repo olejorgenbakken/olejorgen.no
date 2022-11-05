@@ -3,7 +3,7 @@ import { work, education, volunteering, projects, languages, links } from '../li
 
 import Text from '../components/text/Text';
 import List from '../components/list/List';
-import Stack from '../components/stack/Stack';
+import Stack from '../components/Stack/Stack';
 
 import Entry from '../components/cv/entry/Entry';
 import Header from '../components/header/header';

@@ -1,5 +1,5 @@
 import Text from '../text/Text';
-import Stack from '../stack/Stack';
+import Stack from '../Stack/Stack';
 
 export default function Header() {
  return (
