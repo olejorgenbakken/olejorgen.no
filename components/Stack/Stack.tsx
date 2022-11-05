@@ -49,7 +49,7 @@ interface StackProps {
  overflow?: 'visible' | 'hidden' | 'scroll' | 'auto',
 }
 
-function Stack({ children, as = 'div', direction = 'row', spacing = 4, distribution = 'start', alignment = 'start', wrap = 'nowrap', overflow = 'visible' }: StackProps) {
+export default function Stack({ children, as = 'div', direction = 'row', spacing = 4, distribution = 'start', alignment = 'start', wrap = 'nowrap', overflow = 'visible' }: StackProps) {
  const style = {
   'gap': `var(--spacing-${spacing})`,
   'flex-direction': direction,
@@ -64,5 +64,3 @@ function Stack({ children, as = 'div', direction = 'row', spacing = 4, distribut
   style,
  }, children);
 }
-
-export default Stack;
