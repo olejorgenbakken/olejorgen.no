@@ -1,7 +1,6 @@
 
 import Text from '../../Text/Text';
 import Stack from '../../Stack/Stack';
-import Tag from '../../Tag/Tag';
 import List from '../../List/List';
 
 interface WorkProps {
