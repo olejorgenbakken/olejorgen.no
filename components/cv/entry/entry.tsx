@@ -14,6 +14,7 @@ interface WorkProps {
  highlights?: string[],
 }
 
+
 function Entry({ place, role, startDate, endDate, url, summary, highlights }: WorkProps) {
  return (
   <Stack direction='column'>
