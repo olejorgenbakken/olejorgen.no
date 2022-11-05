@@ -1,12 +1,12 @@
 import styles from '../../styles/components/tag.module.css';
 
 interface TagProps {
- text: string,
+ children: React.ReactNode;
 }
 
-function Tag(props: TagProps) {
+function Tag({ children }: TagProps) {
  return (
-  <span className={styles.tag}>{props.text}</span>
+  <span className={styles.tag}>{children}</span>
  );
 }
 

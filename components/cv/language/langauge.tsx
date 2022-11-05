@@ -1,13 +1,15 @@
+import Text from "../../Text/Text";
+
 interface LanguageProps {
  language: string,
  fluency: string,
 }
 
-function Language(props: LanguageProps) {
+function Language({ language, fluency }: LanguageProps) {
  return (
   <div className="language">
-   <h3>{props.language}</h3>
-   <p>{props.fluency}</p>
+   <Text as="h3">{language}</Text>
+   <Text>{fluency}</Text>
   </div>
  );
 }

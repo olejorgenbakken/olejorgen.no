@@ -1,14 +1,1 @@
-.cv {
- display: flex;
- flex-direction: column;
- gap: var(--spacing-16);
- margin-bottom: var(--spacing-16);
-}
-
-.cv .entries {
- display: flex;
- flex-direction: column;
- gap: var(--spacing-12);
- list-style: none;
- padding: var(--spacing-0);
-}
+.cv {}

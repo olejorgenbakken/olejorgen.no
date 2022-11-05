@@ -13,16 +13,22 @@
   --color-link: var(--color-primary);
   --color-link-hover: var(--color-secondary);
 
-
   --font-family-sans: 'Inter', sans-serif;
 
-  --font-size-base: 16px;
-  --font-size-lg: calc(var(--font-size-base) * 1.25);
-  --font-size-sm: calc(var(--font-size-base) * 0.875);
+  --font-size-md: 1rem;
+  --font-size-lg: calc(var(--font-size-md) * 1.25);
+  --font-size-sm: calc(var(--font-size-md) * 0.875);
 
-  --line-height-base: 1.5;
-  --line-height-lg: calc(var(--line-height-base) * 1.5);
-  --line-height-sm: calc(var(--line-height-base) * 0.875);
+  --font-size-heading-1: calc(var(--font-size-md) * 2.5);
+  --font-size-heading-2: calc(var(--font-size-md) * 2);
+  --font-size-heading-3: calc(var(--font-size-md) * 1.75);
+  --font-size-heading-4: calc(var(--font-size-md) * 1.5);
+  --font-size-heading-5: calc(var(--font-size-md) * 1.25);
+  --font-size-heading-6: var(--font-size-md);
+
+  --line-height-md: 1.5;
+  --line-height-lg: calc(var(--line-height-md) * 1.5);
+  --line-height-sm: calc(var(--line-height-md) * 0.875);
 
   --border-radius: 0.25rem;
   --border-radius-lg: 0.3rem;
@@ -62,8 +68,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
   background-color: var(--color-background);
 }
 
@@ -71,6 +75,42 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--spacing-4);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-sans);
+  font-weight: 700;
+  line-height: var(--line-height-lg);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-heading-1);
+}
+
+h2 {
+  font-size: var(--font-size-heading-2);
+}
+
+h3 {
+  font-size: var(--font-size-heading-3);
+}
+
+h4 {
+  font-size: var(--font-size-heading-4);
+}
+
+h5 {
+  font-size: var(--font-size-heading-5);
+}
+
+h6 {
+  font-size: var(--font-size-heading-6);
 }
 
 a {

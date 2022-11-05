@@ -1,16 +1,12 @@
 export const work = [
  {
-  company: 'Work 1',
-  position: 'Position 1',
-  summary: 'Work 1 summary',
-  startDate: '2021-01-01',
-  endDate: '2021-01-01',
-  url: 'https://www.example.com',
-  highlights: [
-   'Work 1 highlight 1',
-   'Work 1 highlight 2',
-   'Work 1 highlight 3',
-  ],
+  company: 'NAV IT',
+  position: 'UX Designer',
+  summary: 'I worked as a UX designer at NAV IT, a Norwegian government agency. I worked on a project called "Digitalt skjema" which was a project to make it easier for people to fill out forms online. I worked on the design of the forms and the user experience of the forms.',
+  startDate: 'nov. 2021',
+  endDate: 'now',
+  url: 'https://www.detsombetyrnoe.no/',
+  highlights: ['Design', 'User Experience', 'User Interface', 'Frontend Development'],
  },
  {
   company: 'Work 2',
@@ -29,7 +25,8 @@ export const work = [
 
 export const projects = [
  {
-  name: 'Project 1',
+  title: 'Project 1',
+  company: 'Company 1',
   position: "Position 1",
   summary: 'Project 1 description',
   startDate: '2021-01-01',
@@ -45,8 +42,8 @@ export const projects = [
 
 export const education = [
  {
-  institution: 'Education 1',
-  area: 'Education 1 area',
+  school: 'Education 1',
+  area: 'Area 1',
   summary: 'Education 1 summary',
   url: 'https://www.example.com',
   startDate: '2021-01-01',
@@ -58,8 +55,8 @@ export const education = [
   ],
  },
  {
-  institution: 'Education 2',
-  area: 'Education 2 area',
+  school: 'Education 2',
+  area: 'Area 2',
   summary: 'Education 2 summary',
   startDate: '2021-01-01',
   endDate: '2021-01-01',

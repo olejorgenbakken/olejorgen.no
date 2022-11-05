@@ -1,0 +1,7 @@
+.list {
+ width: 100%;
+}
+
+.list>* {
+ margin-bottom: var(--spacing-8);
+}

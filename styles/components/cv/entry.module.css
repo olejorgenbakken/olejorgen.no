@@ -1,8 +1,4 @@
-.job ul {
- display: flex;
- flex-direction: row;
- list-style: none;
- flex-wrap: wrap;
- padding: var(--spacing-0);
- gap: var(--spacing-4) var(--spacing-2);
+.entry header .title,
+.entry header .dates {
+ margin: 0;
 }

@@ -1,6 +1,8 @@
-import Tag from '../../tag/tag';
+import Tag from '../../Tag/Tag';
 
 import styles from '../../../styles/components/cv/entry.module.css';
+import Text from '../../Text/Text';
+import Stack from '../../Stack/Stack';
 
 interface WorkProps {
  place: string,
@@ -12,18 +14,18 @@ interface WorkProps {
  highlights?: string[],
 }
 
-function Entry(props: WorkProps) {
+function Entry({ place, title, startDate, endDate, url, summary, highlights }: WorkProps) {
  return (
-  <div className={styles.job}>
-   <h3>{props.place} - {props.title}</h3>
-   <p>{props.startDate} - {props.endDate}</p>
-   {props.summary && <p>{props.summary}</p>}
-   {props.highlights && <ul>
-    {props.highlights.map((highlight) => (
-     <li><Tag text={highlight} /></li>
-    ))}
-   </ul>}
-  </div>
+  <Stack direction='column'>
+   <Stack as='header' distribution="space-between">
+    <Text as='h3'>{place}</Text>
+    <Text muted uppercase lineHeight='sm'>{startDate} - {endDate}</Text>
+   </Stack>
+   {summary && <Text>{summary}</Text>}
+   {highlights && <Stack wrap='wrap'>
+    {highlights.map((highlight) => <Tag>{highlight}</Tag>)}
+   </Stack>}
+  </Stack >
  );
 }
 

@@ -1,11 +1,13 @@
+import Text from '../Text/Text';
 import styles from '../../styles/components/header.module.css';
+import Stack from '../Stack/Stack';
 
 function Header() {
  return (
-  <header className={styles.header}>
-   <h1>Ole Jørgen</h1>
-   <p>Oslo, Norway</p>
-  </header>
+  <Stack as='header' distribution='space-between' alignment='center' spacing={8}>
+   <Text as="h1">Ole Jørgen</Text>
+   <Text>Oslo, Norway</Text>
+  </Stack>
  );
 }
 
