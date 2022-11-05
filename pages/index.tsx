@@ -2,15 +2,13 @@ import Head from 'next/head'
 import Header from '../components/Header/Header'
 import { work, education, volunteering, projects, languages, links } from '../lib/cv';
 import Entry from '../components/cv/Entry/Entry';
-
-import styles from '../styles/pages/index.module.css';
 import Text from '../components/Text/Text';
 import List from '../components/List/List';
 import Stack from '../components/Stack/Stack';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>OJ, designer</title>
         <meta name="description" content="Ole Jørgen, or OJ, or whatever else you feel like. Designer, mostly." />
@@ -23,24 +21,24 @@ export default function Home() {
           <Stack direction='column'>
             <Text as='h2'>Work</Text>
             <List>
-              {work.map((job) => (
-                <Entry place={job.company} title={job.position} summary={job.summary} startDate={job.startDate} endDate={job.endDate} url={job.url} highlights={job.highlights} />
+              {work.map((job, index) => (
+                <Entry place={job.company} role={job.role} summary={job.summary} startDate={job.startDate} endDate={job.endDate} url={job.url} highlights={job.highlights} key={index} />
               ))}
             </List>
           </Stack>
           <Stack direction='column'>
             <Text as='h2'>Volunteering</Text>
             <List>
-              {volunteering.map((volunteer) => (
-                <Entry place={volunteer.organization} title={volunteer.position} startDate={volunteer.startDate} endDate={volunteer.endDate} summary={volunteer.summary} highlights={volunteer.highlights} />
+              {volunteering.map((volunteer, index) => (
+                <Entry place={volunteer.organization} role={volunteer.role} startDate={volunteer.startDate} endDate={volunteer.endDate} summary={volunteer.summary} highlights={volunteer.highlights} key={index} />
               ))}
             </List>
           </Stack>
           <Stack direction='column'>
             <Text as='h2'>Education</Text>
             <List>
-              {education.map((school) => (
-                <Entry place={school.school} title={school.area} startDate={school.startDate} endDate={school.endDate} summary={school.summary} url={school.url} highlights={school.courses} />
+              {education.map((school, index) => (
+                <Entry place={school.school} role={school.area} startDate={school.startDate} endDate={school.endDate} summary={school.summary} url={school.url} highlights={school.courses} key={index} />
               ))}
             </List>
           </Stack>
@@ -51,16 +49,16 @@ export default function Home() {
             <Stack direction='column'>
               <Text as='h2'>Languages</Text>
               <List>
-                {languages.map((language) => (
-                  <Text>{language.language} - {language.fluency}</Text>
+                {languages.map((language, index) => (
+                  <Text key={index}>{language.language} - {language.fluency}</Text>
                 ))}
               </List>
             </Stack>
             <Stack direction='column'>
               <Text as='h2'>Links</Text>
               <List>
-                {links.map((link) => (
-                  <Text><a href={link.url}>{link.name}</a></Text>
+                {links.map((link, index) => (
+                  <Text key={index}><a href={link.url}>{link.name}</a></Text>
                 ))}
               </List>
             </Stack>
@@ -68,6 +66,6 @@ export default function Home() {
         </aside>
 
       </main>
-    </div >
+    </ >
   )
 }

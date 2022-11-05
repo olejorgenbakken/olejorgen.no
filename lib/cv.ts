@@ -1,7 +1,7 @@
 export const work = [
  {
   company: 'NAV IT',
-  position: 'UX Designer',
+  role: 'UX Designer',
   summary: 'I worked as a UX designer at NAV IT, a Norwegian government agency. I worked on a project called "Digitalt skjema" which was a project to make it easier for people to fill out forms online. I worked on the design of the forms and the user experience of the forms.',
   startDate: 'nov. 2021',
   endDate: 'now',
@@ -10,7 +10,7 @@ export const work = [
  },
  {
   company: 'Work 2',
-  position: 'Position 2',
+  role: 'Position 2',
   summary: 'Work 2 summary',
   startDate: '2021-01-01',
   endDate: '2021-01-01',
@@ -27,7 +27,7 @@ export const projects = [
  {
   title: 'Project 1',
   company: 'Company 1',
-  position: "Position 1",
+  role: "Position 1",
   summary: 'Project 1 description',
   startDate: '2021-01-01',
   endDate: '2021-01-01',
@@ -66,7 +66,7 @@ export const education = [
 export const volunteering = [
  {
   organization: 'Volunteering 1',
-  position: 'Volunteering 1 position',
+  role: 'Volunteering 1 position',
   summary: 'Volunteering 1 summary',
   startDate: '2021-01-01',
   endDate: '2021-01-01',
@@ -78,7 +78,7 @@ export const volunteering = [
  },
  {
   organization: 'Volunteering 2',
-  position: 'Volunteering 2 position',
+  role: 'Volunteering 2 position',
   summary: 'Volunteering 2 summary',
   startDate: '2021-01-01',
   endDate: '2021-01-01',

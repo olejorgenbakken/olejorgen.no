@@ -2,10 +2,11 @@
 import Text from '../../Text/Text';
 import Stack from '../../Stack/Stack';
 import Tag from '../../Tag/Tag';
+import List from '../../List/List';
 
 interface WorkProps {
  place: string,
- title: string,
+ role: string,
  startDate: string,
  endDate: string,
  url?: string,
@@ -13,17 +14,18 @@ interface WorkProps {
  highlights?: string[],
 }
 
-function Entry({ place, title, startDate, endDate, url, summary, highlights }: WorkProps) {
+function Entry({ place, role, startDate, endDate, url, summary, highlights }: WorkProps) {
  return (
   <Stack direction='column'>
    <Stack as='header' distribution="space-between">
     <Text as='h3'>{place}</Text>
     <Text muted uppercase lineHeight='sm'>{startDate} - {endDate}</Text>
    </Stack>
+   <Text as='h4'>{role}</Text>
    {summary && <Text>{summary}</Text>}
-   {highlights && <Stack wrap='wrap'>
-    {highlights.map((highlight) => <Tag>{highlight}</Tag>)}
-   </Stack>}
+   {highlights && <List>
+    {highlights.map((highlight, index) => <Text key={index}>{highlight}</Text>)}
+   </List>}
   </Stack >
  );
 }
