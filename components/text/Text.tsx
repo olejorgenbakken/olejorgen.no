@@ -32,13 +32,41 @@ interface TextProps {
   * @type 'md' | 'sm' | 'lg'
   */
  lineHeight?: 'md' | 'sm' | 'lg',
+ /**
+  * Font size.
+  * @default 'pMd'
+  * @type 'pSm' | 'pMd' | 'pLg' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  */
+ fontSize?: 'pSm' | 'pMd' | 'pLg' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
+ /**
+  * Font weight.
+  * @default 'regular'
+  * @type 'regular' | 'medium' | 'bold'
+  */
+ fontWeight?: 'regular' | 'medium' | 'bold',
+ /**
+  * Margin bottom of the text.
+  * @default 0
+  * @type number
+  */
+ marginBottom?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
+ /**
+  * Margin top of the text.
+  * @default 0
+  * @type number 
+  */
+ marginTop?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
 }
 
-function Text({ children, muted, uppercase, lineHeight = 'md', as = 'p' }: TextProps) {
+function Text({ children, muted, uppercase, lineHeight = 'md', as = 'p', fontSize = 'pMd', fontWeight = 'regular', marginBottom = 0, marginTop = 0 }: TextProps) {
  const style = {
   color: muted ? 'var(--color-text-muted)' : 'var(--color-text)',
   textTransform: uppercase ? 'uppercase' : 'none',
-  lineHeight: lineHeight === 'md' ? 'var(--line-height-md)' : lineHeight === 'sm' ? 'var(--line-height-sm)' : 'var(--line-height-lg)',
+  lineHeight: `var(--line-height-${lineHeight})`,
+  fontSize: `var(--font-size-${fontSize})`,
+  fontWeight: `var(--font-weight-${fontWeight})`,
+  marginBottom: `var(--spacing-${marginBottom})`,
+  marginTop: `var(--spacing-${marginTop})`,
  };
 
  return React.createElement(as, { className: cl(styles.text), style }, children);

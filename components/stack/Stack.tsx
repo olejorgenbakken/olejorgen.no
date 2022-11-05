@@ -18,12 +18,6 @@ interface StackProps {
   */
  direction?: 'column' | 'row',
  /**
-  * The gap between the stack items.
-  * @default 4
-  * @type number
-  */
- spacing?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10,
- /**
   * The distribution of the stack items.
   * @default 'start'
   * @type 'start' | 'center' | 'end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'
@@ -47,9 +41,44 @@ interface StackProps {
   * @type 'visible' | 'hidden' | 'scroll' | 'auto'
   */
  overflow?: 'visible' | 'hidden' | 'scroll' | 'auto',
+ /**
+ * The gap between the stack items.
+ * @default 4
+ * @type number
+ */
+ spacing?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
+ /**
+  * Margin of the stack.
+  * @default 0
+  * @type number
+  */
+ margin?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
+ /**
+  * Padding of the stack.
+  * @default 0
+  * @type number
+  */
+ padding?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
+ /**
+  * The max width of the stack.
+  * @default 'none'
+  * @type 'none' | 'mobile' | 'tablet' | 'desktop' | 'max-width'
+  */
+ maxWidth?: 'none' | 'mobile' | 'tablet' | 'desktop' | 'max-width',
 }
 
-export default function Stack({ children, as = 'div', direction = 'row', spacing = 4, distribution = 'start', alignment = 'start', wrap = 'nowrap', overflow = 'visible' }: StackProps) {
+export default function Stack({
+ children, as = 'div',
+ direction = 'row',
+ spacing = 4,
+ distribution = 'start',
+ alignment = 'start',
+ wrap = 'nowrap',
+ overflow = 'visible',
+ margin = 0,
+ padding = 0,
+ maxWidth = 'none'
+}: StackProps) {
  const style = {
   'gap': `var(--spacing-${spacing})`,
   'flex-direction': direction,
@@ -57,6 +86,9 @@ export default function Stack({ children, as = 'div', direction = 'row', spacing
   'align-items': alignment,
   'flex-wrap': wrap,
   'overflow': overflow,
+  'margin': margin ? `var(--spacing-${margin})` : '0 auto',
+  'padding': `var(--spacing-${padding})`,
+  'max-width': `var(--${maxWidth})`
  } as React.CSSProperties;
 
  return React.createElement(as, {

@@ -3,28 +3,30 @@
 :root {
   --color-primary: hsl(212, 100%, 48%);
   --color-secondary: hsl(334, 100%, 50%);
-
   --color-background: hsl(0, 0%, 100%);
   --color-text: hsl(0, 0%, 0%);
   --color-text-secondary: hsl(0, 0%, 33%);
   --color-text-muted: hsl(0, 0%, 20%);
-  --color-border: hsl(0, 0%, 92%);
-
+  --color-border: hsl(0, 0%, 75%);
   --color-link: var(--color-primary);
   --color-link-hover: var(--color-secondary);
 
   --font-family-sans: 'Inter', sans-serif;
 
-  --font-size-md: 1rem;
-  --font-size-lg: calc(var(--font-size-md) * 1.25);
-  --font-size-sm: calc(var(--font-size-md) * 0.875);
+  --font-size-pMd: 1rem;
+  --font-size-pLg: calc(var(--font-size-pMd) * 1.25);
+  --font-size-pSm: calc(var(--font-size-pMd) * 0.875);
 
-  --font-size-heading-1: calc(var(--font-size-md) * 2.5);
-  --font-size-heading-2: calc(var(--font-size-md) * 2);
-  --font-size-heading-3: calc(var(--font-size-md) * 1.75);
-  --font-size-heading-4: calc(var(--font-size-md) * 1.5);
-  --font-size-heading-5: calc(var(--font-size-md) * 1.25);
-  --font-size-heading-6: var(--font-size-md);
+  --font-size-h1: calc(var(--font-size-pMd) * 2.5);
+  --font-size-h2: calc(var(--font-size-pMd) * 2);
+  --font-size-h3: calc(var(--font-size-pMd) * 1.75);
+  --font-size-h4: calc(var(--font-size-pMd) * 1.5);
+  --font-size-h5: calc(var(--font-size-pMd) * 1.25);
+  --font-size-h6: var(--font-size-pMd);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
 
   --line-height-md: 1.5;
   --line-height-lg: calc(var(--line-height-md) * 1.5);
@@ -55,7 +57,7 @@
   --spacing-15: calc(var(--spacing) * 3.75);
   --spacing-16: calc(var(--spacing) * 4);
 
-  --mobile: 640px;
+  --mobile: 540px;
   --tablet: 768px;
   --desktop: 1024px;
   --widescreen: 1280px;
@@ -128,6 +130,6 @@ a {
     --color-text: hsl(0, 0%, 100%);
     --color-text-secondary: hsl(0, 0%, 80%);
     --color-text-muted: hsl(0, 0%, 85%);
-    --color-border: hsl(0, 0%, 15%);
+    --color-border: hsl(0, 0%, 25%);
   }
 }
