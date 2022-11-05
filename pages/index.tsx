@@ -3,10 +3,10 @@ import { work, education, volunteering, projects, languages, links } from '../li
 
 import Text from '../components/text/Text';
 import List from '../components/list/List';
-import Stack from '../components/Stack/Stack';
+import Stack from '../components/stack/Stack';
 
 import Entry from '../components/cv/entry/Entry';
-import Header from '../components/header/header';
+import Header from '../components/header/Header';
 
 export default function Home() {
   return (
