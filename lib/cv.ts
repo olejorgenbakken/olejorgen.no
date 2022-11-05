@@ -113,6 +113,7 @@ export const projects = [
   summary: 'Designing a new system for unemployment benefit applications for NAV.',
   startDate: 'jan. 2022',
   endDate: 'aug. 2022',
+  url: 'https://www.nav.no/',
  },
  {
   title: 'Vipps Charity App',
@@ -167,7 +168,7 @@ export const volunteering = [
   role: 'Bartender',
   startDate: 'mar. 2018',
   endDate: 'mar. 2018',
-  url: 'https://www.x2.no/',
+  url: 'https://www.x2festivalen.no/',
  },
  {
   company: 'Slottsfjell Festival',

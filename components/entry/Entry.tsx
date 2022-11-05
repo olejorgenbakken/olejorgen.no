@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Stack from '../stack/Stack';
 import Tag from '../tag/Tag';
 import Text from '../text/Text';
@@ -8,7 +9,7 @@ interface WorkProps {
  role: string,
  startDate: string,
  endDate: string,
- url?: string,
+ url: string,
  summary?: string,
  highlights?: string[],
 }
@@ -18,7 +19,7 @@ export default function Entry({ place, role, startDate, endDate, url, summary, h
   <Stack direction='column'>
    <Stack as='header' direction='column' spacing={2}>
     <Stack distribution='space-between' alignment='center'>
-     <Text muted as='h3' fontWeight='medium' fontSize='h6'>{place}</Text>
+     <Text muted as='h3' fontWeight='medium' fontSize='h6'><Link href={url}>{place}</Link></Text>
      <Text muted uppercase lineHeight='sm' fontSize='pSm'>{startDate} - {endDate}</Text>
     </Stack>
     <Text as='h4' fontWeight='medium' fontSize='h5' lineHeight='sm'>{role}</Text>

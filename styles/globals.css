@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --color-primary: hsl(212, 100%, 48%);
+  --color-primary: hsl(212, 68%, 45%);
+  --color-primary-light: hsl(212, 100%, 53%);
   --color-secondary: hsl(334, 100%, 50%);
   --color-background: hsl(0, 0%, 100%);
   --color-text: hsl(0, 0%, 0%);
@@ -9,7 +10,7 @@
   --color-text-muted: hsl(0, 0%, 20%);
   --color-border: hsl(0, 0%, 75%);
   --color-link: var(--color-primary);
-  --color-link-hover: var(--color-secondary);
+  --color-link-hover: var(--color-primary-light);
 
   --font-family-sans: 'Inter', sans-serif;
 
@@ -36,7 +37,7 @@
   --border-radius-lg: 0.3rem;
   --border-radius-sm: 0.2rem;
 
-  --transition: all 0.2s ease-in-out;
+  --transition: all 0.1s ease-in;
 
   --spacing: 1rem;
   --spacing-0: 0;
@@ -116,8 +117,14 @@ h6 {
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-text);
   text-decoration: none;
+  padding-bottom: 2px;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-link-hover);
 }
 
 * {
@@ -126,6 +133,8 @@ a {
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-primary: hsl(212, 100%, 48%);
+    --color-primary-light: hsl(212, 100%, 75%);
     --color-background: hsl(240, 100%, 1%);
     --color-text: hsl(0, 0%, 100%);
     --color-text-secondary: hsl(0, 0%, 80%);

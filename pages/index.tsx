@@ -35,7 +35,7 @@ export default function Home() {
             <Text as='h2' fontSize='h5' fontWeight='medium'>Volunteering</Text>
             <List spacing={16}>
               {volunteering.map((volunteer, index) => (
-                <Entry place={volunteer.company} role={volunteer.role} startDate={volunteer.startDate} endDate={volunteer.endDate} key={index} />
+                <Entry place={volunteer.company} role={volunteer.role} startDate={volunteer.startDate} endDate={volunteer.endDate} url={volunteer.url} key={index} />
               ))}
             </List>
           </Stack>
@@ -56,7 +56,7 @@ export default function Home() {
               <List>
                 {languages.map((language, index) => (
                   <Stack as='ul' key={index} direction="column" spacing={2}>
-                    <Text lineHeight='md' uppercase>{language.language}</Text>
+                    <Text lineHeight='md' fontWeight='medium' uppercase>{language.language}</Text>
                     <Text lineHeight='sm' marginBottom={4}>{language.fluency}</Text>
                   </Stack>
                 ))}
