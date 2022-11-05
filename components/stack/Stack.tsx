@@ -48,11 +48,11 @@ interface StackProps {
  */
  spacing?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
  /**
-  * Margin of the stack.
-  * @default 0
-  * @type number
+  * Center stack.
+  * @default false
+  * @type boolean
   */
- margin?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
+ center?: boolean,
  /**
   * Padding of the stack.
   * @default 0
@@ -75,7 +75,7 @@ export default function Stack({
  alignment = 'start',
  wrap = 'nowrap',
  overflow = 'visible',
- margin = 0,
+ center = false,
  padding = 0,
  maxWidth = 'none'
 }: StackProps) {
@@ -86,7 +86,7 @@ export default function Stack({
   'align-items': alignment,
   'flex-wrap': wrap,
   'overflow': overflow,
-  'margin': margin ? `var(--spacing-${margin})` : '0 auto',
+  'margin': center ? `0 auto` : '',
   'padding': `var(--spacing-${padding})`,
   'max-width': `var(--${maxWidth})`
  } as React.CSSProperties;

@@ -1,1 +1,12 @@
-.cv {}
+.cv {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+}
+
+@media (min-width: 900px) {
+ .cv {
+  flex-direction: row;
+  justify-content: space-between;
+ }
+}

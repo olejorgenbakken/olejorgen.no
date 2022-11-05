@@ -8,6 +8,8 @@ import Stack from '../components/stack/Stack';
 import Entry from '../components/entry/Entry';
 import Header from '../components/header/Header';
 
+import styles from '../styles/pages/index.module.css';
+
 export default function Home() {
   return (
     <>
@@ -19,7 +21,7 @@ export default function Home() {
 
       <Header />
 
-      <Stack as='main' spacing={16} padding={4} maxWidth="max-width" distribution="space-between">
+      <main className={styles.cv}>
         <Stack direction='column' spacing={12} maxWidth="mobile">
           <Stack direction='column'>
             <Text as='h2' fontSize='h5' fontWeight='medium'>Work</Text>
@@ -47,7 +49,7 @@ export default function Home() {
           </Stack>
         </Stack>
 
-        <aside>
+        <aside className={styles.sidebar}>
           <Stack direction='column' spacing={4}>
             <Stack direction='column' spacing={2}>
               <Text as='h2' fontSize='h5' fontWeight='medium'>Languages</Text>
@@ -70,7 +72,7 @@ export default function Home() {
             </Stack>
           </Stack>
         </aside>
-      </Stack>
+      </main>
     </ >
   )
 }
