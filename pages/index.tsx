@@ -7,6 +7,7 @@ import Stack from '../components/Stack/Stack';
 
 // @ts-ignore
 import Header from '../components/Header/Header'
+// @ts-ignore
 import Entry from '../components/cv/Entry/Entry';
 
 export default function Home() {
