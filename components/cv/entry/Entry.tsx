@@ -1,4 +1,4 @@
-import Stack from '../../Stack/Stack';
+import Stack from '../../stack/Stack';
 import Tag from '../../tag/Tag';
 import Text from '../../text/Text';
 
