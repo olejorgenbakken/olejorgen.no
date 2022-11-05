@@ -1,8 +1,7 @@
-import Tag from '../../Tag/Tag';
 
-import styles from '../../../styles/components/cv/entry.module.css';
 import Text from '../../Text/Text';
 import Stack from '../../Stack/Stack';
+import Tag from '../../Tag/Tag';
 
 interface WorkProps {
  place: string,
