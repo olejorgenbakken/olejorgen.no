@@ -1,9 +1,7 @@
 
-import Text from '../../Text/Text';
-import Stack from '../../Stack/Stack';
-
-// @ts-ignore
-import Tag from '../../Tag/Tag';
+import Text from '../../text/Text';
+import Stack from '../../stack/Stack';
+import Tag from '../../tag/Tag';
 
 interface WorkProps {
  place: string,

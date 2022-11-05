@@ -1,15 +1,12 @@
 import Head from 'next/head'
 import { work, education, volunteering, projects, languages, links } from '../lib/cv';
 
-import Text from '../components/Text/Text';
-import List from '../components/List/List';
-import Stack from '../components/Stack/Stack';
+import Text from '../components/text/Text';
+import List from '../components/list/List';
+import Stack from '../components/stack/Stack';
 
-// @ts-ignore
-import Header from '../components/Header/Header';
-
-// @ts-ignore
-import Entry from '../components/cv/Entry/Entry';
+import Entry from '../components/cv/entry/Entry';
+import Header from '../components/header/header';
 
 export default function Home() {
   return (

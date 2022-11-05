@@ -1,6 +1,5 @@
-import Text from '../Text/Text';
-import styles from '../../styles/components/header.module.css';
-import Stack from '../Stack/Stack';
+import Text from '../text/Text';
+import Stack from '../stack/Stack';
 
 export default function Header() {
  return (

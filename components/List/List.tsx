@@ -1,7 +1,7 @@
 import React from "react";
-import ListItem from "./ListItem";
 
 import styles from '../../styles/components/list.module.css';
+import ListItem from "./ListItem";
 
 interface ListProps {
  children: React.ReactNode;
