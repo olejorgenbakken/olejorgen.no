@@ -19,7 +19,7 @@ export default function Entry({ place, role, startDate, endDate, url, summary, h
    <Stack as='header' direction='column' spacing={2}>
     <Stack distribution='space-between'>
      <Text muted as='h3' fontWeight='medium' fontSize='h6'>{place}</Text>
-     <Text muted uppercase lineHeight='sm'>{startDate} - {endDate}</Text>
+     <Text muted uppercase lineHeight='sm' fontSize='pSm'>{startDate} - {endDate}</Text>
     </Stack>
     <Text as='h4' fontWeight='medium' fontSize='h5' lineHeight='sm'>{role}</Text>
    </Stack>
