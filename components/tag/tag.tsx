@@ -4,10 +4,8 @@ interface TagProps {
  children: React.ReactNode;
 }
 
-function Tag({ children }: TagProps) {
+export default function Tag({ children }: TagProps) {
  return (
   <span className={styles.tag}>{children}</span>
  );
 }
-
-export default Tag;

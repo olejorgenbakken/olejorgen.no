@@ -15,8 +15,7 @@ interface WorkProps {
  highlights?: string[],
 }
 
-
-function Entry({ place, role, startDate, endDate, url, summary, highlights }: WorkProps) {
+export default function Entry({ place, role, startDate, endDate, url, summary, highlights }: WorkProps) {
  return (
   <Stack direction='column'>
    <Stack as='header' distribution="space-between">
@@ -31,5 +30,3 @@ function Entry({ place, role, startDate, endDate, url, summary, highlights }: Wo
   </Stack >
  );
 }
-
-export default Entry;
