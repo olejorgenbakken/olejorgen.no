@@ -19,7 +19,7 @@ export default function Entry({ place, role, startDate, endDate, url, summary, h
  return (
   <Stack direction='vertical'>
    <Stack as='header' direction='vertical' spacing={2}>
-    <Stack justify='between' align='center'>
+    <Stack justify='between' align='center' spacing={6}>
      <Text muted as='h3' fontWeight='medium' fontSize='h6' className='place'><Link href={url} target="_blank">{place}</Link></Text>
      <Inline>
       <Text muted uppercase lineHeight='sm' fontSize='pSm'>{startDate}</Text>

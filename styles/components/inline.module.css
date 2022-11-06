@@ -1,3 +1,7 @@
 .inline {
  display: inline-flex;
 }
+
+.inline>* {
+ width: max-content;
+}
