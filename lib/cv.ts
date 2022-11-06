@@ -102,15 +102,6 @@ export const projects = [
   highlights: ['Design Systems', 'Web Design', 'Product Design', 'Design Thinking', 'Workshops'],
  },
  {
-  title: 'Mangfold i Mai',
-  role: 'Developer and UX designer',
-  summary: 'A web application for a diversity campaign/festival.',
-  startDate: 'apr. 2022',
-  endDate: 'may 2022',
-  url: 'https://mangfoldimai.no/',
-  highlights: ['Web Design', 'Web Development', 'Jekyll', 'CSS', 'HTML', 'Accessibility'],
- },
- {
   title: 'New unemployment benefit application',
   role: 'UX designer',
   summary: 'Designing a new system for unemployment benefit applications for NAV.',
@@ -118,6 +109,15 @@ export const projects = [
   endDate: 'aug. 2022',
   url: 'https://www.nav.no/',
   highlights: ['Web Design', 'Product Design', 'Design Thinking', 'Workshops'],
+ },
+ {
+  title: 'Mangfold i Mai',
+  role: 'Developer and UX designer',
+  summary: 'A web application for a diversity campaign/festival.',
+  startDate: 'apr. 2022',
+  endDate: 'may 2022',
+  url: 'https://mangfoldimai.no/',
+  highlights: ['Web Design', 'Web Development', 'Jekyll', 'CSS', 'HTML', 'Accessibility'],
  },
  {
   title: 'Vipps Charity App',
