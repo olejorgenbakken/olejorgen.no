@@ -111,7 +111,7 @@ export const projects = [
   highlights: ['Web Design', 'Web Development', 'Jekyll', 'CSS', 'HTML', 'Accessibility'],
  },
  {
-  title: 'New system for unemployment benefit applications for NAV',
+  title: 'New unemployment benefit application',
   role: 'UX designer',
   summary: 'Designing a new system for unemployment benefit applications for NAV.',
   startDate: 'jan. 2022',
