@@ -94,6 +94,7 @@ export const work = [
 export const projects = [
  {
   title: 'Aksel Design System',
+  role: 'UX Designer',
   summary: 'Design system for NAV.',
   startDate: 'aug. 2022',
   endDate: 'now',
@@ -102,6 +103,7 @@ export const projects = [
  },
  {
   title: 'Mangfold i Mai',
+  role: 'Developer and UX designer',
   summary: 'A web application for a diversity campaign/festival.',
   startDate: 'apr. 2022',
   endDate: 'may 2022',
@@ -110,13 +112,16 @@ export const projects = [
  },
  {
   title: 'New system for unemployment benefit applications for NAV',
+  role: 'UX designer',
   summary: 'Designing a new system for unemployment benefit applications for NAV.',
   startDate: 'jan. 2022',
   endDate: 'aug. 2022',
   url: 'https://www.nav.no/',
+  highlights: ['Web Design', 'Product Design', 'Design Thinking', 'Workshops'],
  },
  {
   title: 'Vipps Charity App',
+  role: 'UX designer',
   summary: 'A new product for charitable organizations.',
   startDate: 'jun. 2021',
   endDate: 'aug. 2021',

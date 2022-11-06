@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { work, education, volunteering, projects, languages, links } from '../lib/cv';
+import { work, education, volunteering, languages, links } from '../lib/cv';
 
 import Text from '../components/text/Text';
 import List from '../components/list/List';
