@@ -4,11 +4,10 @@ import { work, education, volunteering, languages, links } from '../lib/cv';
 import Text from '../components/text/Text';
 import List from '../components/list/List';
 import Stack from '../components/stack/Stack';
-
-import Entry from '../components/entry/Entry';
-
 import styles from '../styles/pages/cv.module.css';
 import Link from '../components/link/Link';
+import Inline from '../components/inline/Inline';
+import Tag from '../components/tag/Tag';
 
 export default function Home() {
  return (
@@ -23,7 +22,23 @@ export default function Home() {
       <Text as='h2' fontSize='h5' fontWeight='medium'>Work</Text>
       <List spacing={16} style="none">
        {work.map((job, index) => (
-        <Entry place={job.company} role={job.role} summary={job.summary} startDate={job.startDate} endDate={job.endDate} url={job.url} highlights={job.highlights} key={index} />
+        <Stack direction='vertical' key={index}>
+         <Stack as='header' direction='vertical' spacing={2}>
+          <Stack justify='between' align='center' spacing={6}>
+           <Text muted as='h3' fontWeight='medium' fontSize='h6' className='place'><Link href={job.url} target="_blank">{job.company}</Link></Text>
+           <Inline>
+            <Text muted uppercase lineHeight='sm' fontSize='pSm'>{job.startDate}</Text>
+            {job.endDate != job.startDate && <Text muted uppercase lineHeight='sm' fontSize='pSm'>&nbsp;– {job.endDate}</Text>}
+           </Inline>
+
+          </Stack>
+          <Text as='h4' fontWeight='medium' fontSize='h5' lineHeight='sm'>{job.role}</Text>
+         </Stack>
+         {job.summary && <Text>{job.summary}</Text>}
+         {job.highlights && <Stack as='ol' wrap='wrap' spacing={2}>
+          {job.highlights.slice().sort().map((highlight, index) => <li><Tag key={index}>{highlight}</Tag></li>)}
+         </Stack>}
+        </Stack >
        ))}
       </List>
      </Stack>
@@ -31,7 +46,18 @@ export default function Home() {
       <Text as='h2' fontSize='h5' fontWeight='medium'>Volunteering</Text>
       <List spacing={16} style="none">
        {volunteering.map((volunteer, index) => (
-        <Entry place={volunteer.company} role={volunteer.role} startDate={volunteer.startDate} endDate={volunteer.endDate} url={volunteer.url} key={index} />
+        <Stack direction='vertical' key={index}>
+         <Stack as='header' direction='vertical' spacing={2}>
+          <Stack justify='between' align='center' spacing={6}>
+           <Text muted as='h3' fontWeight='medium' fontSize='h6' className='place'><Link href={volunteer.url} target="_blank">{volunteer.company}</Link></Text>
+           <Inline>
+            <Text muted uppercase lineHeight='sm' fontSize='pSm'>{volunteer.startDate}</Text>
+            {volunteer.endDate != volunteer.startDate && <Text muted uppercase lineHeight='sm' fontSize='pSm'>&nbsp;– {volunteer.endDate}</Text>}
+           </Inline>
+          </Stack>
+          <Text as='h4' fontWeight='medium' fontSize='h5' lineHeight='sm'>{volunteer.role}</Text>
+         </Stack>
+        </Stack >
        ))}
       </List>
      </Stack>
@@ -39,7 +65,18 @@ export default function Home() {
       <Text as='h2' fontSize='h5' fontWeight='medium'>Education</Text>
       <List spacing={16} style="none">
        {education.map((school, index) => (
-        <Entry place={school.school} role={school.degree} startDate={school.startDate} endDate={school.endDate} url={school.url} key={index} />
+        <Stack direction='vertical' key={index}>
+         <Stack as='header' direction='vertical' spacing={2}>
+          <Stack justify='between' align='center' spacing={6}>
+           <Text muted as='h3' fontWeight='medium' fontSize='h6' className='place'><Link href={school.url} target="_blank">{school.school}</Link></Text>
+           <Inline>
+            <Text muted uppercase lineHeight='sm' fontSize='pSm'>{school.startDate}</Text>
+            {school.endDate != school.startDate && <Text muted uppercase lineHeight='sm' fontSize='pSm'>&nbsp;– {school.endDate}</Text>}
+           </Inline>
+          </Stack>
+          <Text as='h4' fontWeight='medium' fontSize='h5' lineHeight='sm'>{school.degree}</Text>
+         </Stack>
+        </Stack >
        ))}
       </List>
      </Stack>
