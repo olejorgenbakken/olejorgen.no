@@ -1,0 +1,17 @@
+.sidebar {
+ max-width: 200px;
+}
+
+.cv {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: var(--spacing-16);
+ max-width: var(--max-width);
+ margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+ .cv {
+  grid-template-columns: 1fr 200px;
+ }
+}

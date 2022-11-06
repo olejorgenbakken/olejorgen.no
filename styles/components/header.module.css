@@ -1,7 +1,10 @@
 .header {
- display: flex;
- justify-content: space-between;
- align-items: center;
+ max-width: var(--max-width);
+ margin: 0 auto;
  margin-bottom: var(--spacing-12);
- padding: var(--spacing-4) var(--spacing-0);
+ padding: var(--spacing-6);
+}
+
+.header .name {
+ color: var(--color-text);
 }

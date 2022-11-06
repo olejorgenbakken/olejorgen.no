@@ -1,4 +1,5 @@
 import React from "react";
+import cl from 'clsx';
 
 import styles from '../../styles/components/list.module.css';
 import ListItem from "./ListItem";
@@ -6,32 +7,40 @@ import ListItem from "./ListItem";
 interface ListProps {
  children: React.ReactNode;
  /**
-  * List style 
-  * @default 'none'
-  * @style 'bullet' | 'number' | 'none'
+  * List type
+  * @default 'ul'
+  * @type 'ul' | 'ol'
   */
- style?: "bullet" | "number" | "none";
+ as?: 'ul' | 'ol';
+ /**
+  * List style
+  * @default 'disc'
+  * @type 'disc' | 'circle' | 'square' | 'decimal' | 'decimal-leading-zero' | 'lower-roman' | 'upper-roman' | 'lower-greek' | 'lower-latin' | 'upper-latin' | 'armenian' | 'georgian' | 'lower-alpha' | 'upper-alpha' | 'none' | 'inherit'
+  */
+ style?: 'disc' | 'circle' | 'square' | 'decimal' | 'decimal-leading-zero' | 'lower-roman' | 'upper-roman' | 'lower-greek' | 'lower-latin' | 'upper-latin' | 'armenian' | 'georgian' | 'lower-alpha' | 'upper-alpha' | 'none' | 'inherit';
  /** 
   * List spacing
   * @default 4
   * @type number
   */
  spacing?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16;
+ /**
+  * Aditonal class name
+  * @default ''
+  * @type string
+  */
+ className?: string;
 }
 
-function List({ children, style = "none", spacing = 4 }: ListProps) {
- return (
-  <ul
-   style={{
-    listStyleType: style === "bullet" ? "disc" : style === "number" ? "decimal" : "none",
-    paddingLeft: style === "bullet" ? "var(--spacing-4)" : style === "number" ? "var(--spacing-4)" : "var(--spacing-0)",
-   }}
-   className={styles.list}
-  >
-   {React.Children.map(children, (child) => (
-    <ListItem spacing={spacing}>{child}</ListItem>
-   ))}
-  </ul>
+function List({ children, as = "ul", style = 'disc', spacing = 4, className }: ListProps) {
+ return React.createElement(as, {
+  className: cl(styles.list, className, {
+   [styles[`style-${style}`]]: style,
+  }),
+ },
+  React.Children.map(children, (child) => (
+   <ListItem spacing={spacing}>{child}</ListItem>
+  ))
  );
 }
 

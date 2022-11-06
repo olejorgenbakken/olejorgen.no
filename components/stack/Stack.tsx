@@ -13,22 +13,22 @@ interface StackProps {
  as?: 'div' | 'section' | 'article' | 'main' | 'aside' | 'header' | 'footer' | 'nav' | 'ul' | 'ol',
  /**
   * The direction of the stack.
-  * @default 'row'
-  * @type 'column' | 'row'
+  * @default 'horizontal'
+  * @type 'vertical' | 'horizontal'
   */
- direction?: 'column' | 'row',
+ direction?: 'vertical' | 'horizontal',
  /**
   * The distribution of the stack items.
   * @default 'start'
-  * @type 'start' | 'center' | 'end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch'
+  * @type 'start' | 'center' | 'end' | 'between' | 'around' | 'evenly' | 'stretch'
   */
- distribution?: 'start' | 'center' | 'end' | 'space-between' | 'space-around' | 'space-evenly' | 'stretch',
+ justify?: 'start' | 'center' | 'end' | 'between' | 'around' | 'evenly' | 'stretch',
  /**
   * The alignment of the stack items.
   * @default 'start'
   * @type 'start' | 'center' | 'end' | 'stretch'
   */
- alignment?: 'start' | 'center' | 'end' | 'stretch',
+ align?: 'start' | 'center' | 'end' | 'stretch',
  /**
   * The wrapping of the stack items.
   * @default 'nowrap'
@@ -48,51 +48,35 @@ interface StackProps {
  */
  spacing?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
  /**
-  * Center stack.
-  * @default false
-  * @type boolean
+  * Aditional class.
+  * @default ''
+  * @type string
   */
- center?: boolean,
- /**
-  * Padding of the stack.
-  * @default 0
-  * @type number
-  */
- padding?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
- /**
-  * The max width of the stack.
-  * @default 'none'
-  * @type 'none' | 'mobile' | 'tablet' | 'desktop' | 'max-width'
-  */
- maxWidth?: 'none' | 'mobile' | 'tablet' | 'desktop' | 'max-width',
+ className?: string,
 }
 
 export default function Stack({
  children, as = 'div',
- direction = 'row',
- spacing = 4,
- distribution = 'start',
- alignment = 'start',
+ direction = 'horizontal',
+ justify = 'start',
+ align = 'start',
  wrap = 'nowrap',
  overflow = 'visible',
- center = false,
- padding = 0,
- maxWidth = 'none'
+ spacing = 4,
+ className
 }: StackProps) {
- const style = {
-  'gap': `var(--spacing-${spacing})`,
-  'flex-direction': direction,
-  'justify-content': distribution,
-  'align-items': alignment,
-  'flex-wrap': wrap,
-  'overflow': overflow,
-  'margin': center ? `0 auto` : '',
-  'padding': `var(--spacing-${padding})`,
-  'max-width': `var(--${maxWidth})`
- } as React.CSSProperties;
 
  return React.createElement(as, {
-  className: cl(styles.stack),
-  style,
- }, children);
+  style: {
+   gap: `var(--spacing-${spacing})`,
+  },
+  className: cl(styles.stack, className, {
+   [styles[`direction-${direction}`]]: direction,
+   [styles[`justify-${justify}`]]: justify,
+   [styles[`align-${align}`]]: align,
+   [styles[`wrap-${wrap}`]]: wrap,
+   [styles[`overflow-${overflow}`]]: overflow,
+  }),
+  children,
+ });
 }

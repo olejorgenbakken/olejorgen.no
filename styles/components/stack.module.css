@@ -8,3 +8,68 @@ ol.stack {
  padding: var(--spacing-0);
  list-style-type: none;
 }
+
+.stack.direction-horizontal {
+ flex-direction: row;
+}
+
+.stack.direction-vertical {
+ flex-direction: column;
+}
+
+.stack.align-start {
+ align-items: flex-start;
+}
+
+.stack.align-center {
+ align-items: center;
+}
+
+.stack.align-end {
+ align-items: flex-end;
+}
+
+.stack.align-stretch {
+ align-items: stretch;
+}
+
+.stack.justify-start {
+ justify-content: flex-start;
+}
+
+.stack.justify-center {
+ justify-content: center;
+}
+
+.stack.justify-end {
+ justify-content: flex-end;
+}
+
+.stack.justify-between {
+ justify-content: space-between;
+ width: 100%;
+}
+
+.stack.justify-around {
+ justify-content: space-around;
+}
+
+.stack.justify-evenly {
+ justify-content: space-evenly;
+}
+
+.stack.wrap-nowrap {
+ flex-wrap: nowrap;
+}
+
+.stack.wrap-wrap {
+ flex-wrap: wrap;
+}
+
+.stack.wrap-wrap-reverse {
+ flex-wrap: wrap-reverse;
+}
+
+.stack.max-width {
+ max-width: var(--max-width);
+}

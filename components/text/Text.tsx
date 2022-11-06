@@ -56,9 +56,15 @@ interface TextProps {
   * @type number 
   */
  marginTop?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16,
+ /**
+  * Additional class name.
+  * @type string
+  * @default ''
+  */
+ className?: string,
 }
 
-function Text({ children, muted, uppercase, lineHeight = 'md', as = 'p', fontSize = 'pMd', fontWeight = 'regular', marginBottom = 0, marginTop = 0 }: TextProps) {
+function Text({ children, muted, uppercase, lineHeight = 'md', as = 'p', fontSize = 'pMd', fontWeight = 'regular', marginBottom = 0, marginTop = 0, className }: TextProps) {
  const style = {
   color: muted ? 'var(--color-text-muted)' : 'var(--color-text)',
   textTransform: uppercase ? 'uppercase' : 'none',
@@ -69,7 +75,7 @@ function Text({ children, muted, uppercase, lineHeight = 'md', as = 'p', fontSiz
   marginTop: `var(--spacing-${marginTop})`,
  };
 
- return React.createElement(as, { className: cl(styles.text), style }, children);
+ return React.createElement(as, { className: cl(styles.text, className), style }, children);
 }
 
 export default Text;

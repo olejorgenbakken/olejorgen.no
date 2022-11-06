@@ -204,11 +204,11 @@ export const languages = [
  },
  {
   language: 'Swedish',
-  fluency: 'Basic',
+  fluency: 'Advanced',
  },
  {
   language: 'Danish',
-  fluency: 'Basic',
+  fluency: 'Advanced',
  }
 ]
 

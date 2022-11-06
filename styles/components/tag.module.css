@@ -4,7 +4,28 @@
  border: 1px solid var(--color-border);
  color: var(--color-text-muted);
  font-family: var(--font-family-sans);
- font-size: var(--font-size-pSm);
+ font-size: var(--font-size-pXs);
+ font-weight: var(--font-weight-medium);
  line-height: var(--line-height-lg);
  min-width: max-content;
+}
+
+.tag.default {
+ background-color: var(--color-background);
+ color: var(--color-text-muted);
+}
+
+.tag.success {
+ background-color: var(--color-success-background);
+ color: var(--color-success-text);
+}
+
+.tag.warning {
+ background-color: var(--color-warning-background);
+ color: var(--color-warning-text);
+}
+
+.tag.danger {
+ background-color: var(--color-danger-background);
+ color: var(--color-danger-text);
 }
