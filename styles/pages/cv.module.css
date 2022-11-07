@@ -10,6 +10,12 @@
  margin: 0 auto;
 }
 
+.cv .entry header a {
+ color: var(--color-text-muted);
+ border-bottom: 0;
+ padding-bottom: 0;
+}
+
 @media (min-width: 768px) {
  .cv {
   grid-template-columns: 1fr 200px;

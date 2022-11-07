@@ -22,10 +22,10 @@ export default function Home() {
       <Text as='h2' fontSize='h5' fontWeight='medium'>Work</Text>
       <List spacing={16} style="none">
        {work.map((job, index) => (
-        <Stack direction='vertical' key={index}>
+        <Stack direction='vertical' key={index} className={styles.entry}>
          <Stack as='header' direction='vertical' spacing={2}>
           <Stack justify='between' align='center' spacing={6}>
-           <Text muted as='h3' fontWeight='medium' fontSize='h6' className='place'><Link href={job.url} target="_blank">{job.company}</Link></Text>
+           <Text muted as='h3' fontSize='h6' className='place'><Link href={job.meta.url} target="_blank">{job.company}</Link></Text>
            <Inline>
             <Text muted uppercase lineHeight='sm' fontSize='pSm'>{job.startDate}</Text>
             {job.endDate != job.startDate && <Text muted uppercase lineHeight='sm' fontSize='pSm'>&nbsp;– {job.endDate}</Text>}
@@ -35,8 +35,8 @@ export default function Home() {
           <Text as='h4' fontWeight='medium' fontSize='h5' lineHeight='sm'>{job.role}</Text>
          </Stack>
          {job.summary && <Text>{job.summary}</Text>}
-         {job.highlights && <Stack as='ol' wrap='wrap' spacing={2}>
-          {job.highlights.slice().sort().map((highlight, index) => <li><Tag key={index}>{highlight}</Tag></li>)}
+         {job.meta && job.meta.tags && <Stack as='ol' wrap='wrap' spacing={2}>
+          {job.meta.tags.slice().sort().map((tag, index) => <li><Tag key={index}>{tag}</Tag></li>)}
          </Stack>}
         </Stack >
        ))}
@@ -46,10 +46,10 @@ export default function Home() {
       <Text as='h2' fontSize='h5' fontWeight='medium'>Volunteering</Text>
       <List spacing={16} style="none">
        {volunteering.map((volunteer, index) => (
-        <Stack direction='vertical' key={index}>
+        <Stack direction='vertical' key={index} className={styles.entry}>
          <Stack as='header' direction='vertical' spacing={2}>
           <Stack justify='between' align='center' spacing={6}>
-           <Text muted as='h3' fontWeight='medium' fontSize='h6' className='place'><Link href={volunteer.url} target="_blank">{volunteer.company}</Link></Text>
+           <Text muted as='h3' fontSize='h6' className='place'><Link href={volunteer.meta.url} target="_blank">{volunteer.company}</Link></Text>
            <Inline>
             <Text muted uppercase lineHeight='sm' fontSize='pSm'>{volunteer.startDate}</Text>
             {volunteer.endDate != volunteer.startDate && <Text muted uppercase lineHeight='sm' fontSize='pSm'>&nbsp;– {volunteer.endDate}</Text>}
@@ -65,10 +65,10 @@ export default function Home() {
       <Text as='h2' fontSize='h5' fontWeight='medium'>Education</Text>
       <List spacing={16} style="none">
        {education.map((school, index) => (
-        <Stack direction='vertical' key={index}>
+        <Stack direction='vertical' key={index} className={styles.entry}>
          <Stack as='header' direction='vertical' spacing={2}>
           <Stack justify='between' align='center' spacing={6}>
-           <Text muted as='h3' fontWeight='medium' fontSize='h6' className='place'><Link href={school.url} target="_blank">{school.school}</Link></Text>
+           <Text muted as='h3' fontSize='h6' className='place'><Link href={school.meta.url} target="_blank">{school.school}</Link></Text>
            <Inline>
             <Text muted uppercase lineHeight='sm' fontSize='pSm'>{school.startDate}</Text>
             {school.endDate != school.startDate && <Text muted uppercase lineHeight='sm' fontSize='pSm'>&nbsp;– {school.endDate}</Text>}

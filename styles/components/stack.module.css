@@ -52,10 +52,12 @@ ol.stack {
 
 .stack.justify-around {
  justify-content: space-around;
+ width: 100%;
 }
 
 .stack.justify-evenly {
  justify-content: space-evenly;
+ width: 100%;
 }
 
 .stack.wrap-nowrap {
@@ -70,6 +72,18 @@ ol.stack {
  flex-wrap: wrap-reverse;
 }
 
-.stack.max-width {
- max-width: var(--max-width);
+.stack.overflow-visible {
+ overflow: visible;
+}
+
+.stack.overflow-hidden {
+ overflow: hidden;
+}
+
+.stack.overflow-scroll {
+ overflow: scroll;
+}
+
+.stack.overflow-auto {
+ overflow: auto;
 }

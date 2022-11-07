@@ -8,6 +8,7 @@
  font-weight: var(--font-weight-medium);
  line-height: var(--line-height-lg);
  min-width: max-content;
+ text-transform: capitalize;
 }
 
 .tag.default {

@@ -13,7 +13,7 @@ export default function Header() {
    </div>
    <nav>
     <Stack as='ul'>
-     <Text><Link href={"/cv"}>CV</Link></Text>
+     <Text fontWeight='medium'><Link href={"/cv"}>CV</Link></Text>
     </Stack>
    </nav>
   </Stack>

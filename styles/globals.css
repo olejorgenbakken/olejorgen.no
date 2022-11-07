@@ -39,9 +39,9 @@
   --line-height-lg: calc(var(--line-height-md) * 1.5);
   --line-height-sm: calc(var(--line-height-md) * 0.875);
 
-  --border-radius: 0.25rem;
-  --border-radius-lg: 0.3rem;
-  --border-radius-sm: 0.2rem;
+  --border-radius: 1rem;
+  --border-radius-lg: calc(var(--border-radius) * 1.5);
+  --border-radius-sm: calc(var(--border-radius) * 0.75);
 
   --transition: all 0.1s ease-in;
 
@@ -63,6 +63,10 @@
   --spacing-14: calc(var(--spacing) * 3.5);
   --spacing-15: calc(var(--spacing) * 3.75);
   --spacing-16: calc(var(--spacing) * 4);
+  --spacing-17: calc(var(--spacing) * 4.25);
+  --spacing-18: calc(var(--spacing) * 4.5);
+  --spacing-19: calc(var(--spacing) * 4.75);
+  --spacing-20: calc(var(--spacing) * 5);
 
   --mobile: 540px;
   --tablet: 768px;
