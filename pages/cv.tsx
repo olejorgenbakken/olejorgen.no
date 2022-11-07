@@ -17,9 +17,9 @@ export default function Home() {
     <meta name="description" content="My CV on the internet. What a concept." />
    </Head>
    <main className={styles.cv}>
-    <Stack direction='vertical' spacing={12}>
-     <Stack direction='vertical'>
-      <Text as='h2' fontSize='h5' fontWeight='medium'>Work</Text>
+    <Stack direction='vertical' spacing={20} className={styles.entries}>
+     <Stack direction='vertical' spacing={12}>
+      <Text as='h2' fontSize='h5'>Work</Text>
       <List spacing={16} style="none">
        {work.map((job, index) => (
         <Stack direction='vertical' key={index} className={styles.entry}>
@@ -42,8 +42,8 @@ export default function Home() {
        ))}
       </List>
      </Stack>
-     <Stack direction='vertical'>
-      <Text as='h2' fontSize='h5' fontWeight='medium'>Volunteering</Text>
+     <Stack direction='vertical' spacing={12}>
+      <Text as='h2' fontSize='h5'>Volunteering</Text>
       <List spacing={16} style="none">
        {volunteering.map((volunteer, index) => (
         <Stack direction='vertical' key={index} className={styles.entry}>
@@ -61,8 +61,8 @@ export default function Home() {
        ))}
       </List>
      </Stack>
-     <Stack direction='vertical'>
-      <Text as='h2' fontSize='h5' fontWeight='medium'>Education</Text>
+     <Stack direction='vertical' spacing={12}>
+      <Text as='h2' fontSize='h5'>Education</Text>
       <List spacing={16} style="none">
        {education.map((school, index) => (
         <Stack direction='vertical' key={index} className={styles.entry}>
@@ -82,27 +82,25 @@ export default function Home() {
      </Stack>
     </Stack>
 
-    <Stack as='aside' className={styles.sidebar}>
+    <Stack as='aside' direction='vertical' className={styles.sidebar} spacing={12}>
      <Stack direction='vertical' spacing={4}>
-      <Stack direction='vertical' spacing={2}>
-       <Text as='h2' fontSize='h5' fontWeight='medium'>Languages</Text>
-       <List style="none">
-        {languages.map((language, index) => (
-         <Stack key={index} direction="vertical" spacing={1}>
-          <Text lineHeight='md' fontWeight='medium' uppercase>{language.language}</Text>
-          <Text lineHeight='sm' marginBottom={4}>{language.fluency}</Text>
-         </Stack>
-        ))}
-       </List>
-      </Stack>
-      <Stack direction='vertical' spacing={0}>
-       <Text as='h2' fontSize='h5' fontWeight='medium'>Links</Text>
-       <List style="none">
-        {links.map((link, index) => (
-         <Text key={index}><Link href={link.url} target="_blank">{link.name}</Link></Text>
-        ))}
-       </List>
-      </Stack>
+      <Text as='h2' fontSize='h5'>Languages</Text>
+      <List style="none">
+       {languages.map((language, index) => (
+        <Stack key={index} direction="vertical" spacing={1}>
+         <Text lineHeight='md' uppercase>{language.language}</Text>
+         <Text lineHeight='sm' marginBottom={4}>{language.fluency}</Text>
+        </Stack>
+       ))}
+      </List>
+     </Stack>
+     <Stack direction='vertical' spacing={4}>
+      <Text as='h2' fontSize='h5'>Links</Text>
+      <List style="none">
+       {links.map((link, index) => (
+        <Text key={index}><Link href={link.url} target="_blank">{link.name}</Link></Text>
+       ))}
+      </List>
      </Stack>
     </Stack>
    </main>
