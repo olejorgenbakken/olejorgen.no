@@ -18,16 +18,13 @@ export default function Home() {
         <meta name="description" content={`${contact.name.first} ${contact.name.last} is a ${contact.title}, mostly.`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Stack as='main'>
+      <Stack as='main' className={styles.page}>
         <List spacing={20} style="none" className={styles.projects}>
           {projects.map((project, index) => (
             <Card key={index} imageSrc={project.meta.image} imageAlt={`${project.company} logo`} className={styles.project}>
-              <Stack direction='vertical' align='start' spacing={1}>
-                <Text muted uppercase fontSize='pSm'>{project.endDate}</Text>
-                <Text as='h2' fontWeight='medium' fontSize='h4' className='place'><Link href={project.url} target="_blank">{project.title}</Link></Text>
-              </Stack>
+              <Text as='h2' fontWeight='medium' fontSize='h4' className='place'><Link href={project.url} target="_blank">{project.title}</Link></Text>
               {project.summary && <Text>{project.summary}</Text>}
-              {project.meta.tags && <Stack as='ol' wrap='wrap' spacing={2}>
+              {project.meta.tags && <Stack as='ol' wrap='wrap'>
                 {project.meta.tags.slice().sort().map((tag, index) => <li><Tag key={index}>{tag}</Tag></li>)}
               </Stack>}
             </Card>

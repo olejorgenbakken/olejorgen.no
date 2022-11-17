@@ -1,9 +1,15 @@
+.page {
+ max-width: var(--width-mx);
+ margin: 0 auto;
+}
+
 .project img {
  max-height: 200px;
 }
 
 .projects {
- container-type: inline-size
+ container-type: inline-size;
+
 }
 
 @media (min-width: 540px) {

@@ -1,24 +1,5 @@
 .cv {
- display: grid;
- grid-template-columns: 1fr;
  gap: var(--spacing-16);
- max-width: var(--max-width);
+ max-width: var(--width-md);
  margin: 0 auto;
-}
-
-.cv .entries {
- width: 100%;
-}
-
-.cv .entry header a {
- color: var(--color-text-muted);
- border-bottom: 0;
- padding-bottom: 0;
-}
-
-@media (min-width: 768px) {
- .cv {
-  grid-template-columns: 1fr max-content;
-  gap: var(--spacing-20);
- }
 }
