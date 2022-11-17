@@ -1,6 +1,7 @@
 .card {
  display: grid;
  gap: var(--spacing-4);
+ border-radius: var(--border-radius-lg);
 }
 
 .card.vertical,
@@ -25,11 +26,21 @@
 .card a {
  color: var(--color-text);
  border: none;
- padding: 0;
+}
+
+.card a:hover {
+ border-bottom: 2px solid var(--color-link-hover);
 }
 
 .card img {
  width: 100%;
  object-fit: cover;
- border-radius: var(--border-radius-lg);
+ border-radius: var(--border-radius-md);
+}
+
+@container (min-width: 540px) {
+ .card .content {
+  padding: var(--spacing-2) var(--spacing-4) var(--spacing-4) var(--spacing-2);
+  justify-content: center;
+ }
 }

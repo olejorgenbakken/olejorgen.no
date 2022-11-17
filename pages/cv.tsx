@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { work, education, volunteering, languages, links } from '../lib/cv';
+import { work, education, volunteering, languages } from '../lib/cv';
 
 import Text from '../components/text/Text';
 import List from '../components/list/List';
@@ -8,12 +8,13 @@ import styles from '../styles/pages/cv.module.css';
 import Link from '../components/link/Link';
 import Inline from '../components/inline/Inline';
 import Tag from '../components/tag/Tag';
+import { contact } from '../lib/about';
 
 export default function Home() {
  return (
   <>
    <Head>
-    <title>CV | OJ, designer</title>
+    <title>CV | {contact.name.first} {contact.name.last}</title>
     <meta name="description" content="My CV on the internet. What a concept." />
    </Head>
    <main className={styles.cv}>
@@ -91,14 +92,6 @@ export default function Home() {
          <Text lineHeight='md' uppercase>{language.language}</Text>
          <Text lineHeight='sm' marginBottom={4}>{language.fluency}</Text>
         </Stack>
-       ))}
-      </List>
-     </Stack>
-     <Stack direction='vertical' spacing={4}>
-      <Text as='h2' fontSize='h5'>Links</Text>
-      <List style="none">
-       {links.map((link, index) => (
-        <Text key={index}><Link href={link.url} target="_blank">{link.name}</Link></Text>
        ))}
       </List>
      </Stack>

@@ -1,0 +1,9 @@
+.footer {
+ background: var(--color-background);
+}
+
+.content {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: var(--spacing-12) var(--spacing-6);
+}

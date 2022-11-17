@@ -282,22 +282,3 @@ export const languages = [
   fluency: 'Advanced',
  }
 ]
-
-export const links = [
- {
-  name: 'GitHub',
-  url: 'https://www.github.com/olejorgenbakken',
- },
- {
-  name: 'Figma',
-  url: 'https://www.figma.com/@olejorgen',
- },
- {
-  name: 'Twitter',
-  url: 'https://www.twitter.com/olejorgenbakken',
- },
- {
-  name: 'LinkedIn',
-  url: 'https://www.linkedin.com/in/olejorgenbakken/',
- }
-]

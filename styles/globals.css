@@ -2,6 +2,9 @@
 
 :root {
   --color-background: hsl(0, 0%, 100%);
+  --color-background-hover: hsl(0, 0%, 95%);
+  --color-surface: hsl(0, 0%, 90%);
+  --color-surface-hover: hsl(0, 0%, 85%);
   --color-success-background: hsl(120, 100%, 95%);
   --color-success-text: hsl(120, 100%, 15%);
   --color-warning-background: hsl(37, 100%, 80%);
@@ -41,9 +44,12 @@
 
   --border-radius: 1rem;
   --border-radius-lg: calc(var(--border-radius) * 1.5);
+  --border-radius-md: var(--border-radius);
   --border-radius-sm: calc(var(--border-radius) * 0.75);
 
-  --transition: all 0.1s ease-in;
+  --transition-sm: all 0.1s ease-in;
+  --transition-md: all 0.2s ease-in;
+  --transition-lg: all 0.3s ease-in;
 
   --spacing: 1rem;
   --spacing-0: 0;
@@ -133,6 +139,9 @@ h6 {
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: hsl(0, 0%, 1%);
+    --color-background-hover: hsl(0, 0%, 5%);
+    --color-surface: hsl(0, 0%, 5%);
+    --color-surface-hover: hsl(0, 0%, 10%);
     --color-success: hsl(120, 100%, 10%);
     --color-success-text: hsl(120, 100%, 90%);
     --color-warning: hsl(30, 100%, 25%);
@@ -147,5 +156,16 @@ h6 {
 
     --color-link: hsl(216, 100%, 65%);
     --color-link-hover: hsl(216, 100%, 50%);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-h1: calc(var(--font-size-pMd) * 3);
+    --font-size-h2: calc(var(--font-size-pMd) * 2.5);
+    --font-size-h3: calc(var(--font-size-pMd) * 2);
+    --font-size-h4: calc(var(--font-size-pMd) * 1.75);
+    --font-size-h5: calc(var(--font-size-pMd) * 1.5);
+    --font-size-h6: var(--font-size-pMd);
   }
 }

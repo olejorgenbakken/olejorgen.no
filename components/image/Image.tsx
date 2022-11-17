@@ -23,8 +23,16 @@ interface ImageProps {
  className?: string;
 }
 
-export default function Image({ src, alt, className }: ImageProps) {
+export default function Image({
+ src,
+ alt,
+ className,
+}: ImageProps) {
  return (
-  <img src={src} alt={alt} className={cl(styles.image, className)} />
+  <img
+   src={src}
+   alt={alt}
+   className={cl(styles.image, className)}
+  />
  );
 }

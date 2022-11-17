@@ -2,6 +2,10 @@
  max-height: 200px;
 }
 
+.projects {
+ container-type: inline-size
+}
+
 @media (min-width: 540px) {
  .project img {
   max-height: 400px;
