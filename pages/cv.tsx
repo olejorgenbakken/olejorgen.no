@@ -17,6 +17,7 @@ export default function Home() {
     <meta name="description" content="My CV on the internet. What a concept." />
    </Head>
    <Stack as="main" direction='vertical' spacing={20} className={styles.cv}>
+    <Text as='h1' fontSize='h1'>CV</Text>
     <Stack direction='vertical' spacing={8}>
      <Text as='h2' fontSize='h5' fontWeight='medium'>Work</Text>
      <List spacing={16} style="none">

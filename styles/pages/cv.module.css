@@ -1,4 +1,4 @@
 .cv {
  gap: var(--spacing-16);
- max-width: var(--width-md);
+ max-width: var(--width-lg);
 }
