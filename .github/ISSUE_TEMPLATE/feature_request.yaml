@@ -14,7 +14,7 @@ body:
     attributes:
       label: Tittel på ikonet
       description: Hva er navnet på ikonet du ønsker deg?
-      placeholder: eksempel: send
+      placeholder: eks. send
     validations:
       required: true
   - type: textarea
