@@ -1,0 +1,27 @@
+.header {
+ width: 100%;
+ background-color: var(--surface);
+}
+
+.headerContent {
+ display: flex;
+ gap: var(--spacing-8);
+ align-items: center;
+ width: 100%;
+ max-width: var(--full);
+ padding: var(--spacing-4) var(--spacing-8);
+ margin: 0 auto;
+}
+
+.header h1 {
+ font-size: var(--font-size-s);
+}
+
+.header p {
+ font-size: var(--font-size-xs);
+}
+
+.header h1 a,
+.header h1 a:visited {
+ color: var(--text);
+}
