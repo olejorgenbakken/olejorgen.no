@@ -77,7 +77,8 @@
 
   --bg: var(--black);
   --text: var(--white);
-  --surface: var(--gray-950);
+  --text-muted: var(--gray-200);
+  --surface: var(--gray-900);
 
   --font-family: 'Inter', sans-serif;
 
@@ -89,11 +90,21 @@
   --spacing-6: 1.5rem;
   --spacing-7: 1.75rem;
   --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-13: 3.5rem;
+  --spacing-14: 4rem;
+  --spacing-15: 4.5rem;
+  --spacing-16: 5rem;
+  --spacing-17: 5.5rem;
+  --spacing-18: 6rem;
 
   --full: 1440px;
   --container: 900px;
 
-  --font-size-xxl: 2.5rem;
+  --font-size-xxl: 2.25rem;
   --font-size-xl: 2rem;
   --font-size-l: 1.5rem;
   --font-size-m: 1.25rem;
@@ -128,6 +139,17 @@ body {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  line-height: 150%;
+}
+
 h1 {
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-bold);
@@ -156,6 +178,7 @@ h6 {
 
 p {
   font-size: var(--font-size-s);
+  line-height: 150%;
 }
 
 a {
@@ -177,4 +200,13 @@ a:visited {
 
 a:focus {
   color: var(--blue-700);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--spacing-8);
 }

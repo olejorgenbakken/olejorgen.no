@@ -1,17 +1,21 @@
-.projects {
- display: flex;
- flex-direction: column;
- gap: var(--spacing-8);
- width: 100%;
- max-width: var(--full);
- margin: 0 auto;
- padding: var(--spacing-8);
-}
-
-.projects ul {
+.category {
  display: flex;
  flex-direction: column;
  gap: var(--spacing-4);
+ width: 100%;
+ max-width: var(--full);
+ margin: 0 auto;
+}
+
+.categoryTitle {
+ font-size: var(--font-size-m);
+ color: var(--text-muted);
+}
+
+.category ul {
+ display: flex;
+ flex-direction: column;
+ gap: var(--spacing-12);
  padding: 0;
  margin: 0;
 }
