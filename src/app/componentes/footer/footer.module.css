@@ -31,3 +31,9 @@
 .category a:visited {
  color: var(--text-muted);
 }
+
+@media (min-width: 1024px) {
+ .footerContent {
+  padding: var(--spacing-8) var(--spacing-4);
+ }
+}
