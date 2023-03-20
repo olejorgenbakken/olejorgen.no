@@ -1,6 +1,5 @@
 .header {
  width: 100%;
- background-color: var(--surface);
 }
 
 .headerContent {
@@ -10,12 +9,13 @@
  align-items: center;
  width: 100%;
  max-width: var(--container);
- padding: var(--spacing-3) var(--spacing-8);
+ padding: var(--spacing-4) var(--spacing-8);
  margin: 0 auto;
 }
 
 .header h1 {
  font-size: var(--font-size-s);
+ font-weight: var(--font-weight-medium);
 }
 
 .header p {

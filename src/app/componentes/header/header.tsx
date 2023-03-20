@@ -1,13 +1,15 @@
 import cl from 'clsx';
 import styles from "./header.module.css";
+
 import Link from 'next/link';
+import { about } from '../../../../data/about';
 
 function Header() {
  return (
   <header className={cl(styles.header)}>
    <div className={cl(styles.headerContent)}>
-    <h1><Link href="/">Ole Jørgen Bakken</Link></h1>
-    <p>UX Designer</p>
+    <h1><Link href="/">{about.name}</Link></h1>
+    <p>{about.title} in {about.location}</p>
    </div>
   </header>
  );

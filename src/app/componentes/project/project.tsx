@@ -11,15 +11,21 @@ interface ProjectProps {
   start: string;
   end?: string;
  },
+ cta?: {
+  url: string;
+  text: string;
+  title: string;
+ },
 }
 
-function Project({ company, title, description, date }: ProjectProps) {
+function Project({ company, title, description, date, cta }: ProjectProps) {
  return (
   <li className={cl(styles.project)}>
    <h3 className={styles.title}>{title} <span className={cl(styles.company)}>for {company}</span></h3>
    <p className={styles.description}>{description}</p>
    <p className={cl(styles.dates)}>From {date.start} to {date.end || 'Present'}</p>
-  </li>
+   {cta && <p><Link title={`Go to ${cta.title}`} href={cta.url}>{cta.text}</Link></p>}
+  </li >
  );
 }
 

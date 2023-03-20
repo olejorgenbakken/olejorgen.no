@@ -2,7 +2,7 @@
  position: relative;
  display: flex;
  flex-direction: column;
- gap: var(--spacing-3);
+ gap: var(--spacing-2);
 }
 
 .project>* {
@@ -16,10 +16,9 @@
 .project .description {
  color: var(--text-muted);
  font-size: var(--font-size-m);
- font-weight: var(--font-weight-medium);
+ font-weight: var(--font-weight-regular);
 }
 
 .project .dates {
  font-size: var(--font-size-s);
- color: var(--text-muted);
 }

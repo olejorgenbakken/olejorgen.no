@@ -1,0 +1,7 @@
+.job {
+ list-style: none;
+}
+
+.job .title {
+ font-weight: var(--font-weight-medium);
+}
