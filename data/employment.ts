@@ -8,9 +8,9 @@ export const employment = [
   }
  },
  {
-  company: "NAV",
+  company: "NAV IT",
   title: "UX designer",
-  url: "https://nav.no",
+  url: "https://detsombetyrnoe.no",
   date: {
    start: "November 2021",
    end: "March 2023"
