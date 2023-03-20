@@ -23,7 +23,7 @@ function School({ school, title, description, date, cta }: SchoolProps) {
    <h3 className={cl(styles.title)}>{title} at {school}</h3>
    <p className={cl(styles.dates)}>Graduated {date.end}</p>
    <p className={cl(styles.description)}>{description}</p>
-   {cta && <p className={cl(styles.link)}><Link href={cta.url} title={`Go to ${cta.title}`} target="_blank" rel="noopener noreferrer">{cta.text}</Link></p>}
+   {cta && <p className={cl(styles.link)}><Link href={cta.url} title={`Go to ${cta.title}`} target="_blank" rel="noopener noreferrer">Visit {school}</Link></p>}
   </li>
  );
 }

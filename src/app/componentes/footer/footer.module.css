@@ -1,15 +1,16 @@
 .footer {
  width: 100%;
+ background: var(--surface-muted);
 }
 
 .footerContent {
- display: flex;
- gap: var(--spacing-12);
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: var(--spacing-12) var(--spacing-8);
  width: 100%;
  max-width: var(--container);
  padding: var(--spacing-4);
  margin: 0 auto;
- border-top: var(--border);
 }
 
 .footerContent h2 {
@@ -20,20 +21,12 @@
 .category ul {
  display: flex;
  flex-direction: column;
-}
-
-.category,
-.category.socialMedia ul {
  gap: var(--spacing-2);
 }
 
-.category a,
-.category a:visited {
- color: var(--text-muted);
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
  .footerContent {
   padding: var(--spacing-8) var(--spacing-4);
+  grid-template-columns: repeat(4, 1fr);
  }
 }
