@@ -60,7 +60,7 @@
  }
 
  .category.projects ul {
-  gap: var(--spacing-18);
+  gap: var(--spacing-19);
  }
 
  .category.employment ul,

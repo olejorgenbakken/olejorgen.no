@@ -2,7 +2,6 @@
  position: relative;
  display: flex;
  flex-direction: column;
- gap: var(--spacing-2);
 }
 
 .project>* {
@@ -17,18 +16,13 @@
  color: var(--text-muted);
  font-size: var(--font-size-m);
  font-weight: var(--font-weight-regular);
+ margin: var(--spacing-2) 0 var(--spacing-4) 0;
+}
+
+.project .description .company {
+ color: var(--text);
 }
 
 .project .dates {
  font-size: var(--font-size-s);
-}
-
-.project a {
- margin-top: var(--spacing-2);
-}
-
-@media (min-width: 768px) {
- .project {
-  gap: var(--spacing-4);
- }
 }

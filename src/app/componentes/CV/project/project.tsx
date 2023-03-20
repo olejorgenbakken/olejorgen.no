@@ -17,8 +17,8 @@ interface ProjectProps {
 function Project({ company, title, description, cta }: ProjectProps) {
  return (
   <li className={cl(styles.project)}>
-   <h3 className={styles.title}>{title} <span className={cl(styles.company)}>for {company}</span></h3>
-   <p className={styles.description}>{description}</p>
+   <h3 className={styles.title}>{title}</h3>
+   <p className={styles.description}><span className={cl(styles.company)}>Made for {company}.</span> {description}</p>
    {cta && <CTA title={`Go to ${cta.title}`} href={cta.url} target="_blank" rel="noopener noreferrer">{cta.text}</CTA>}
   </li >
  );

@@ -6,7 +6,7 @@ export const projects = [
   date: {
    start: "August 2022",
    end: "March 2023"
-  },
+    },
    cta: {
     text: "Visit website",
     url: "https://aksel.nav.no",
@@ -21,7 +21,7 @@ export const projects = [
   date: {
    start: "November 2021",
    end: "August 2022"
-  },
+   },
  },
  {
   company: "Vipps",
@@ -30,7 +30,7 @@ export const projects = [
   date: {
    start: "June 2021",
    end: "August 2021"
-  },
+   },
   cta: {
     text: "View protoype",
     url: "https://www.figma.com/community/file/1016826393815010584",

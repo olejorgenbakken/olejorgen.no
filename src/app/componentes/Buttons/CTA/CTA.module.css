@@ -3,8 +3,8 @@
  font-size: var(--font-size-s);
  width: max-content;
  min-width: 80px;
- border-radius: var(--border-radius-l);
- padding: var(--spacing-3) var(--spacing-5);
+ border-radius: var(--border-radius-full);
+ padding: var(--spacing-2) var(--spacing-5);
 }
 
 .cta,
