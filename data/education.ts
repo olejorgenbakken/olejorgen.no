@@ -2,7 +2,7 @@ export const education = [
  {
   school: "Kristiania University College",
   title: "Bachelor of IT, specialisation in UX design",
-  description: "The bachelor's degree in IT with specialisation in UX design is a three-year programme that focuses on the design of digital products and services. The programme is based on the principles of design thinking, and the students are taught to work in multidisciplinary teams. The programme is accredited by the Norwegian Agency for Quality Assurance in Education (NOKUT).",
+  description: "The bachelor's degree in IT with specialisation in UX design is a three-year programme that focuses on the design of digital products and services. The programme is based on the principles of design thinking, and the students are taught to work in multidisciplinary teams.",
   date: {
    start: "August 2018",
    end: "June 2021"
