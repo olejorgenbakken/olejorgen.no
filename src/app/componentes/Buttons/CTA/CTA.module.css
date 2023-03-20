@@ -1,0 +1,14 @@
+.cta {
+ background: var(--cta-bg-color);
+ font-size: var(--font-size-s);
+ width: max-content;
+ min-width: 80px;
+ border-radius: var(--border-radius-l);
+ padding: var(--spacing-3) var(--spacing-5);
+}
+
+.cta,
+.cta:visited,
+.cta:visited:hover {
+ color: var(--cta-text-color);
+}

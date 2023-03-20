@@ -23,6 +23,10 @@
  font-size: var(--font-size-s);
 }
 
+.project a {
+ margin-top: var(--spacing-2);
+}
+
 @media (min-width: 768px) {
  .project {
   gap: var(--spacing-4);

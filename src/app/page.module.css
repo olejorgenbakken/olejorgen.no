@@ -35,6 +35,18 @@
  gap: var(--spacing-8);
 }
 
+.category.languages ul {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: var(--spacing-12) var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+ .category.languages ul {
+  grid-template-columns: repeat(4, 1fr);
+ }
+}
+
 @media (min-width: 1024px) {
  .frontPage {
   gap: var(--spacing-19);

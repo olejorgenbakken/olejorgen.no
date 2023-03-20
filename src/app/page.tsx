@@ -2,13 +2,15 @@ import cl from 'clsx';
 
 import { projects } from '../../data/projects'
 
-import Project from './componentes/project/project'
+import Project from './componentes/CV/project/project'
 
 import styles from './page.module.css'
 import { education } from '../../data/education';
-import School from './componentes/school/school';
+import School from './componentes/CV/school/school';
 import { employment } from '../../data/employment';
-import Job from './componentes/job/job';
+import Job from './componentes/CV/job/job';
+import { languages } from '../../data/languages';
+import Language from './componentes/CV/language/language';
 
 export default function Home() {
   return (
@@ -34,6 +36,14 @@ export default function Home() {
         <ul>
           {education.map((school) => (
             <School key={school.title} {...school} />
+          ))}
+        </ul>
+      </div>
+      <div className={cl(styles.category, styles.languages)}>
+        <h2 className={styles.categoryTitle}>Languages</h2>
+        <ul>
+          {languages.map((language) => (
+            <Language key={language.name} {...language} />
           ))}
         </ul>
       </div>

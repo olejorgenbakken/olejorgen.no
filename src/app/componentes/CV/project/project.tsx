@@ -1,6 +1,7 @@
 import cl from 'clsx';
 import styles from "./project.module.css";
 import Link from 'next/link';
+import CTA from '../../Buttons/CTA/CTA';
 
 interface ProjectProps {
  company: string;
@@ -18,7 +19,7 @@ function Project({ company, title, description, cta }: ProjectProps) {
   <li className={cl(styles.project)}>
    <h3 className={styles.title}>{title} <span className={cl(styles.company)}>for {company}</span></h3>
    <p className={styles.description}>{description}</p>
-   {cta && <p className={cl(styles.link)}><Link title={`Go to ${cta.title}`} href={cta.url} target="_blank" rel="noopener noreferrer">{cta.text}</Link></p>}
+   {cta && <CTA title={`Go to ${cta.title}`} href={cta.url} target="_blank" rel="noopener noreferrer">{cta.text}</CTA>}
   </li >
  );
 }

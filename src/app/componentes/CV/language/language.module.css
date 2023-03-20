@@ -1,0 +1,15 @@
+.language {
+ display: flex;
+ flex-direction: column;
+ gap: var(--spacing-1);
+ list-style: none;
+}
+
+.language .title {
+ font-size: var(--font-size-m);
+ font-weight: var(--font-weight-normal);
+}
+
+.language .level {
+ color: var(--text-muted);
+}
