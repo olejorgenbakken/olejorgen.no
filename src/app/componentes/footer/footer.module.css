@@ -29,3 +29,9 @@
   grid-template-columns: repeat(4, 1fr);
  }
 }
+
+@media (prefers-color-scheme: light) {
+ .footer {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--blue-50) 100%);
+ }
+}

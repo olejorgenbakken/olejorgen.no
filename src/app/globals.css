@@ -91,8 +91,8 @@
   --action-visited: var(--action);
   --action-focus: var(--blue-200);
 
-  --cta-bg-color: var(--blue-500);
-  --cta-text-color: var(--white);
+  --cta-bg-color: var(--blue-800);
+  --cta-text-color: var(--blue-100);
 
   --border: 1px solid var(--surface);
 
@@ -268,7 +268,7 @@ main {
     --action-visited: var(--action);
     --action-focus: var(--blue-800);
 
-    --cta-bg-color: var(--blue-900);
-    --cta-text-color: var(--blue-50);
+    --cta-bg-color: var(--blue-500);
+    --cta-text-color: var(--white);
   }
 }

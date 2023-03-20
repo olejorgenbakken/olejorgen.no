@@ -36,3 +36,9 @@
   padding: var(--spacing-8) var(--spacing-4);
  }
 }
+
+@media (prefers-color-scheme: light) {
+ .header {
+  background: linear-gradient(0deg, var(--bg) 0%, var(--blue-50) 100%);
+ }
+}
