@@ -1,17 +1,16 @@
 .footer {
  width: 100%;
- background: var(--surface);
 }
 
 .footerContent {
  display: flex;
- justify-content: space-between;
- gap: var(--spacing-4);
- align-items: center;
+ flex-direction: column;
+ gap: var(--spacing-8);
  width: 100%;
  max-width: var(--container);
- padding: var(--spacing-8);
+ padding: var(--spacing-4);
  margin: 0 auto;
+ border-top: var(--border);
 }
 
 .footerContent h2 {
@@ -29,6 +28,15 @@
  gap: var(--spacing-2);
 }
 
-.category a {
+.category a,
+.category a:visited {
  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+ .footerContent {
+  padding: var(--spacing-8) var(--spacing-4);
+  flex-direction: row;
+  gap: var(--spacing-16);
+ }
 }

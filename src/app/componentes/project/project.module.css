@@ -10,7 +10,7 @@
 }
 
 .project .title {
- font-size: var(--font-size-xl);
+ font-size: var(--font-size-xxl);
 }
 
 .project .description {
@@ -21,4 +21,10 @@
 
 .project .dates {
  font-size: var(--font-size-s);
+}
+
+@media (min-width: 768px) {
+ .project {
+  gap: var(--spacing-8);
+ }
 }

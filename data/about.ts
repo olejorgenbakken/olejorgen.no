@@ -9,12 +9,18 @@ export const about = {
    url: "https://www.linkedin.com/in/ole-jorgen-bakken/",
   },
   {
-   name: "GitHub",
-   url: "https://www.github.com/olejorgenbakken/",
-  },
-  {
    name: "Twitter",
    url: "https://www.twitter.com/olejorgenbakken/",
+  },
+ ],
+ portfolio: [
+  {
+   name: "Figma",
+   url: "https://www.figma.com/@olejorgenbakken",
+  },
+  {
+   name: "GitHub",
+   url: "https://www.github.com/olejorgenbakken/",
   },
  ],
 }

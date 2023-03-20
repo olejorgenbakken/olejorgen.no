@@ -1,4 +1,7 @@
 .job {
+ display: flex;
+ flex-direction: column;
+ gap: var(--spacing-2);
  list-style: none;
 }
 

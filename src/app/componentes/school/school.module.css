@@ -11,4 +11,5 @@
 
 .school .description {
  color: var(--text-muted);
+ line-height: 175%;
 }

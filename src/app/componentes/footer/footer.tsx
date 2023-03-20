@@ -10,8 +10,17 @@ function Footer() {
     <div className={cl(styles.category, styles.socialMedia)}>
      <h2 className={styles.categoryTitle}>Social media</h2>
      <ul>
-      {about.social.map((social) => (
-       <Social key={social.name} {...social} />
+      {about.social.map((medium) => (
+       <Social key={medium.name} {...medium} />
+      ))}
+     </ul>
+    </div>
+
+    <div className={cl(styles.category, styles.socialMedia)}>
+     <h2 className={styles.categoryTitle}>Portfolio</h2>
+     <ul>
+      {about.portfolio.map((entry) => (
+       <Social key={entry.name} {...entry} />
       ))}
      </ul>
     </div>
