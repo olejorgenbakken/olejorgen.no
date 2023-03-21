@@ -1,5 +1,5 @@
 import cl from 'clsx';
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 
 import Link from 'next/link';
 import { about } from '../../../../data/about';

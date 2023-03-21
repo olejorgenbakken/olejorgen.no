@@ -94,6 +94,9 @@
   --text-color-muted: var(--gray-200);
   --text-color-inverted: var(--black);
 
+  --border-color: var(--gray-800);
+  --border-color-muted: var(--gray-900);
+
   --font-family: 'Inter', sans-serif;
 
   --font-size-xxl: 1.75rem;
@@ -133,9 +136,9 @@
   --full: 1440px;
   --container: 900px;
 
-  --border-radius-s: 0.25rem;
-  --border-radius-m: 1rem;
-  --border-radius-l: 2rem;
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem;
   --border-radius-full: 9999px;
 }
 
@@ -223,6 +226,8 @@ a:focus {
 main {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  min-height: 60rem;
 }
 
 @media (min-width: 768px) {

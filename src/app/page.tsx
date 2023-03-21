@@ -1,16 +1,11 @@
 import cl from 'clsx';
-
-import { projects } from '../../data/projects'
-
-import Project from './componentes/CV/project/project'
-
+import { education, employment, projects, languages } from '../../data/cv';
 import styles from './page.module.css'
-import { education } from '../../data/education';
-import School from './componentes/CV/school/school';
-import { employment } from '../../data/employment';
-import Job from './componentes/CV/job/job';
-import { languages } from '../../data/languages';
-import Language from './componentes/CV/language/language';
+
+import Project from './componentes/CV/Project/Project'
+import School from './componentes/CV/School/School';
+import Job from './componentes/CV/Job/Job';
+import Language from './componentes/CV/Language/Language';
 
 export default function Home() {
   return (
