@@ -4,27 +4,41 @@ export const education = [
   title: "Bachelor of IT, specialisation in UX design",
   description: "The bachelor's degree in IT with specialisation in UX design is a three-year programme that focuses on the design of digital products and services. The programme is based on the principles of design thinking, and the students are taught to work in multidisciplinary teams.",
   date: {
-   start: "August 2018",
-   end: "June 2021"
+   start: "2018",
+   end: "2021"
   },
   cta: {
    text: "View school website",
-   url: "https://www.kristiania.no/utdanning/bachelor-it-ux-design/",
+   url: "https://www.kristiania.no",
    title: "Kristiania University College"
+  }
+ },
+ {
+  school: "University of Oslo",
+  title: "One-year unit in gender studies",
+  description: "The programme worked as an introduction to issues relating to gender, feminism, gender equality, power, and knowledge production.",
+  date: {
+   start: "2017",
+   end: "2018"
+  },
+  cta: {
+   text: "View school website",
+   url: "https://www.uio.no",
+   title: "University of Oslo"
   }
  },
  {
   school: "Volda University College",
   title: "One-year unit in media and communication",
-  description: "The 1 year unit in media and communication is a one-year programme that focuses on the design of digital products and services.",
+  description: "The programme focused on the design of digital products and services and how to use social media effectively.",
   date: {
-   start: "August 2017",
-   end: "June 2018"
+   start: "2016",
+   end: "2017"
   },
   cta: {
    text: "View school website",
    url: "https://www.hivolda.no",
    title: "Volda University College"
   }
- }
+ },
 ]
