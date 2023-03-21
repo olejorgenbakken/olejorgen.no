@@ -3,7 +3,9 @@
  background: linear-gradient(180deg, var(--bg) 0%, var(--blue-900) 100%);
 }
 
+
 .footerContent {
+ position: relative;
  display: grid;
  grid-template-columns: repeat(2, 1fr);
  gap: var(--spacing-12) var(--spacing-8);
@@ -11,6 +13,7 @@
  max-width: var(--container);
  padding: var(--spacing-4) var(--spacing-4) var(--spacing-16) var(--spacing-4);
  margin: 0 auto;
+ z-index: 2;
 }
 
 .footerContent h2 {
@@ -27,6 +30,7 @@
 @media (min-width: 768px) {
  .footerContent {
   grid-template-columns: repeat(4, 1fr);
+  padding: var(--spacing-4) var(--spacing-4) var(--spacing-20) var(--spacing-4);
  }
 }
 

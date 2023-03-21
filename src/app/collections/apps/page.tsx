@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic';
 import cl from 'clsx';
 import styles from "./page.module.css";
 
@@ -7,14 +6,15 @@ import AppCard from '@/app/componentes/Card/AppCard';
 
 export const metadata = {
  title: "App collection",
+ description: "A collection of apps I always download when I get a new device.",
 }
 
 export default function Apps() {
  return (
   <main className={styles.appPage}>
    <header className={styles.title}>
-    <h1>App collection</h1>
-    <p>A collection of apps I always download when I get a new device.</p>
+    <h1>{metadata.title}</h1>
+    <p>{metadata.description}</p>
    </header>
    <div className={styles.apps}>
     {apps.sort((a, b) => (a.category > b.category) ? 1 : ((b.category > a.category) ? -1 : 0)).map((group) => (
