@@ -1,6 +1,6 @@
 import cl from "clsx"
 import styles from "./page.module.css"
-import Link from "next/link"
+import CTA from "../componentes/Buttons/CTA/CTA"
 
 export const metadata = {
  title: "Collections",
@@ -14,14 +14,18 @@ export default function Collections() {
     <h1>{metadata.title}</h1>
     <p>{metadata.description}</p>
    </header>
-   <ul>
-    <li>
-     <Link href={"/collections/apps"}>Apps</Link>
-    </li>
-    <li>
-     <Link href={"/collections/websites"}>Websites</Link>
-    </li>
-   </ul>
+   <div className={cl(styles.collections)}>
+    <div className={cl(styles.collection)}>
+     <h2>App collection</h2>
+     <CTA href={"/collections/apps"}>See apps</CTA>
+    </div>
+    <div className={cl(styles.collection)}>
+     <h2>Website collection</h2>
+     <CTA href={"/collections/websites"}>See websites</CTA>
+    </div>
+
+   </div>
+
   </main>
  )
 }

@@ -8,6 +8,7 @@
 }
 
 .cta,
+.cta:hover,
 .cta:visited,
 .cta:visited:hover {
  color: var(--cta-text-color);
