@@ -1,7 +1,7 @@
 import cl from 'clsx';
 import styles from "./footer.module.css";
 import { about } from '../../../../data/about';
-import Social from '../CV/Social/Social';
+import Social from '../CV/social/social';
 
 function Footer() {
  return (

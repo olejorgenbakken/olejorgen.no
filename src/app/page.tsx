@@ -2,10 +2,10 @@ import cl from 'clsx';
 import { education, employment, projects, languages } from '../../data/cv';
 import styles from './page.module.css'
 
-import Project from './componentes/CV/Project/Project'
-import School from './componentes/CV/School/School';
-import Job from './componentes/CV/Job/Job';
-import Language from './componentes/CV/Language/Language';
+import Project from './componentes/CV/project/project'
+import School from './componentes/CV/school/school';
+import Job from './componentes/CV/job/job';
+import Language from './componentes/CV/language/language';
 
 export default function Home() {
   return (
