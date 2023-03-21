@@ -81,10 +81,6 @@
   --surface: var(--gray-900);
   --surface-muted: var(--gray-950);
 
-  --text: var(--white);
-  --text-muted: var(--gray-200);
-  --text-inverted: var(--black);
-
   --action: var(--blue-400);
   --action-hover: var(--blue-200);
   --action-active: var(--blue-200);
@@ -94,7 +90,9 @@
   --cta-bg-color: var(--blue-600);
   --cta-text-color: var(--white);
 
-  --border: 1px solid var(--surface);
+  --text-color: var(--white);
+  --text-color-muted: var(--gray-200);
+  --text-color-inverted: var(--black);
 
   --font-family: 'Inter', sans-serif;
 
@@ -150,7 +148,7 @@
 html,
 body {
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text-color);
   font-family: var(--font-family);
   margin: 0;
 }
@@ -257,9 +255,9 @@ main {
     --surface: var(--gray-100);
     --surface-muted: var(--gray-50);
 
-    --text: var(--black);
-    --text-muted: var(--gray-700);
-    --text-inverted: var(--white);
+    --text-color: var(--black);
+    --text-color-muted: var(--gray-700);
+    --text-color-inverted: var(--white);
 
     --focus: var(--blue-800);
     --action: var(--blue-500);

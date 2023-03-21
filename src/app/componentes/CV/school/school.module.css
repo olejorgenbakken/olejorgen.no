@@ -10,6 +10,10 @@
 }
 
 .school .description {
- color: var(--text-muted);
+ color: var(--text-color-muted);
  line-height: 175%;
+}
+
+.school .description .graduation {
+ color: var(--text-color);
 }

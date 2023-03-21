@@ -24,7 +24,7 @@
 
 .header h1 a,
 .header h1 a:visited {
- color: var(--text);
+ color: var(--text-color);
 }
 
 @media (min-width: 768px) {
