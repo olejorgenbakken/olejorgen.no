@@ -2,7 +2,7 @@ export const projects = [
  {
   company: "NAV",
   title: "Aksel Design System",
-  description: "Aksel is an open source design system used in production by NAV's internal and external applications. Accessibility is a core value of the design system as it will be used by the Norwegian public.",
+  description: "Aksel is an open source design system used in production by NAV's internal and external applications. Accessibility is a core value of the design system, as it will be used by the Norwegian public.",
   date: {
    start: "August 2022",
    end: "March 2023"
@@ -12,6 +12,20 @@ export const projects = [
     url: "https://aksel.nav.no",
     title: "Aksel Design System"
    }
+  },
+  {
+    company: "NAV",
+    title: "Mangfold i Mai website",
+    description: "A festival with focus on universal design of ICT.",
+    date: {
+      start: "May 2022",
+      end: "May 2022"
+    },
+    cta: {
+      text: "Visit website",
+      url: "https://mangfoldimai.no",
+      title: "Mangfold i Mai website"
+    }
  },
  {
   company: "NAV",
