@@ -14,7 +14,7 @@
 }
 
 .categoryTitle {
- font-size: var(--font-size-m);
+ font-size: var(--font-size-medium);
 }
 
 .category ul {

@@ -1,6 +1,6 @@
 .cta {
  background: var(--cta-bg-color);
- font-size: var(--font-size-s);
+ font-size: var(--font-size-small);
  width: max-content;
  min-width: 80px;
  border-radius: var(--border-radius-full);

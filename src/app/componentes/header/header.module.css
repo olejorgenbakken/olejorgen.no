@@ -14,12 +14,12 @@
 }
 
 .header h1 {
- font-size: var(--font-size-m);
+ font-size: var(--font-size-medium);
  font-weight: var(--font-weight-medium);
 }
 
 .header p {
- font-size: var(--font-size-s);
+ font-size: var(--font-size-small);
 }
 
 .header h1 a,

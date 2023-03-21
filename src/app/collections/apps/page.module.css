@@ -2,7 +2,7 @@
  display: flex;
  flex-direction: column;
  gap: var(--spacing-16);
- padding: var(--spacing-8) var(--spacing-4) var(--spacing-18) var(--spacing-4);
+ padding: var(--spacing-8) var(--spacing-4) var(--spacing-20) var(--spacing-4);
  width: 100%;
  max-width: var(--container);
 }
@@ -14,7 +14,7 @@
 }
 
 .title h1 {
- font-size: var(--font-size-l);
+ font-size: var(--font-size-large);
  font-weight: var(--font-weight-medium);
 }
 
@@ -25,30 +25,38 @@
 .apps {
  display: flex;
  flex-direction: column;
- gap: var(--spacing-16);
+ gap: var(--spacing-18);
 }
 
 .category {
  display: flex;
  flex-direction: column;
- gap: var(--spacing-12);
+ gap: var(--spacing-8);
  width: 100%;
  max-width: var(--full);
  margin: 0 auto;
 }
 
 .categoryTitle {
- font-size: var(--font-size-xxl);
+ font-size: var(--font-size-xxlarge);
  font-weight: var(--font-weight-bold);
+}
+
+.category .description {
+ color: var(--text-color-muted);
 }
 
 .appList {
  display: grid;
  grid-template-columns: repeat(1, 1fr);
- gap: var(--spacing-12);
+ gap: var(--spacing-10);
 }
 
 @media (min-width: 768px) {
+ .apps {
+  gap: var(--spacing-20);
+ }
+
  .appList {
   grid-template-columns: repeat(2, 1fr);
  }
@@ -56,6 +64,6 @@
 
 @media (min-width: 1024px) {
  .appList {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
  }
 }

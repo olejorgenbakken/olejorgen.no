@@ -99,12 +99,12 @@
 
   --font-family: 'Inter', sans-serif;
 
-  --font-size-xxl: 1.75rem;
-  --font-size-xl: 1.6rem;
-  --font-size-l: 1.4rem;
-  --font-size-m: 1.2rem;
-  --font-size-s: 1rem;
-  --font-size-xs: 0.8rem;
+  --font-size-xxlarge: 1.75rem;
+  --font-size-xlarge: 1.6rem;
+  --font-size-large: 1.4rem;
+  --font-size-medium: 1.2rem;
+  --font-size-small: 1rem;
+  --font-size-xsmall: 0.8rem;
 
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -168,33 +168,33 @@ a {
 }
 
 h1 {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xxlarge);
   font-weight: var(--font-weight-bold);
 }
 
 h2 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xlarge);
   font-weight: var(--font-weight-medium);
 }
 
 h3 {
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-large);
 }
 
 h4 {
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-medium);
 }
 
 h5 {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-small);
 }
 
 h6 {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-xsmall);
 }
 
 p {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-small);
   line-height: 150%;
 }
 
@@ -232,23 +232,23 @@ main {
 
 @media (min-width: 768px) {
   :root {
-    --font-size-xxl: 2rem;
-    --font-size-xl: 1.75rem;
-    --font-size-l: 1.5rem;
-    --font-size-m: 1.25rem;
-    --font-size-s: 1rem;
-    --font-size-xs: 0.8rem;
+    --font-size-xxlarge: 2rem;
+    --font-size-xlarge: 1.75rem;
+    --font-size-large: 1.5rem;
+    --font-size-medium: 1.25rem;
+    --font-size-small: 1rem;
+    --font-size-xsmall: 0.8rem;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --font-size-xxl: 2.25rem;
-    --font-size-xl: 2rem;
-    --font-size-l: 1.5rem;
-    --font-size-m: 1.25rem;
-    --font-size-s: 1rem;
-    --font-size-xs: 0.8rem;
+    --font-size-xxlarge: 2.25rem;
+    --font-size-xlarge: 2rem;
+    --font-size-large: 1.5rem;
+    --font-size-medium: 1.25rem;
+    --font-size-small: 1rem;
+    --font-size-xsmall: 0.8rem;
   }
 }
 
@@ -265,13 +265,13 @@ main {
     --text-color-inverted: var(--white);
 
     --focus: var(--blue-800);
-    --action: var(--blue-500);
+    --action: var(--blue-600);
     --action-hover: var(--blue-800);
     --action-active: var(--blue-800);
     --action-visited: var(--action);
     --action-focus: var(--blue-800);
 
-    --cta-bg-color: var(--blue-500);
+    --cta-bg-color: var(--blue-600);
     --cta-text-color: var(--white);
   }
 }
