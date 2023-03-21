@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Collections() {
  return (
-  <main className={cl(styles.collections)}>
+  <main className={cl(styles.collectionPage)}>
    <header>
     <h1>{metadata.title}</h1>
     <p>{metadata.description}</p>

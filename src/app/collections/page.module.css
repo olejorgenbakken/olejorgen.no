@@ -1,22 +1,23 @@
-.collections {
+.collectionPage {
  max-width: var(--container);
  display: flex;
  flex-direction: column;
  gap: var(--spacing-18);
+ padding: 0 var(--spacing-4) var(--spacing-18) var(--spacing-4);
 }
 
-.collections ul {
+.collectionPage ul {
  display: grid;
  grid-template-columns: repeat(1, 1fr);
  gap: var(--spacing-10);
 }
 
-.collections ul li {
+.collectionPage ul li {
  list-style: none;
 }
 
 @media (min-width: 768px) {
- .collections ul {
+ .collectionPage ul {
   grid-template-columns: repeat(2, 1fr);
  }
 }
