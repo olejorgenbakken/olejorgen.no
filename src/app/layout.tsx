@@ -3,8 +3,19 @@ import Header from './componentes/header/header'
 import './globals.css'
 
 export const metadata = {
-  title: 'Ole Jørgen | UX Designer',
+  title: {
+    default: 'Ole Jørgen Bakken',
+    template: '%s | Ole Jørgen Bakken',
+  },
   description: 'UX Designer',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
 }
 
 export default function RootLayout({
@@ -14,13 +25,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content={metadata.description} />
-        <title>{metadata.title}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body>
         <Header />
         {children}
