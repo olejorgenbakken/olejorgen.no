@@ -16,11 +16,17 @@ export default function Collections() {
    </header>
    <div className={cl(styles.collections)}>
     <div className={cl(styles.collection)}>
-     <h2>App collection</h2>
+     <header>
+      <h2>App collection</h2>
+      <p>Apps I use on a daily basis.</p>
+     </header>
      <CTA href={"/collections/apps"}>See apps</CTA>
     </div>
     <div className={cl(styles.collection)}>
-     <h2>Website collection</h2>
+     <header>
+      <h2>Website collection</h2>
+      <p>Websites I use as inspiration for my work.</p>
+     </header>
      <CTA href={"/collections/websites"}>See websites</CTA>
     </div>
 
