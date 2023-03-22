@@ -265,7 +265,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 60rem;
+  min-height: 80vh;
 }
 
 @media (min-width: 768px) {
