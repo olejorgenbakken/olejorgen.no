@@ -28,7 +28,7 @@ export const websites = [
  },
  {
   category: "Design inspiration",
-  description: "Inspiring design systems.",
+  description: "Websites with inspiring design.",
   color: "var(--red-500)",
   websiteList: [
    {
@@ -45,7 +45,7 @@ export const websites = [
  },
  {
   category: "Design tools",
-  description: "Inspiring design systems.",
+  description: "Tools for designers.",
   color: "var(--purple-500)",
   websiteList: [
    {

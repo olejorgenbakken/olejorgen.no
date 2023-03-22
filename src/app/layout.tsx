@@ -1,6 +1,5 @@
 import Footer from './componentes/footer/footer'
 import Header from './componentes/header/header'
-
 import './globals.css'
 
 export const metadata = {
@@ -11,11 +10,6 @@ export const metadata = {
   description: 'UX Designer',
   icons: {
     icon: '/favicon.ico',
-  },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
   },
 }
 

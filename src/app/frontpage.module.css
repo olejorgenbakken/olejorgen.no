@@ -1,0 +1,68 @@
+.cv {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: var(--spacing-16);
+ width: 100%;
+ max-width: var(--container-large);
+ padding: 0 var(--spacing-4) var(--spacing-16) var(--spacing-4);
+ margin: 0 auto;
+}
+
+.cv .group {
+ display: flex;
+ flex-direction: column;
+ gap: var(--spacing-2);
+}
+
+.cv ul {
+ list-style: none;
+}
+
+.cv h2 {
+ font-size: var(--font-size-medium);
+ font-weight: var(--font-weight-medium);
+}
+
+.cv .projects {
+ display: flex;
+ flex-direction: column;
+ gap: var(--spacing-12);
+}
+
+.cv .employment,
+.cv .education,
+.cv .languages {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: var(--spacing-8);
+}
+
+@media (min-width: 375px) {
+ .cv .languages {
+  grid-template-columns: repeat(2, 1fr);
+ }
+}
+
+@media (min-width: 768px) {
+ .cv {
+  gap: var(--spacing-18);
+ }
+
+ .cv .group {
+  gap: var(--spacing-4);
+ }
+
+ .cv .projects {
+  gap: var(--spacing-16);
+ }
+
+ .cv .employment,
+ .cv .education {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-12);
+ }
+
+ .cv .languages {
+  grid-template-columns: repeat(4, 1fr);
+ }
+}

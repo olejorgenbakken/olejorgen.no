@@ -1,4 +1,3 @@
-import cl from 'clsx';
 import styles from "./school.module.css";
 import Link from 'next/link';
 
@@ -19,9 +18,9 @@ interface SchoolProps {
 
 function School({ school, title, description, date, cta }: SchoolProps) {
  return (
-  <li className={cl(styles.school)}>
-   <h3 className={cl(styles.title)}>{title}</h3>
-   <p className={cl(styles.description)}><span className={cl(styles.graduation)}>Graduated from <Link href={cta.url} title={`Go to ${cta.title}`} target="_blank" rel="noopener noreferrer">{school}</Link> in {date.end}.</span> {description}</p>
+  <li className={styles.school}>
+   <h3 className={styles.title}>{title}</h3>
+   <p className={styles.description}><span className="clear">Graduated from <Link href={cta.url} title={`Go to ${cta.title}`} target="_blank" rel="noopener noreferrer">{school}</Link> in {date.end}.</span> {description}</p>
   </li>
  );
 }

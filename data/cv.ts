@@ -2,7 +2,7 @@ export const education = [
  {
   school: "Kristiania University College",
   title: "Bachelor of IT, specialisation in UX design",
-  description: "The bachelor's degree in IT with specialisation in UX design is a three-year programme that focuses on the design of digital products and services. The programme is based on the principles of design thinking, and the students are taught to work in multidisciplinary teams.",
+  description: "My bachelor's programme is based on the principles of design thinking, and we were taught to work in multidisciplinary teams.",
   date: {
    start: "2018",
    end: "2021"
@@ -106,23 +106,11 @@ export const employment = [
 
 export const languages = [
  {
-  icon: "🇳🇴",
   name: "Norwegian",
   level: "Native",
  },
  {
-  icon: "🇬🇧",
   name: "English",
-  level: "Fluent",
- },
- {
-  icon: "🇸🇪",
-  name: "Swedish",
-  level: "Fluent",
- },
- {
-  icon: "🇩🇰",
-  name: "Danish",
   level: "Fluent",
  }
 ]
@@ -160,7 +148,7 @@ export const projects = [
   company: "NAV",
   title: "New unemployment benefits application",
   url: "https://nav.no/dagpenger",
-  description: "The application uses a new backend system, developed to make the process of applying for unemployment benefits more efficient and fair. The new frontend is built using the Aksel design system.",
+  description: "The application uses a new backend system, developed to make the process of applying for unemployment benefits more efficient and fair. The new frontend is built using the Aksel design system. It is currently behind a login.",
   date: {
    start: "November 2021",
    end: "August 2022"

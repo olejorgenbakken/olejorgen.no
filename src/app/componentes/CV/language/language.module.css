@@ -1,14 +1,8 @@
-.language {
- display: flex;
- flex-direction: column;
- list-style: none;
-}
-
 .language .title {
  font-size: var(--font-size-small);
- font-weight: var(--font-weight-regular);
+ font-weight: var(--font-weight-medium);
 }
 
 .language .level {
- color: var(--text-color-muted);
+ color: var(--text-muted);
 }

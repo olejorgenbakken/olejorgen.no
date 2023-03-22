@@ -1,4 +1,3 @@
-import cl from 'clsx';
 import styles from "./language.module.css";
 
 interface LanguageProps {
@@ -8,9 +7,9 @@ interface LanguageProps {
 
 function Language({ name, level }: LanguageProps) {
  return (
-  <li className={cl(styles.language)}>
-   <h3 className={cl(styles.title)}>{name}</h3>
-   <p className={cl(styles.level)}>{level}</p>
+  <li className={styles.language}>
+   <h3 className={styles.title}>{name}</h3>
+   <p className={styles.level}>{level}</p>
   </li>
  );
 }

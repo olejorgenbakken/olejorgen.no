@@ -1,4 +1,3 @@
-import cl from 'clsx';
 import styles from "./header.module.css";
 
 import Link from 'next/link';
@@ -6,10 +5,10 @@ import { about } from '../../../../data/about';
 
 function Header() {
  return (
-  <header className={cl(styles.header)}>
-   <div className={cl(styles.headerContent)}>
-    <h1><Link href="/">{about.name}</Link></h1>
-    <p>{about.title} in {about.location}</p>
+  <header className={styles.header}>
+   <div className={styles.content}>
+    <p><Link href="/" className={styles.name}>{about.name}</Link></p>
+    <p className={styles.location}>{about.title} in {about.location}</p>
    </div>
   </header>
  );

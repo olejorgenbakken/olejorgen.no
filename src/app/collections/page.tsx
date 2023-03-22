@@ -1,37 +1,35 @@
-import cl from "clsx"
-import styles from "./page.module.css"
-import CTA from "../componentes/Buttons/CTA/CTA"
+import styles from "./collections.module.css"
+import CTA from "../componentes/Button/Button"
+import Card from "../componentes/Card/Card"
 
 export const metadata = {
- title: "Collections",
- description: "A collection of apps and websites I frequent.",
+ title: 'Collections',
+ description: 'Apps and websites I use on a daily basis.',
 }
 
 export default function Collections() {
  return (
-  <main className={cl(styles.collectionPage)}>
-   <header>
-    <h1>{metadata.title}</h1>
-    <p>{metadata.description}</p>
+  <>
+   <header className={styles.header}>
+    <h1 className={styles.title}>{metadata.title}</h1>
+    <p className={styles.description}>{metadata.description}</p>
    </header>
-   <div className={cl(styles.collections)}>
-    <div className={cl(styles.collection)}>
+   <div className={styles.collectionList}>
+    <Card className={styles.collection}>
      <header>
       <h2>App collection</h2>
-      <p>Apps I use on a daily basis.</p>
+      <p className={styles.description}>Apps I use on a daily basis.</p>
      </header>
      <CTA href={"/collections/apps"}>See apps</CTA>
-    </div>
-    <div className={cl(styles.collection)}>
+    </Card>
+    <Card className={styles.collection}>
      <header>
       <h2>Website collection</h2>
-      <p>Websites I use as inspiration for my work.</p>
+      <p className={styles.description}>Websites I use as inspiration for my work.</p>
      </header>
      <CTA href={"/collections/websites"}>See websites</CTA>
-    </div>
-
+    </Card>
    </div>
-
-  </main>
+  </>
  )
 }

@@ -1,8 +1,6 @@
-import cl from 'clsx';
-import styles from "./page.module.css";
-
-import AppCard from '@/app/componentes/Card/AppCard';
+import styles from "../collections.module.css";
 import { websites } from '../../../../data/collections/websites';
+import Link from 'next/link';
 
 export const metadata = {
  title: "Website collection",
@@ -11,26 +9,29 @@ export const metadata = {
 
 export default function Websites() {
  return (
-  <main className={styles.websitePage}>
-   <header className={styles.title}>
-    <h1>{metadata.title}</h1>
-    <p>{metadata.description}</p>
+  <>
+   <header className={styles.header}>
+    <h1 className={styles.title}>{metadata.title}</h1>
+    <p className={styles.description}>{metadata.description}</p>
    </header>
-   <div className={styles.websites}>
+   <div className={styles.collectionGroups}>
     {websites.sort((a, b) => (a.category > b.category) ? 1 : ((b.category > a.category) ? -1 : 0)).map((group) => (
-     <div key={group.category} className={cl(styles.category)}>
+     <div key={group.category} className={styles.collectionGroup}>
       <header>
-       <h2 className={cl(styles.categoryTitle)}>{group.category}</h2>
-       {group.description && <p className={cl(styles.description)}>{group.description}</p>}
+       <h2 className={styles.title}>{group.category}</h2>
+       {group.description && <p>{group.description}</p>}
       </header>
-      <ul className={cl(styles.websiteList)}>
+      <ul>
        {group.websiteList.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).map((website) => (
-        <AppCard {...website} key={website.name} />
+        <li key={website.name}>
+         <Link href={website.url} title={website.name} target="_blank" rel="noopener noreferrer">{website.name}</Link>
+         <p>{website.description}</p>
+        </li>
        ))}
       </ul>
      </div>
     ))}
    </div>
-  </main >
+  </>
  )
 }
