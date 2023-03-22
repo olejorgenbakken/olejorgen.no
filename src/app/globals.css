@@ -75,6 +75,42 @@
   --purple-100: hsl(265, 100%, 90%);
   --purple-50: hsl(265, 100%, 95%);
 
+  --orange-950: hsl(30, 100%, 5%);
+  --orange-900: hsl(30, 100%, 10%);
+  --orange-800: hsl(30, 100%, 20%);
+  --orange-700: hsl(30, 100%, 30%);
+  --orange-600: hsl(30, 100%, 40%);
+  --orange-500: hsl(30, 100%, 50%);
+  --orange-400: hsl(30, 100%, 60%);
+  --orange-300: hsl(30, 100%, 70%);
+  --orange-200: hsl(30, 100%, 80%);
+  --orange-100: hsl(30, 100%, 90%);
+  --orange-50: hsl(30, 100%, 95%);
+
+  --pink-950: hsl(330, 100%, 5%);
+  --pink-900: hsl(330, 100%, 10%);
+  --pink-800: hsl(330, 100%, 20%);
+  --pink-700: hsl(330, 100%, 30%);
+  --pink-600: hsl(330, 100%, 40%);
+  --pink-500: hsl(330, 100%, 50%);
+  --pink-400: hsl(330, 100%, 60%);
+  --pink-300: hsl(330, 100%, 70%);
+  --pink-200: hsl(330, 100%, 80%);
+  --pink-100: hsl(330, 100%, 90%);
+  --pink-50: hsl(330, 100%, 95%);
+
+  --teal-950: hsl(180, 100%, 5%);
+  --teal-900: hsl(180, 100%, 10%);
+  --teal-800: hsl(180, 100%, 20%);
+  --teal-700: hsl(180, 100%, 30%);
+  --teal-600: hsl(180, 100%, 40%);
+  --teal-500: hsl(180, 100%, 50%);
+  --teal-400: hsl(180, 100%, 60%);
+  --teal-300: hsl(180, 100%, 70%);
+  --teal-200: hsl(180, 100%, 80%);
+  --teal-100: hsl(180, 100%, 90%);
+  --teal-50: hsl(180, 100%, 95%);
+
   --bg: var(--black);
   --bg-inverted: var(--white);
 
@@ -89,6 +125,8 @@
 
   --cta-bg-color: var(--blue-600);
   --cta-text-color: var(--white);
+  --cta-shadow: 0 0 11px var(--purple-700), 0 0 20px var(--purple-800);
+  --cta-shadow-hover: 0 0 11px var(--purple-600), 0 0 20px var(--purple-700);
 
   --text-color: var(--white);
   --text-color-muted: var(--gray-200);
@@ -273,5 +311,7 @@ main {
 
     --cta-bg-color: var(--blue-600);
     --cta-text-color: var(--white);
+    --cta-shadow: 0 0 11px var(--purple-100), 0 0 20px var(--purple-50);
+    --cta-shadow-hover: 0 0 11px var(--purple-200), 0 0 20px var(--purple-100);
   }
 }
