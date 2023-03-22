@@ -37,7 +37,7 @@
  padding: var(--spacing-12) var(--spacing-4);
  background: radial-gradient(circle, var(--blue-900), var(--purple-900));
  border-radius: var(--border-radius-large);
- border: 1px solid var(--blue-900);
+ border: 1px solid var(--blue-800);
 }
 
 @media (min-width: 768px) {
@@ -53,6 +53,6 @@
 @media (prefers-color-scheme: light) {
  .collection {
   background: radial-gradient(circle, var(--blue-50), var(--purple-50));
-  border: 1px solid var(--blue-50);
+  border: 1px solid var(--blue-100);
  }
 }
