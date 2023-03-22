@@ -1,7 +1,10 @@
 import styles from "./collections.module.css"
 
 export const metadata = {
- title: 'Collections',
+ title: {
+  default: "Collections",
+  template: "%s | Ole Jørgen Bakken",
+ },
  description: 'Apps and websites I use on a daily basis.',
 }
 

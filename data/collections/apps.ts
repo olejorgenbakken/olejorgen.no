@@ -8,21 +8,25 @@ export const apps = [
     name: "Twitter",
     description: "Elon Musk hellscape.",
     url: "https://apps.apple.com/us/app/twitter/id333903271",
+
    },
    {
     name: "Instagram",
     description: "Mark Zuckerberg hellscape.",
     url: "https://apps.apple.com/us/app/instagram/id389801252",
+
    },
    {
     name: "TikTok",
     description: "The only good social media app.",
     url: "https://apps.apple.com/us/app/tiktok/id835599320",
+
    },
    {
     name: "LinkedIn",
     description: "Workfluence hellscape.",
     url: "https://apps.apple.com/us/app/reddit-official-app/id1064216828",
+
    }
   ]
  },
@@ -35,16 +39,19 @@ export const apps = [
     name: "Apple Music",
     description: "Apple's music streaming service.",
     url: "https://apps.apple.com/us/app/apple-music/id1108185179",
+
    },
    {
     name: "Shazam",
     description: "Yeah I actually use it.",
     url: "https://apps.apple.com/us/app/shazam/id897118787",
+
    },
    {
     name: "MusicHarbor",
     description: "Follow upcoming releases.",
-    url: "https://apps.apple.com/us/app/musicharbor/id1481000001",
+    url: "https://apps.apple.com/us/app/musicharbor-track-new-music/id1440405750",
+
    },
   ],
  },
@@ -57,21 +64,25 @@ export const apps = [
     name: "Disney+",
     description: "Disney streaming service.",
     url: "https://apps.apple.com/us/app/disney/id1427273905",
+
    },
    {
     name: "Letterboxd",
     description: "I enjoyed the shoutout in Scream 6.",
     url: "https://apps.apple.com/us/app/letterboxd-film-journal/id1207158752",
+
    },
    {
     name: "Apple TV+",
     description: "Apple streaming service.",
     url: "https://apps.apple.com/us/app/apple-tv/id1496833156",
+
    },
    {
     name: "HBO Max",
     description: "WarnerMedia streaming service.",
     url: "https://apps.apple.com/us/app/hbo-max/id1480666471",
+
    },
   ],
  },
@@ -84,41 +95,49 @@ export const apps = [
     name: "AutoSleep",
     description: "Automatic sleep tracking.",
     url: "https://apps.apple.com/us/app/autosleep/id1277059278",
+    price: 4.99,
    },
    {
     name: "Fantasy Hike",
     description: "Hike to Mordor.",
-    url: "https://apps.apple.com/us/app/fantasy-hike/id1481000004",
+    url: "https://apps.apple.com/us/app/fantasy-hike/id1557127861",
+
    },
    {
     name: "HealthFit",
     description: "Health and fitness tracker.",
-    url: "https://apps.apple.com/us/app/healthfit/id1481000005",
+    url: "https://apps.apple.com/us/app/healthfit/id1202650514",
+    price: 4.99,
    },
    {
     name: "Redpoint",
     description: "Climbing training app.",
-    url: "https://apps.apple.com/us/app/redpoint/id1481000006",
+    url: "https://apps.apple.com/cg/app/redpoint-bouldering-climb/id1324072645",
+
    },
    {
     name: "Setgraph",
     description: "Weightlifting training app.",
-    url: "https://apps.apple.com/us/app/setgraph/id1481000007",
+    url: "https://apps.apple.com/no/app/setgraph-workout-tracker/id1209781676",
+
    },
    {
     name: "Slopes",
     description: "Skiing and snowboarding tracker.",
-    url: "https://apps.apple.com/us/app/slopes/id1481000008",
+    url: "https://apps.apple.com/ca/app/slopes-ski-snowboard/id643351983",
+
    },
    {
     name: "Strava",
     description: "Social fitness tracker.",
-    url: "https://apps.apple.com/us/app/strava/id429245458",
+    url: "https://apps.apple.com/us/app/strava-run-ride-hike/id426826309",
+
    },
    {
     name: "Any Distance",
     description: "Running tracker.",
-    url: "https://apps.apple.com/us/app/any-distance/id1481000002",
+    url: "https://apps.apple.com/md/app/any-distance-share-workouts/id1545233932",
+
    },
   ]
  },
@@ -130,12 +149,14 @@ export const apps = [
    {
     name: "Holedown",
     description: "A fun little game where you shoot down holes in the ground.",
-    url: "https://apps.apple.com/us/app/a-dark-room/id1481000009",
+    url: "https://apps.apple.com/us/app/holedown/id1297270249",
+    price: 3.99,
    },
    {
     name: "Kahoot!",
     description: "Trivia and group games.",
-    url: "https://apps.apple.com/us/app/kahoot!/id469463298",
+    url: "https://apps.apple.com/us/app/kahoot-play-create-quizzes/id1131203560",
+
    }
   ]
  },
@@ -148,6 +169,7 @@ export const apps = [
     name: "Wikipedia",
     description: "The free encyclopedia.",
     url: "https://apps.apple.com/us/app/wikipedia/id324715238",
+
    },
   ],
  },
@@ -160,16 +182,19 @@ export const apps = [
     name: "Flighty",
     description: "Flight tracking.",
     url: "https://apps.apple.com/us/app/flighty/id1481000010",
+
    },
    {
     name: "Ruter",
     description: "Public transportation in Oslo.",
     url: "https://apps.apple.com/us/app/ruter/id1481000011",
+
    },
    {
     name: "Vy",
     description: "Public transportation in Norway.",
     url: "https://apps.apple.com/us/app/vy/id1481000012",
+
    },
   ],
  },

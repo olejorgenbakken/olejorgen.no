@@ -21,17 +21,26 @@ export default function Websites() {
        <h2 className={styles.title}>{group.category}</h2>
        {group.description && <p>{group.description}</p>}
       </header>
-      <ul>
-       {group.websiteList.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).map((website) => (
-        <li key={website.name}>
-         <Link href={website.url} title={website.name} target="_blank" rel="noopener noreferrer">{website.name}</Link>
-         <p>{website.description}</p>
-        </li>
-       ))}
-      </ul>
+      <table className={styles.table}>
+       <thead>
+        <th className={styles.name}>Name</th>
+        <th>Description</th>
+       </thead>
+       <tbody>
+        {group.websiteList.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)).map((site) => (
+         <tr key={site.name}>
+          <td className={styles.name}><Link href={site.url} title={site.name} target="_blank" rel="noopener noreferrer">{site.name}</Link></td>
+          <td className={styles.description}>{site.description}</td>
+         </tr>
+        ))}
+       </tbody>
+      </table>
      </div>
     ))}
    </div>
+   <footer className={styles.footer}>
+    <Link href="/collections" title="Go to collections">Go back to collections</Link>
+   </footer>
   </>
  )
 }

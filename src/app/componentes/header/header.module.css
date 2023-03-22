@@ -1,5 +1,7 @@
 .header {
  width: 100%;
+ background: var(--surface);
+ margin-bottom: var(--spacing-12);
 }
 
 .content {
@@ -7,7 +9,7 @@
  max-width: var(--container-large);
  display: grid;
  align-items: center;
- padding: var(--spacing-4) var(--spacing-4) var(--spacing-12) var(--spacing-4);
+ padding: var(--spacing-4);
  margin: 0 auto;
 }
 
@@ -25,6 +27,5 @@
  .content {
   grid-template-columns: max-content 1fr;
   gap: var(--spacing-8);
-  padding: var(--spacing-8) var(--spacing-4) var(--spacing-18) var(--spacing-4);
  }
 }

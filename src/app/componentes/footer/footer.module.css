@@ -1,7 +1,8 @@
 .footer {
  width: 100%;
+ margin-top: var(--spacing-16);
+ background: var(--surface);
 }
-
 
 .content {
  width: 100%;
@@ -10,7 +11,7 @@
  display: grid;
  grid-template-columns: 1fr;
  gap: var(--spacing-4);
- padding: var(--spacing-12) var(--spacing-4) var(--spacing-8) var(--spacing-4);
+ padding: var(--spacing-8) var(--spacing-4) var(--spacing-16) var(--spacing-4);
 }
 
 .content h2 {

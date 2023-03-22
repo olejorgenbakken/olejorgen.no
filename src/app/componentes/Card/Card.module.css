@@ -1,21 +1,40 @@
 .card {
+ position: relative;
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
  text-align: center;
+ color: var(--white);
  width: 100%;
  gap: var(--spacing-8);
  padding: var(--spacing-12);
- background: radial-gradient(100% 100% at 50% 50%,
-   var(--surface) 0%,
-   var(--bg) 100%);
  border: var(--border);
  border-radius: var(--border-radius-medium);
+ overflow: hidden;
+}
+
+.card>* {
+ z-index: 1;
+}
+
+.card .title {
+ font-size: var(--font-size-medium);
+ font-weight: var(--font-weight-medium);
+}
+
+.card img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ z-index: 0;
 }
 
 @media (min-width: 1200px) {
  .card {
-  padding: var(--spacing-12);
+  padding: var(--spacing-20) var(--spacing-12);
  }
 }

@@ -15,21 +15,19 @@ export default function Collections() {
     <p className={styles.description}>{metadata.description}</p>
    </header>
    <div className={styles.collectionList}>
-    <Card className={styles.collection}>
-     <header>
-      <h2>App collection</h2>
-      <p className={styles.description}>Apps I use on a daily basis.</p>
-     </header>
-     <CTA href={"/collections/apps"}>See apps</CTA>
-    </Card>
-    <Card className={styles.collection}>
-     <header>
-      <h2>Website collection</h2>
-      <p className={styles.description}>Websites I use as inspiration for my work.</p>
-     </header>
-     <CTA href={"/collections/websites"}>See websites</CTA>
-    </Card>
-   </div>
+    <Card
+     title="App collection"
+     description="Apps I use on a daily basis"
+     url={{ href: "/collections/apps", text: "See apps" }}
+     image={{ src: "/images/apps.jpg", alt: "", width: 800, height: 600, position: "center" }}
+    />
+    <Card
+     title="Website collection"
+     description="Websites I use as inspiration for my work"
+     url={{ href: "/collections/websites", text: "See websites" }}
+     image={{ src: "/images/websites.jpg", alt: "", width: 800, height: 600, position: "bottom" }}
+    />
+   </div >
   </>
  )
 }

@@ -2,7 +2,7 @@ import styles from "./Button.module.css";
 import React from 'react';
 import Link from 'next/link';
 
-interface CTAProps {
+interface ButtonProps {
  children: React.ReactNode;
  href: string;
  rel?: string;
@@ -10,10 +10,10 @@ interface CTAProps {
  target?: string;
 }
 
-export function CTA({ children, href, rel, title, target }: CTAProps) {
+export function Button({ children, href, rel, title, target }: ButtonProps) {
  return (
   <Link className={styles.button} href={href} title={title} target={target} rel={rel ? "noopener noreferrer" : ""}>{children}</Link>
  );
 }
 
-export default CTA;
+export default Button;

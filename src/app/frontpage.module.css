@@ -4,7 +4,7 @@
  gap: var(--spacing-16);
  width: 100%;
  max-width: var(--container-large);
- padding: 0 var(--spacing-4) var(--spacing-16) var(--spacing-4);
+ padding: 0 var(--spacing-4);
  margin: 0 auto;
 }
 

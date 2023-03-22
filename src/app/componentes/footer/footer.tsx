@@ -16,6 +16,7 @@ function Footer() {
       ))}
      </ul>
     </li>
+
     <li className={styles.group}>
      <h2 className={styles.categoryTitle}>Social media</h2>
      <ul>
@@ -26,6 +27,15 @@ function Footer() {
       ))}
      </ul>
     </li>
+
+    <li className={styles.group}>
+     <h2 className={styles.categoryTitle}>Collections</h2>
+     <ul>
+      <li><Link href="/collections/apps" title="Go to apps">Apps</Link></li>
+      <li><Link href="/collections/websites" title="Go to websites">Websites</Link></li>
+     </ul>
+    </li>
+
    </ul>
   </footer >
  );

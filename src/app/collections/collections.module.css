@@ -16,17 +16,18 @@
  width: 100%;
  display: grid;
  grid-template-columns: 1fr;
- gap: var(--spacing-8);
  padding: var(--spacing-4);
  margin: 0 auto;
 }
 
 .collectionList {
  max-width: var(--container-xlarge);
+ gap: var(--spacing-8);
 }
 
 .collectionGroups {
  max-width: var(--container-large);
+ gap: var(--spacing-16);
 }
 
 .collectionGroup {
@@ -48,24 +49,20 @@
  margin-bottom: var(--spacing-4);
 }
 
-@media (min-width: 576px) {
- .collectionGroups {
-  grid-template-columns: repeat(2, 1fr);
- }
+.table .name {
+ width: 20%;
+ font-weight: var(--font-weight-medium);
+}
+
+.footer {
+ width: 100%;
+ max-width: var(--container-large);
+ margin: 0 auto;
+ padding: 0 var(--spacing-4);
 }
 
 @media (min-width: 768px) {
  .CollectionLayout {
   gap: var(--spacing-8);
- }
-}
-
-@media (min-width: 1200px) {
- .collectionList {
-  grid-template-columns: repeat(2, 1fr);
- }
-
- .collectionGroups {
-  grid-template-columns: repeat(3, 1fr);
  }
 }
