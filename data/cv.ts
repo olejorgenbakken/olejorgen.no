@@ -117,17 +117,17 @@ export const languages = [
 
 export const projects = [
   {
-  company: "Me",
+  company: "Myself/NAV",
   title: "Aksel Icons Figma plugin",
-  description: "A Figma plugin to easily insert icons from the Aksel design system. The plugin is still awaiting review from Figma.",
+  description: "A Figma plugin to easily insert icons from the Aksel design system.",
   date: {
    start: "March 2023",
    end: "March 2023"
     },
    cta: {
-    text: "View repository",
-    url: "https://github.com/olejorgenbakken/aksel-icons",
-    title: "Github repository"
+    text: "View plugin",
+    url: "https://www.figma.com/community/plugin/1221057403873975172",
+    title: "Figma plugin"
    }
   },
  {
