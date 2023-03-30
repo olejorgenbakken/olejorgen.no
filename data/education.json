@@ -1,0 +1,44 @@
+[
+ {
+  "school": "Kristiania University College",
+  "title": "Bachelor of IT, specialisation in UX design",
+  "description": "My bachelor's programme is based on the principles of design thinking, and we were taught to work in multidisciplinary teams.",
+  "date": {
+   "start": "2018",
+   "end": "2021"
+  },
+  "cta": {
+   "text": "View school website",
+   "url": "https://www.kristiania.no",
+   "title": "Kristiania University College"
+  }
+ },
+ {
+  "school": "University of Oslo",
+  "title": "One-year unit in gender studies",
+  "description": "The programme worked as an introduction to issues relating to gender, feminism, gender equality, power, and knowledge production.",
+  "date": {
+   "start": "2017",
+   "end": "2018"
+  },
+  "cta": {
+   "text": "View school website",
+   "url": "https://www.uio.no",
+   "title": "University of Oslo"
+  }
+ },
+ {
+  "school": "Volda University College",
+  "title": "One-year unit in media and communication",
+  "description": "The programme focused on the design of digital products and services and how to use social media effectively.",
+  "date": {
+   "start": "2016",
+   "end": "2017"
+  },
+  "cta": {
+   "text": "View school website",
+   "url": "https://www.hivolda.no",
+   "title": "Volda University College"
+  }
+ }
+]

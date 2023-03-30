@@ -35,7 +35,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/icons/WeightIcon.tsx.tsx",
-    "src/app/icons/WeightIcon.tsx"
+    "src/app/icons/WeightIcon.tsx",
+    "data/cv.json"
   ],
   "exclude": [
     "node_modules"

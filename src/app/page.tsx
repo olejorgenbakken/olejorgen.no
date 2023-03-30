@@ -1,5 +1,10 @@
 import styles from "./frontpage.module.css";
-import { education, employment, projects, languages } from '../../data/cv';
+
+import education from '../../data/education.json';
+import employment from '../../data/employment.json';
+import languages from '../../data/languages.json';
+import projects from '../../data/projects.json';
+
 import Project from './componentes/CV/project/project'
 import School from './componentes/CV/school/school';
 import Job from './componentes/CV/job/job';
