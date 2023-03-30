@@ -1,7 +1,7 @@
 import styles from "./header.module.css";
 
 import Link from 'next/link';
-import about from '../../../../data/about.json';
+import about from '../../data/about.json';
 
 function Header() {
  return (

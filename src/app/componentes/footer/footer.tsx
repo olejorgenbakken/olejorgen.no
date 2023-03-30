@@ -1,5 +1,5 @@
 import styles from "./footer.module.css";
-import about from '../../../../data/about.json';
+import links from '../../data/links.json';
 import Link from "next/link";
 
 function Footer() {
@@ -9,7 +9,7 @@ function Footer() {
     <li className={styles.category}>
      <h2 className={styles.categoryTitle}>Portfolio</h2>
      <ul>
-      {about.portfolio.map((site) => (
+      {links.portfolio.map((site) => (
        <li key={site.name}>
         <Link href={site.url} title={site.name} target="_blank" rel="noopener noreferrer">{site.name}</Link>
        </li>
@@ -20,7 +20,7 @@ function Footer() {
     <li className={styles.group}>
      <h2 className={styles.categoryTitle}>Social media</h2>
      <ul>
-      {about.social.map((site) => (
+      {links.social.map((site) => (
        <li key={site.name}>
         <Link href={site.url} title={site.name} target="_blank" rel="noopener noreferrer">{site.name}</Link>
        </li>
