@@ -8,7 +8,6 @@ function Header() {
   <header className={styles.header}>
    <div className={styles.content}>
     <p><Link href="/" className={styles.name}>{about.name}</Link></p>
-    <p className={styles.location}>{about.title} in {about.location}</p>
    </div>
   </header>
  );

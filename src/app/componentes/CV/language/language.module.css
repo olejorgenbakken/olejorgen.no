@@ -1,8 +1,0 @@
-.language .title {
- font-size: var(--font-size-small);
- font-weight: var(--font-weight-medium);
-}
-
-.language .level {
- color: var(--text-muted);
-}

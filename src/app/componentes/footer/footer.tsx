@@ -1,35 +1,13 @@
 import styles from "./footer.module.css";
-import links from '../../data/links.json';
+import about from '../../data/about.json';
 import Link from "next/link";
 
-function Footer() {
+export default function Footer() {
  return (
   <footer className={styles.footer}>
-   <ul className={styles.content}>
-    <li className={styles.category}>
-     <h2 className={styles.categoryTitle}>Portfolio</h2>
-     <ul>
-      {links.portfolio.map((site) => (
-       <li key={site.name}>
-        <Link href={site.url} title={site.name} target="_blank" rel="noopener noreferrer">{site.name}</Link>
-       </li>
-      ))}
-     </ul>
-    </li>
-
-    <li className={styles.group}>
-     <h2 className={styles.categoryTitle}>Social media</h2>
-     <ul>
-      {links.social.map((site) => (
-       <li key={site.name}>
-        <Link href={site.url} title={site.name} target="_blank" rel="noopener noreferrer">{site.name}</Link>
-       </li>
-      ))}
-     </ul>
-    </li>
-   </ul>
-  </footer >
+   <div className={styles.content}>
+    <p className={styles.tagline}>{about.name}. {about.title} in {about.location}. <Link href="/cv" title="Go to my CV">Work and education</Link></p>
+   </div>
+  </footer>
  );
 }
-
-export default Footer;

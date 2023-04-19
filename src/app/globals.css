@@ -126,7 +126,7 @@
   --border: 1px solid var(--gray-900);
   --border-muted: 1px solid var(--gray-950);
 
-  --font-family: 'Inter', sans-serif;
+  --font-family-sans-serif: 'Inter', sans-serif;
 
   --font-size-xxlarge: 1.7rem;
   --font-size-xlarge: 1.6rem;
@@ -184,7 +184,7 @@ html,
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: var(--font-family);
+  font-family: var(--font-family-sans-serif);
   margin: 0;
 }
 
@@ -199,7 +199,8 @@ h6 {
 
 h1 {
   font-size: var(--font-size-xxlarge);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-normal);
+  margin: var(--spacing-8) 0 var(--spacing-4) 0;
 }
 
 h2,
@@ -212,6 +213,7 @@ h6 {
 
 h2 {
   font-size: var(--font-size-xlarge);
+  margin: var(--spacing-12) 0 var(--spacing-4) 0;
 }
 
 h3 {
@@ -232,6 +234,8 @@ h6 {
 
 p {
   font-size: var(--font-size-small);
+  margin-bottom: var(--spacing-12);
+  max-width: var(--container-medium);
 }
 
 a {
@@ -254,21 +258,6 @@ a {
 main {
   width: 100%;
   margin: 0 auto;
-}
-
-table {
-  border-spacing: 0;
-}
-
-th,
-td {
-  padding: var(--spacing-2);
-  text-align: left;
-  border: var(--border)
-}
-
-th {
-  font-weight: var(--font-weight-medium);
 }
 
 .visuallyhidden {

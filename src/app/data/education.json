@@ -7,7 +7,7 @@
    "start": "2018",
    "end": "2021"
   },
-  "cta": {
+  "link": {
    "text": "View school website",
    "url": "https://www.kristiania.no",
    "title": "Kristiania University College"
@@ -21,7 +21,7 @@
    "start": "2017",
    "end": "2018"
   },
-  "cta": {
+  "link": {
    "text": "View school website",
    "url": "https://www.uio.no",
    "title": "University of Oslo"
@@ -35,7 +35,7 @@
    "start": "2016",
    "end": "2017"
   },
-  "cta": {
+  "link": {
    "text": "View school website",
    "url": "https://www.hivolda.no",
    "title": "Volda University College"

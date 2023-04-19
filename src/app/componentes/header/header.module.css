@@ -1,31 +1,15 @@
 .header {
  width: 100%;
- background: var(--surface);
  margin-bottom: var(--spacing-12);
 }
 
 .content {
  width: 100%;
  max-width: var(--container-large);
- display: grid;
- align-items: center;
- padding: var(--spacing-4);
+ padding: var(--spacing-4) var(--spacing-4) 0 var(--spacing-4);
  margin: 0 auto;
 }
 
 .content .name {
- font-size: var(--font-size-medium);
- font-weight: var(--font-weight-medium);
  text-decoration: none;
-}
-
-.content .location {
- font-size: var(--font-size-small);
-}
-
-@media (min-width: 768px) {
- .content {
-  grid-template-columns: max-content 1fr;
-  gap: var(--spacing-8);
- }
 }

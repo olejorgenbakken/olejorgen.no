@@ -1,3 +1,13 @@
+.school {
+ display: flex;
+ flex-direction: column;
+ gap: var(--spacing-1);
+}
+
+.school .schoolName {
+ margin-bottom: 0;
+}
+
 .school .description {
  color: var(--text-muted);
 }
