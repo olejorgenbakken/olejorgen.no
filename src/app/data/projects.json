@@ -45,7 +45,7 @@
     "company": "NAV",
     "title": "New unemployment benefits application",
     "url": "https://nav.no/dagpenger",
-    "description": "The application uses a new backend system, developed to make the process of applying for unemployment benefits more efficient and fair. The new frontend is built using the Aksel design system. It's currently behind a login.",
+    "description": "The application uses a new backend system, developed to make the process of applying for unemployment benefits more efficient and fair. The new frontend is built using the Aksel design system. It is currently behind a login.",
     "date": {
       "start": "November 2021",
       "end": "August 2022"
