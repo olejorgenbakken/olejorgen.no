@@ -7,7 +7,7 @@ export default function Home() {
     <main className={styles.frontpage}>
       <h1 className="visuallyhidden">Ole Jørgen Bakken</h1>
       <section className={styles.projects}>
-        <h2>Things I've worked on</h2>
+        <h2>Things I have worked on</h2>
         <ul>
           {projects.map((project) => (
             <Project key={project.title} {...project} />
