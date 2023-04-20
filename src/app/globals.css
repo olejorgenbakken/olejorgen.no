@@ -114,7 +114,7 @@
   --bg: var(--black);
   --bg-inverted: var(--white);
 
-  --surface: var(--gray-900);
+  --surface: var(--gray-800);
 
   --button-bg: var(--blue-600);
   --button-text: var(--white);
