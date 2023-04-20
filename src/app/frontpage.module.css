@@ -1,6 +1,7 @@
 .frontpage {
  max-width: var(--container-large);
- padding: 0 var(--spacing-4);
+ padding-left: var(--spacing-4);
+ padding-right: var(--spacing-4);
 }
 
 .about p {
