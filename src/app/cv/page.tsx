@@ -21,7 +21,7 @@ function renderWork() {
    <ul className={styles.employment}>
     {work &&
      work.map((job) => (
-      <li className={styles.job}>
+      <li className={styles.job} key={job.title}>
        <h3 className={styles.title}>
         {job.title} at <Link href={job.url} title={`Go to ${job.company}`} target="_blank" rel="noopener noreferrer" className={styles.company}>{job.company}</Link>
        </h3>
@@ -41,9 +41,9 @@ function renderEducation() {
    <ul className={styles.education}>
     {education &&
      education.map((school) => (
-      <li className={styles.school}>
+      <li className={styles.school} key={school.name}>
        <h3 className={styles.title}>{school.title}</h3>
-       <p className={styles.schoolName}>Graduated from {school.school} in {school.date.end}.</p>
+       <p className={styles.schoolName}>Graduated from {school.name} in {school.date.end}.</p>
        <p className={styles.description}>{school.description}</p>
       </li>
      ))}
