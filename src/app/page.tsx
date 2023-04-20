@@ -31,7 +31,7 @@ export default async function Home() {
       <h1 className="visuallyhidden">Ole Jørgen Bakken</h1>
       {github && <section className={styles.about}>
         <h2 className={styles.title}>About me</h2>
-        <p>I'm {github.name}. I work as an interaction designer working {github.company} in {github.location}.</p>
+        <p>My name is {github.name}. I work as an interaction designer working {github.company} in {github.location}.</p>
       </section>}
 
       <section className={styles.projects}>
