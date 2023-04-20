@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import Link from 'next/link';
 import about from '../../data/about.json';
 
-function Header() {
+export default function Header() {
  return (
   <header className={styles.header}>
    <div className={styles.content}>
@@ -12,5 +12,3 @@ function Header() {
   </header>
  );
 }
-
-export default Header;
