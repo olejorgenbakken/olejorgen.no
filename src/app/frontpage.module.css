@@ -1,8 +1,16 @@
 .frontpage {
- padding: 0 var(--spacing-4);
  max-width: var(--container-large);
+ padding: 0 var(--spacing-4);
+}
+
+.about p {
+ margin-bottom: 0;
 }
 
 .project {
  list-style-type: none;
+}
+
+.project h3 {
+ margin: 0
 }

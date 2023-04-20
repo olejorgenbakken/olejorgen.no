@@ -6,10 +6,17 @@
 .content {
  width: 100%;
  max-width: var(--container-large);
- padding: var(--spacing-4) var(--spacing-4) 0 var(--spacing-4);
+ padding: var(--spacing-8) var(--spacing-4);
  margin: 0 auto;
 }
 
-.content .name {
+.content ul {
+ display: flex;
+ align-items: center;
+ gap: var(--spacing-8);
+ list-style: none;
+}
+
+.content a.active {
  text-decoration: none;
 }

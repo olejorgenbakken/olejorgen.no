@@ -1,14 +1,22 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+
 import styles from "./header.module.css";
 
 import Link from 'next/link';
-import about from '../../data/about.json';
 
 export default function Header() {
+ const pathname = usePathname();
+
  return (
   <header className={styles.header}>
-   <div className={styles.content}>
-    <p><Link href="/" className={styles.name}>{about.name}</Link></p>
-   </div>
+   <nav className={styles.content}>
+    <ul>
+     <li><Link href="/" className={pathname === '/' ? styles.active : ''} title="Go to frontpage">Home</Link></li>
+     <li><Link href="/cv" className={pathname === '/cv' ? styles.active : ''} title="Go to CV">CV</Link></li>
+    </ul>
+   </nav>
   </header>
  );
 }
