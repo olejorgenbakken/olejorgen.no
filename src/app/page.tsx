@@ -1,60 +1,76 @@
 import styles from "./frontpage.module.css";
-import projects from './data/projects.json';
-import Link from "next/link";
-import { Octokit } from "octokit";
+import Link from 'next/link';
 
-interface Link {
-  url: string;
-  title: string;
+import { Octokit } from "@octokit/core";
+
+const octokit = new Octokit({});
+const username = 'olejorgenbakken';
+const apiVersion = '2022-11-28';
+
+async function getUserInfo() {
+  const res = await octokit.request('GET /users/{username}', {
+    username: username,
+    headers: {
+      'X-GitHub-Api-Version': apiVersion
+    },
+    sort: 'updated',
+    direction: 'desc',
+    type: 'all',
+  })
+
+  return res.data;
 }
 
-interface Project {
-  title: string;
-  description: string;
-  link?: Link;
+async function getRepos() {
+  const res = await octokit.request('GET /users/{username}/repos', {
+    username: username,
+    headers: {
+      'X-GitHub-Api-Version': apiVersion
+    },
+    sort: 'updated',
+    direction: 'desc',
+    type: 'all',
+  })
+
+  return res.data;
 }
 
-async function getGithubData() {
-  const octokit = new Octokit({});
-  const res = await octokit.request("GET /users/{username}", {
-    username: "olejorgenbakken",
-  });
+async function getSocials() {
+  const res = await octokit.request('GET /users/{username}/social_accounts', {
+    username: username,
+    headers: {
+      'X-GitHub-Api-Version': apiVersion
+    }
+  })
 
   return res.data;
 }
 
 export default async function Home() {
-  const github = await getGithubData();
+  const user = await getUserInfo();
+  const repos = await getRepos();
+  const socials = await getSocials();
 
   return (
     <main className={styles.frontpage}>
-      <h1 className="visuallyhidden">Ole Jørgen Bakken</h1>
-      {github && <section className={styles.about}>
-        <h2 className={styles.title}>About me</h2>
-        <p>My name is {github.name}. I work as an interaction designer {github.company} in {github.location}.</p>
-      </section>}
-
-      <section className={styles.projects}>
-        <h2>Things I have worked on</h2>
-        <ul>
-          {projects.map((project) => renderProject(project))}
-        </ul>
-      </section>
-
-      <section className={styles.social}>
-        <h2>Socials</h2>
-        {github && <p>Find me on <Link href={github.html_url} title="Github profile" target="_blank" rel="noopener noreferrer">Github</Link>.</p>}
-      </section>
-    </main>
-  )
-}
-
-function renderProject(project: Project) {
-  const { title, description, link } = project
-  return (
-    <li className={styles.project}>
-      <h3 className={styles.title}>{link ? <Link href={link.url} title={link.title} target="_blank" rel="noopener noreferrer" className={styles.company}>{title}</Link> : title}</h3>
-      <p className={styles.description}>{description}</p>
-    </li >
+      <h1 className={styles.heading}>{user.name}</h1>
+      {user.company && <p className={styles.work}>Jeg jobber hos {user.company.slice(1)} {user.location && `i ${user.location}`}.</p>}
+      <h2>Det siste jeg har jobbet på</h2>
+      <ul className={styles.repos}>
+        {repos.map(repo => (
+          <li key={repo.id} className={styles.repo}>
+            <Link href={repo.html_url} title={repo.name}>{repo.name}</Link> - sist oppdatert: {new Date(repo.updated_at).toLocaleDateString()}
+          </li>
+        ))}
+      </ul>
+      <h2>Andre steder å finne meg</h2>
+      <ul className={styles.links}>
+        {socials.map(social => (
+          <li key={social.id} className={styles.link}>
+            <Link href={social.url} title={social.provider}>{social.provider}</Link>
+          </li>
+        ))}
+      </ul>
+    </main >
   )
 }

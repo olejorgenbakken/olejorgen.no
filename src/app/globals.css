@@ -111,22 +111,20 @@
   --teal-100: hsl(180, 100%, 90%);
   --teal-50: hsl(180, 100%, 95%);
 
-  --bg: var(--black);
-  --bg-inverted: var(--white);
+  --bg: var(--white);
+  --bg-inverted: var(--black);
 
-  --surface: var(--gray-800);
+  --surface: var(--gray-100);
 
   --button-bg: var(--blue-600);
   --button-text: var(--white);
 
-  --text: var(--white);
-  --text-muted: var(--gray-300);
-  --text-inverted: var(--black);
-
-  --border: 1px solid var(--gray-900);
-  --border-muted: 1px solid var(--gray-950);
+  --text: var(--black);
+  --text-muted: var(--gray-700);
+  --text-inverted: var(--white);
 
   --font-family-sans-serif: 'Inter', sans-serif;
+  --font-family-serif: 'Gloock', serif;
 
   --font-size-xxlarge: 1.7rem;
   --font-size-xlarge: 1.6rem;
@@ -199,16 +197,16 @@ h6 {
 
 h1 {
   font-size: var(--font-size-xxlarge);
-  font-weight: var(--font-weight-normal);
   margin: var(--spacing-8) 0 var(--spacing-4) 0;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
 }
 
 h2 {
@@ -266,16 +264,8 @@ main {
   padding-bottom: var(--spacing-12);
 }
 
-.visuallyhidden {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-  clip-path: inset(0px 0px 99.9% 99.9%);
-  overflow: hidden;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  border: 0;
+ul {
+  padding-left: var(--spacing-6);
 }
 
 @media (min-width: 768px) {
@@ -297,21 +287,5 @@ main {
     --font-size-medium: 1.25rem;
     --font-size-small: 1rem;
     --font-size-xsmall: 0.8rem;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: var(--white);
-    --bg-inverted: var(--black);
-
-    --surface: var(--gray-50);
-
-    --text: var(--black);
-    --text-muted: var(--gray-600);
-    --text-inverted: var(--white);
-
-    --border: 1px solid var(--gray-100);
-    --border-muted: 1px solid var(--gray-50);
   }
 }

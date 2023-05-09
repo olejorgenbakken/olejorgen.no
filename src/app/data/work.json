@@ -1,60 +1,48 @@
 [
  {
   "company": "Fremtind",
-  "title": "UX designer",
+  "title": "Interaksjonsdesigner",
   "url": "https://fremtind.no",
-  "date": {
-   "start": "April 2023"
-  }
+  "start": "2023-04"
  },
  {
   "company": "NAV IT",
-  "title": "Product designer",
+  "title": "Produktdesigner",
   "description": "",
   "url": "https://detsombetyrnoe.no",
-  "date": {
-   "start": "November 2021",
-   "end": "March 2023"
-  }
+  "start": "2021-11",
+  "end": "2023-03"
  },
  {
   "company": "Vipps",
-  "title": "UX designer",
-  "description": "I worked with about 10 other students on a project we called Vipps Donate. The goal was to create a new way for people to donate money to charities. We used Figma to create a prototype and then tested it with real users.",
+  "title": "Interaksjonsdesigner",
+  "description": "Jeg jobbet sammen med rundt 10 andre IT-studenter for å lage en prototype på en løsning hvor veldedige organisasjoner kunne få donasjoner fra Vipps-brukere.",
   "url": "https://vipps.no",
-  "date": {
-   "start": "June 2021",
-   "end": "August 2021"
-  }
+  "start": "2021-06",
+  "end": "2021-08"
  },
  {
   "company": "Shortcut",
-  "title": "UX designer",
-  "description": "Through our bachelor's thesis we worked with Shortcut on a project to create an Android app for one of their existing customers. We ended up using Jetpack Compose while it was in it's beta phase, and focused on the performance and accessibility compared to the old framework.",
+  "title": "Interaksjons- og visuell designer",
+  "description": "Bacheloroppgaven min gikk ut på å lage en Android applikasjon for en kunde hos Shortcut sammen med 3 utviklere.",
   "url": "https://shortcut.no",
-  "date": {
-   "start": "January 2021",
-   "end": "June 2021"
-  }
+  "start": "2021-01",
+  "end": "2021-06"
  },
  {
   "company": "Kristiania University College",
-  "title": "Student assistant",
-  "description": "I helped students with their projects and assignments in courses relating to web development, creative web projects and database programming.",
+  "title": "Veileder",
+  "description": "Veilederjobben gikk ut på å hjelpe studenter med å forstå pensum og forberede seg til eksamen i diverse design- og programmeringsemner. I tillegg hjalp veilederne til med å rette arbeidskrav.",
   "url": "https://kristiania.no",
-  "date": {
-   "start": "August 2019",
-   "end": "June 2021"
-  }
+  "start": "2019-08",
+  "end": "2021-06"
  },
  {
   "company": "Flow Digital",
-  "title": "Developer and UX designer",
-  "description": "The majority of my work was focused on making reusable components for different Wordpress sites. I also worked on the design of the sites.",
+  "title": "Uvikler og designer",
+  "description": "Jeg jobbet med å lage enkle nettsider gjennom Wordpress.",
   "url": "https://flowdigital.no",
-  "date": {
-   "start": "September 2019",
-   "end": "February 2020"
-  }
+  "start": "2019-09",
+  "end": "2020-02"
  }
 ]

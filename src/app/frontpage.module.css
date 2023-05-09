@@ -4,14 +4,10 @@
  padding-right: var(--spacing-4);
 }
 
-.about p {
- margin-bottom: 0;
+.repos {
+ padding-left: var(--spacing-4);
 }
 
-.project {
- list-style-type: none;
-}
-
-.project h3 {
- margin: 0
+.repo {
+ margin-bottom: var(--spacing-4);
 }

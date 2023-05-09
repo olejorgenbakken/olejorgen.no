@@ -1,44 +1,16 @@
 [
  {
-  "name": "Kristiania University College",
-  "title": "Bachelor of IT, specialisation in UX design",
-  "description": "My bachelor's programme is based on the principles of design thinking, and we were taught to work in multidisciplinary teams.",
-  "date": {
-   "start": "2018",
-   "end": "2021"
-  },
-  "link": {
-   "text": "View school website",
-   "url": "https://www.kristiania.no",
-   "title": "Kristiania University College"
-  }
+  "school": "Høyskolen Kristiania",
+  "title": "Bachelorgrad i interaksjonsdesign",
+  "description": "Bachelorgraden i interaksjonsdesign er en tverrfaglig utdanning som kombinerer fagområdene design, teknologi og psykologi. Studiet gir deg kompetanse til å utvikle brukervennlige digitale produkter og tjenester.",
+  "start": 2018,
+  "end": 2021
  },
  {
-  "name": "University of Oslo",
-  "title": "One-year unit in gender studies",
-  "description": "The programme worked as an introduction to issues relating to gender, feminism, gender equality, power, and knowledge production.",
-  "date": {
-   "start": "2017",
-   "end": "2018"
-  },
-  "link": {
-   "text": "View school website",
-   "url": "https://www.uio.no",
-   "title": "University of Oslo"
-  }
- },
- {
-  "name": "Volda University College",
-  "title": "One-year unit in media and communication",
-  "description": "The programme focused on the design of digital products and services and how to use social media effectively.",
-  "date": {
-   "start": "2016",
-   "end": "2017"
-  },
-  "link": {
-   "text": "View school website",
-   "url": "https://www.hivolda.no",
-   "title": "Volda University College"
-  }
+  "school": "Høgskulen i Volda",
+  "title": "Årsstudium i mediefag",
+  "description": "Årsstudiet i mediefag gir deg en innføring i mediebransjen og medieproduksjon. Du lærer om medienes historie, medieøkonomi, mediepolitikk, medieetikk, medieledelse, medieproduksjon og medieanalyse.",
+  "start": 2016,
+  "end": 2017
  }
 ]
