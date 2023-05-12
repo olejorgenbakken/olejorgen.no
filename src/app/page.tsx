@@ -1,7 +1,22 @@
+import RelativeTime from '@yaireo/relative-time'
+
 import styles from "./frontpage.module.css";
 import Link from 'next/link';
 
 import { Octokit } from "@octokit/core";
+import { Tag } from "./components/tag/tag";
+import { Card } from "./components/card/card";
+
+const relativeTime = new RelativeTime({ locale: 'no' });
+
+var units = {
+  year: 24 * 60 * 60 * 1000 * 365,
+  month: 24 * 60 * 60 * 1000 * 365 / 12,
+  day: 24 * 60 * 60 * 1000,
+  hour: 60 * 60 * 1000,
+  minute: 60 * 1000,
+  second: 1000
+};
 
 const octokit = new Octokit({});
 const username = 'olejorgenbakken';
@@ -57,9 +72,13 @@ export default async function Home() {
       {user.company && <p className={styles.work}>{user.bio} {user.location && `i ${user.location}`}.</p>}
       <h2>Det siste jeg har jobbet på</h2>
       <ul className={styles.repos}>
-        {repos.map((repo: any) => (
+        {repos.filter((repo: any) => repo.fork === false).map((repo: any) => (
           <li key={repo.id} className={styles.repo}>
-            <Link href={repo.html_url} title={repo.name}>{repo.name}</Link> - sist oppdatert: {new Date(repo.updated_at).toLocaleDateString()}
+            <Card heading={{ level: 3, text: repo.name }} subheading={`Sist oppdatert ${relativeTime.from(new Date(repo.updated_at))}.`}>
+
+              {repo.description && <p lang='en'>{repo.description}</p>}
+              {repo.topics && <ul className={styles.tags}>{repo.topics.map((tag: string) => <Tag key={tag}>{tag}</Tag>)}{repo.language && <Tag>{repo.language.toLowerCase()}</Tag>}</ul>}
+            </Card>
           </li>
         ))}
       </ul>

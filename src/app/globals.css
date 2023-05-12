@@ -12,7 +12,7 @@
   --gray-300: hsl(0, 0%, 70%);
   --gray-200: hsl(0, 0%, 80%);
   --gray-100: hsl(0, 0%, 90%);
-  --gray-50: hsl(0, 0%, 95%);
+  --gray-50: hsl(0, 46%, 70%);
   --white: hsl(0, 0%, 100%);
 
   --blue-950: hsl(210, 100%, 5%);
@@ -123,12 +123,15 @@
   --text-muted: var(--gray-700);
   --text-inverted: var(--white);
 
+  --action: var(--blue-600);
+  --action-hover: var(--blue-800);
+
   --font-family-sans-serif: 'Inter', sans-serif;
   --font-family-serif: 'Gloock', serif;
 
   --font-size-xxlarge: 1.7rem;
-  --font-size-xlarge: 1.6rem;
-  --font-size-large: 1.4rem;
+  --font-size-xlarge: 1.4rem;
+  --font-size-large: 1.3rem;
   --font-size-medium: 1.2rem;
   --font-size-small: 1rem;
   --font-size-xsmall: 0.8rem;
@@ -170,6 +173,30 @@
   --container-large: 992px;
   --container-xlarge: 1200px;
   --container-xxlarge: 1440px;
+
+  --tag-bg: linear-gradient(45deg, var(--purple-100), var(--teal-100));
+  --tag-text: var(--blue-800);
+  --tag-border: 1px solid var(--blue-100);
+  --tag-border-radius: var(--border-radius-small);
+  --tag-padding: var(--spacing-1) var(--spacing-2);
+  --tag-font-size: var(--font-size-xsmall);
+  --tag-font-weight: var(--font-weight-medium);
+
+  --card-bg: var(--white);
+  --card-text: var(--black);
+  --card-border-radius: var(--border-radius-medium);
+  --card-padding: var(--spacing-4);
+  --card-font-size: var(--font-size-normal);
+  --card-font-weight: var(--font-weight-normal);
+  --card-border: 1px solid var(--gray-100);
+  --card-heading-color: var(--black);
+  --card-heading-font-size: var(--font-size-small);
+  --card-heading-font-weight: var(--font-weight-medium);
+  --card-subheading-color: var(--text-muted);
+  --card-subheading-margin: 0 0 var(--spacing-1) 0;
+  --card-subheading-font-size: var(--font-size-small);
+  --card-subheading-font-weight: var(--font-weight-normal);
+  --card-content-margin: var(--spacing-2) 0 0 0;
 }
 
 * {
@@ -198,20 +225,13 @@ h6 {
 h1 {
   font-size: var(--font-size-xxlarge);
   margin: var(--spacing-8) 0 var(--spacing-4) 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-weight: var(--font-weight-bold);
 }
 
 h2 {
   font-size: var(--font-size-xlarge);
   margin: var(--spacing-12) 0 var(--spacing-4) 0;
+  font-weight: var(--font-weight-normal);
 }
 
 h3 {
@@ -233,20 +253,21 @@ h6 {
 
 p {
   font-size: var(--font-size-small);
-  margin-bottom: var(--spacing-12);
   max-width: var(--container-medium);
+  font-weight: var(--font-weight-normal);
 }
 
 a {
-  color: var(--text);
+  color: var(--action);
   text-decoration: underline;
   text-underline-offset: 4px;
-  text-decoration-color: var(--text-muted);
+  text-decoration-color: var(--action);
   transition: text-decoration-color 0.2s ease;
 }
 
 a:hover {
-  text-decoration-color: var(--text-muted);
+  color: var(--action-hover);
+  text-decoration-color: var(--action-hover);
 }
 
 p,
@@ -268,12 +289,16 @@ ul {
   padding-left: var(--spacing-6);
 }
 
+li {
+  margin-bottom: var(--spacing-4);
+}
+
 @media (min-width: 768px) {
   :root {
     --font-size-xxlarge: 2rem;
-    --font-size-xlarge: 1.75rem;
-    --font-size-large: 1.5rem;
-    --font-size-medium: 1.25rem;
+    --font-size-xlarge: 1.5rem;
+    --font-size-large: 1.25rem;
+    --font-size-medium: 1rem;
     --font-size-small: 1rem;
     --font-size-xsmall: 0.8rem;
   }
@@ -282,9 +307,9 @@ ul {
 @media (min-width: 1024px) {
   :root {
     --font-size-xxlarge: 2.25rem;
-    --font-size-xlarge: 2rem;
-    --font-size-large: 1.5rem;
-    --font-size-medium: 1.25rem;
+    --font-size-xlarge: 1.75rem;
+    --font-size-large: 1.3rem;
+    --font-size-medium: 1.2rem;
     --font-size-small: 1rem;
     --font-size-xsmall: 0.8rem;
   }

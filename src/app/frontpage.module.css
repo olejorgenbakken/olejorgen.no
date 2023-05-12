@@ -1,9 +1,32 @@
 .frontpage {
- max-width: var(--container-large);
+ max-width: var(--container-xlarge);
  padding-left: var(--spacing-4);
  padding-right: var(--spacing-4);
 }
 
+.repos {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: var(--spacing-6);
+ list-style: none;
+ padding: 0;
+}
+
 .repo {
- margin-bottom: var(--spacing-4);
+ margin: 0;
+}
+
+.repo .tags {
+ display: flex;
+ flex-wrap: wrap;
+ gap: var(--spacing-2);
+ margin-top: var(--spacing-8);
+ padding: 0;
+}
+
+.repoLinks {
+ display: flex;
+ align-items: center;
+ gap: var(--spacing-8);
+ margin-top: var(--spacing-4);
 }

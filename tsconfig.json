@@ -36,7 +36,9 @@
     ".next/types/**/*.ts",
     "src/app/icons/WeightIcon.tsx.tsx",
     "src/app/icons/WeightIcon.tsx",
-    "data/cv.json"
+    "data/cv.json",
+    "src/app/utils/getRelativeTime.ts",
+    "src/app/utils/getRelativeTime.ts"
   ],
   "exclude": [
     "node_modules"
