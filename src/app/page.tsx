@@ -54,10 +54,10 @@ export default async function Home() {
   return (
     <main className={styles.frontpage}>
       <h1 className={styles.heading}>{user.name}</h1>
-      {user.company && <p className={styles.work}>Jeg jobber hos {user.company.slice(1)} {user.location && `i ${user.location}`}.</p>}
+      {user.company && <p className={styles.work}>{user.bio} {user.location && `i ${user.location}`}.</p>}
       <h2>Det siste jeg har jobbet på</h2>
       <ul className={styles.repos}>
-        {repos.map(repo => (
+        {repos.map((repo: any) => (
           <li key={repo.id} className={styles.repo}>
             <Link href={repo.html_url} title={repo.name}>{repo.name}</Link> - sist oppdatert: {new Date(repo.updated_at).toLocaleDateString()}
           </li>
@@ -65,7 +65,7 @@ export default async function Home() {
       </ul>
       <h2>Andre steder å finne meg</h2>
       <ul className={styles.links}>
-        {socials.map(social => (
+        {socials.map((social: any) => (
           <li key={social.id} className={styles.link}>
             <Link href={social.url} title={social.provider}>{social.provider}</Link>
           </li>

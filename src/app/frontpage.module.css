@@ -4,10 +4,6 @@
  padding-right: var(--spacing-4);
 }
 
-.repos {
- padding-left: var(--spacing-4);
-}
-
 .repo {
  margin-bottom: var(--spacing-4);
 }
