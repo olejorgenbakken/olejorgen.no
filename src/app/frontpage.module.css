@@ -20,9 +20,10 @@
 
 .links {
  display: flex;
- flex-direction: column;
+ flex-direction: row;
  align-items: center;
  justify-content: center;
+ gap: var(--spacing-4);
  padding: var(--spacing-8) var(--spacing-4);
  list-style: none;
 }
