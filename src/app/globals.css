@@ -111,16 +111,9 @@
   --teal-100: hsl(180, 100%, 90%);
   --teal-50: hsl(180, 100%, 95%);
 
-  --bg: #050214;
-  --bg-inverted: var(--black);
-
-  --surface: var(--gray-100);
-
-  --button-bg: var(--blue-600);
-  --button-text: var(--white);
-
+  --bg: var(--black);
   --text: var(--white);
-  --text-muted: var(--gray-700);
+  --text-muted: var(--gray-100);
   --text-inverted: var(--white);
 
   --action: var(--text);
