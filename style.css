@@ -1,0 +1,67 @@
+:root {
+    --color-bg: #000;
+    --color-text: #fff;
+    --color-link: #9dccff;
+    --color-link-hover: #9dacff;
+
+    --font-family-body: 'Instrument Sans', sans-serif;
+    --font-family-heading: 'Newsreader', sans-serif;
+
+    --font-size-m: 1rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 3rem;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family-body);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+h1 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-extrabold);
+
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    color: var(--color-link);
+    text-underline-offset: 4px;
+    transition: color 0.1s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
