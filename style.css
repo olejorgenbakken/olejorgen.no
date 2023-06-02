@@ -47,7 +47,7 @@ body {
     padding: var(--spacing-xl) var(--spacing-l);
     background:
         linear-gradient(96deg, rgb(247, 240, 255), rgba(255, 255, 255, 0.6)),
-        url(https://grainy-gradients.vercel.app/noise.svg);
+        url(media/noise.svg);
 }
 
 h1 {
