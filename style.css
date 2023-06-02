@@ -1,7 +1,7 @@
 :root {
     --color-bg: #fff;
     --color-text: #010121;
-    --color-link: #5729ad;
+    --color-link: #0887c6;
     --color-link-hover: #010121;
 
     --font-family-body: 'Instrument Sans', sans-serif;
@@ -44,7 +44,7 @@ body {
     align-items: flex-start;
     text-align: left;
     gap: var(--spacing-m);
-    padding: var(--spacing-l);
+    padding: var(--spacing-xl) var(--spacing-l);
     background:
         linear-gradient(96deg, rgb(247, 240, 255), rgba(255, 255, 255, 0.6)),
         url(https://grainy-gradients.vercel.app/noise.svg);
