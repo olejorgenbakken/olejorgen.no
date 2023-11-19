@@ -1,0 +1,20 @@
+export type User = {
+  name: string;
+  email: string;
+  avatar_url: string;
+  bio: string;
+  blog: string;
+  company: string;
+  created_at: Date;
+  followers: number;
+  following: number;
+  hireable: boolean;
+  html_url: string;
+  location: string;
+  login: string;
+  public_gists: number;
+  public_repos: number;
+  twitter_username: string;
+  updated_at: Date;
+  url: string;
+};
