@@ -1,14 +1,14 @@
-import { School } from "../cv.model";
+import Heading from "@/app/components/typography/Heading";
+import { School } from "../../api/cv/cv.model";
+import Paragraph from "@/app/components/typography/Paragraph";
 
 export default function SchoolCard({ school }: { school: School }) {
  return (
   <li key={school.name} className="w-full flex flex-col">
-   <header className="flex flex-col gap-4 mb-2">
-    <h3 className="font-medium text-xl">{school.name}</h3>
-   </header>
+   <Heading level={3}>{school.name}</Heading>
    <div className="sm:flex sm:flex-row sm:items-center gap-2 justify-between">
-    <p className="text-lg font-medium mb-1">{school.degree}</p>
-    <p className="text-sm opacity-75">{school.date_start.toLocaleDateString()} - {school.date_end ? school.date_end.toLocaleDateString() : "nå"}</p>
+    <Paragraph>{school.degree}</Paragraph>
+    <Paragraph muted>{school.date_start.toLocaleDateString("nb-NO")} - {school.date_end ? school.date_end.toLocaleDateString("nb-NO") : "nå"}</Paragraph>
    </div>
   </li >
  )

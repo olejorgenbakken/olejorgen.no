@@ -17,13 +17,10 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-}
-
-main {
   min-height: 100svh;
 }
 
-a {
+a:not(.badge) {
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid;

@@ -1,18 +1,18 @@
-import { Business } from "../cv.model";
+import Heading from "@/app/components/typography/Heading";
+import { Business } from "../../api/cv/cv.model";
 import Link from "next/link";
+import Paragraph from "@/app/components/typography/Paragraph";
 
 export default function BusinessCard({ business }: { business: Business }) {
  return (
   <li key={business.name} className="w-full flex flex-col">
-   <header className="flex flex-col gap-4 mb-5">
-    <h3 className="font-medium text-xl">{business.name}</h3>
-   </header>
+   <Heading level={3}>{business.name}</Heading>
    <div className="sm:flex sm:flex-row sm:items-center gap-2 justify-between">
-    <p className="text-lg font-medium mb-1">{business.job_title}</p>
-    <p className="text-sm opacity-75">{business.date_start.toLocaleDateString()} - {business.date_end ? business.date_end.toLocaleDateString() : "nå"}</p>
+    <Paragraph>{business.job_title}</Paragraph>
+    <Paragraph muted>{business.date_start.toLocaleDateString("nb-NO")} - {business.date_end ? business.date_end.toLocaleDateString("nb-NO") : "nå"}</Paragraph>
    </div>
-   <p className="text-lg mt-2">{business.job_description}</p>
-   <p className="text-md mt-4"><Link href={business.url}>{business.url}</Link></p>
+   <Paragraph>{business.job_description}</Paragraph>
+   <Paragraph><Link href={business.url}>{business.url}</Link></Paragraph>
   </li>
  )
 }
