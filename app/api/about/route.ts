@@ -10,3 +10,5 @@ export async function GET() {
     },
   });
 }
+
+//TODO: Move to Vercel Edge Config
