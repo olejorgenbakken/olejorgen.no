@@ -8,7 +8,7 @@ interface ParagraphProps {
 
 export default function Paragraph({ children, muted = false, bold = false, size = "lg", className }: ParagraphProps) {
  return (
-  <p className={`${className ? className : ""} text-${size} ${muted ? "opacity-70" : ""} ${bold ? "font-bold" : ""}`}>
+  <p className={`${className ? className : ""} text-${size} ${muted ? "opacity-70" : ""} ${bold ? "font-medium" : ""}`}>
    {children}
   </p>
  )

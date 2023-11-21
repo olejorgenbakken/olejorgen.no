@@ -1,4 +1,4 @@
-import { Commit } from "./commit.model";
+import { Commit } from "../models/commit.model";
 
 export const dynamic = "force-dynamic";
 

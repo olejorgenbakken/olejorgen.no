@@ -70,5 +70,5 @@ export type Commit = {
   };
   parents: {
     url: string;
-  }[];
+  };
 };

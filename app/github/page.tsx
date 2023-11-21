@@ -3,12 +3,11 @@ import Heading from "../components/typography/Heading";
 import Paragraph from "../components/typography/Paragraph";
 
 export default async function Home() {
- const user = await GET("isssseelliinn");
+ const user = await GET("olejorgenbakken");
 
  return (
   <section>
-   <Heading level={2}>{user.name}</Heading>
-   <Paragraph>{user.bio}</Paragraph>
+   noe
   </section>
  )
 }

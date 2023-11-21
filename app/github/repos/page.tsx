@@ -1,9 +1,9 @@
 import Heading from "@/app/components/typography/Heading";
-import { GET } from "../../api/github/repo/route";
+import { GET as getRepo } from "../../api/github/repo/route";
 import RepoCard from "../components/RepoCard";
 
 export default async function Repos() {
- const repos = await GET("olejorgenbakken", "updated");
+ const repos = await getRepo("olejorgenbakken", "updated");
 
  return (
   <section>

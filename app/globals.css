@@ -20,8 +20,8 @@ body {
   min-height: 100svh;
 }
 
-a:not(.badge) {
+a {
   text-decoration: none;
   padding-bottom: 2px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgba(var(--foreground-rgb), 0.75);
 }

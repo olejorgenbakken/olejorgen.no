@@ -1,4 +1,4 @@
-import { Repo } from "./repo.model";
+import { Repo } from "../models/repo.model";
 
 export const dynamic = "force-dynamic";
 
