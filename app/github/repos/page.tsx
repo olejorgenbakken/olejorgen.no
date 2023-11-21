@@ -8,7 +8,7 @@ export default async function Repos() {
  return (
   <section>
    <Heading level={2}>Repos</Heading>
-   <ul className="flex flex-col gap-8">
+   <ul className="flex flex-col gap-16">
     {repos.map(repo =>
      <RepoCard repo={repo} key={repo.name} />
     )}
