@@ -7,7 +7,8 @@ export default async function Home() {
 
  return (
   <section>
-   noe
+   <Heading level={2}>{user.name}</Heading>
+   <Paragraph>{user.bio}</Paragraph>
   </section>
  )
 }
