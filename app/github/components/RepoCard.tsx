@@ -16,20 +16,9 @@ const getStargarers = (repo: Repo) => {
     case 0:
       return null;
     case 1:
-      return <Badge>{repo.stargazers_count} stjerne</Badge>;
+      return `${repo.stargazers_count} stjerne`
     default:
-      return <Badge>{repo.stargazers_count} stjerner</Badge>;
-  }
-}
-
-const getOpenIssues = (repo: Repo) => {
-  switch (repo.open_issues_count) {
-    case 0:
-      return null;
-    case 1:
-      return <Badge link={`${repo.html_url}/issues`}>{repo.open_issues_count} åpent issue</Badge>;
-    default:
-      return <Badge link={`${repo.html_url}/issues`}>{repo.open_issues_count} åpne issues</Badge>;
+      return `${repo.stargazers_count} stjerner`;
   }
 }
 
@@ -48,38 +37,38 @@ const getLatestCommit = async (owner: string, repo: string) => {
 
 export default async function RepoCard({ repo }: RepoCardProps) {
 
+  console.log(repo)
+
   const latestCommit = await getLatestCommit(repo.owner.login, repo.name);
 
   return (
-    <li key={repo.name}>
-      <aside className="flex flex-col justify-between mb-4 gap-x-8 sm:flex-row sm:justify-between sm:items-center">
-        <div className="flex flex-row gap-3 items-center">
-          <Image src={repo.owner.avatar_url} alt={repo.owner.login} width={24} height={24} className="rounded-full" />
-          <Paragraph size="base" muted><Link href={repo.owner.html_url}>Opprettet av {repo.owner.login}</Link> den {formatDate(repo.created_at)} </Paragraph>
+    <li key={repo.name} className="px-8 py-6  rounded-lg border bg-slate-50 border-slate-200 dark:bg-slate-950 dark:border-slate-800">
+      <Heading level={3}><Link href={repo.html_url}>{repo.name}</Link></Heading>
+
+
+      <Paragraph size="lg" className="gap-x-8">{repo.description ? repo.description : "Ingen beskrivelse"}</Paragraph>
+
+      <div className="flex flex-row flex-wrap mt-8 gap-4">
+        {repo.language && <Paragraph size="xs" muted>{repo.language}</Paragraph>}
+        {repo.size && <Paragraph size="xs" muted>{(repo.size / 1000).toFixed(2)} MB</Paragraph>}
+        {repo.has_issues && <Paragraph size="xs" muted>{repo.open_issues_count} issues</Paragraph>}
+      </div>
+
+      <footer className="flex flex-row flex-wrap mt-8 pt-8 gap-8 border-t border-slate-700">
+        <div className="flex flex-row gap-2 items-center">
+          <Image src={repo.owner.avatar_url} alt={repo.owner.login} width={24} height={24} className="rounded-full h-5 w-5 aspect-square" />
+          <Paragraph size="xs">Opprettet av <Link href={repo.owner.html_url}>{repo.owner.login}</Link> den {formatDate(repo.created_at)}</Paragraph>
         </div>
-        <div className="flex flex-row gap-4">
-          {repo.language && <Badge link={`https://github.com/topics/${repo.language}`}>{repo.language}</Badge>}
-          {getStargarers(repo)}
-          {getOpenIssues(repo)}
-          {repo.archived && <Badge>Arkivert</Badge>}
-          {repo.disabled && <Badge>Deaktivert</Badge>}
-          {repo.fork && <Badge>Fork</Badge>}
-          {repo.private && <Badge>Privat</Badge>}
-        </div>
-      </aside>
 
-      <header className="mb-4 gap-x-8">
-        <Heading level={3}><Link href={repo.html_url}>{repo.name}</Link></Heading>
-      </header>
+        {latestCommit?.author ?
+          <div className="flex flex-row gap-2 items-center">
+            <Image src={latestCommit.author.avatar_url} alt={latestCommit.author.login} width={24} height={24} className="rounded-full h-5 w-5 aspect-square" />
+            <Paragraph size="xs">Oppdatert av <Link href={latestCommit.author.html_url}>{latestCommit.author.login}</Link> den {formatDate(latestCommit.commit.committer.date)} </Paragraph>
+          </div>
+          : <Paragraph size="xs">Ingen oppdateringer siden publisering</Paragraph>
+        }
+      </footer>
 
-      <Paragraph size="xl" className="mb-6 gap-x-8">{repo.description ? repo.description : "Ingen beskrivelse"}</Paragraph>
-      {latestCommit?.author &&
-        <footer className="flex flex-row p-3 gap-2 rounded-md bg-slate-100 border border-slate-300 dark:bg-slate-800 dark:border-slate-600">
-          <Image src={latestCommit.author.avatar_url} alt={latestCommit.author.login} width={16} height={16} className="rounded-sm" />
-          <Paragraph size="sm"><Link href={latestCommit.author.html_url}>Siste commit av {latestCommit.author.login}</Link> den {formatDate(latestCommit.commit.committer.date)} </Paragraph>
-
-        </footer>
-      }
     </li>
   )
 }

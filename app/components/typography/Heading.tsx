@@ -10,9 +10,9 @@ export default function Heading({ level, children }: HeadingProps) {
     case 1:
       return <h1 className="text-4xl font-semibold mt-8 mb-2">{children}</h1>;
     case 2:
-      return <h2 className="text-2xl font-semibold mt-12 mb-2">{children}</h2>;
+      return <h2 className="text-2xl font-medium mt-12 mb-2">{children}</h2>;
     case 3:
-      return <h3 className="text-xl font-medium mt-2 mb-2">{children}</h3>;
+      return <h3 className="text-xl font-normal mt-2 mb-2">{children}</h3>;
     case 4:
       return <h4>{children}</h4>;
     case 5:
