@@ -13,11 +13,11 @@ export default async function GithubLayout({ children }: { children: React.React
  return (
   <Main>
    <Heading level={1}>GitHub</Heading>
-   <header className="flex flex-row items-center w-full gap-8">
-    <Image src={user.avatar_url} alt={user.name} width={128} height={128} className="rounded-full h-28 w-28 aspect-square" />
+   <header className="flex flex-col sm:flex-row sm:items-center w-full gap-8">
+    <Image src={user.avatar_url} alt={user.name} width={128} height={128} className="rounded-md w-28 h-full aspect-square object-cover" />
     <div className="flex flex-col">
-     <Heading level={2}>{user.name} <span className="text-base font-normal"><Link href={user.html_url}>github.com/{user.login}</Link></span></Heading>
-     <Paragraph className="mt-1 mb-2">{user.bio}</Paragraph>
+     <Heading level={2}><Link href={user.html_url}>{user.name}</Link></Heading>
+     <Paragraph className="mt-2 mb-2">{user.bio}</Paragraph>
      <Paragraph muted size="sm">{user.location}</Paragraph>
     </div>
    </header>

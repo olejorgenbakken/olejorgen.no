@@ -10,7 +10,7 @@ export default async function Home() {
  return (
   <section className="w-full">
    <Heading level={2} className="mb-4">Repoer ({repos.length})</Heading>
-   <ul className="grid grid-cols-1 gap-12 md:grid-cols-2">
+   <ul className="grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-2">
     {repos.map(repo =>
      <RepoCard repo={repo} key={repo.name} />
     )}
