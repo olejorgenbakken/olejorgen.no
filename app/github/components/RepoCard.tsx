@@ -29,7 +29,7 @@ export default async function RepoCard({ repo }: RepoCardProps) {
           <Paragraph muted size="sm">Opprettet av <Link href={repo.owner.html_url}>{repo.owner.login}</Link> den {formatDate(repo.created_at)}</Paragraph>
         </div>
         <ul className="flex flex-row flex-wrap gap-2">
-          {repo.topics.map(topic => <li><Badge key={topic} size="sm" link={`https://github.com/topics/${topic}`}>{topic}</Badge></li>)}
+          {repo.topics.map(topic => <li key={topic}><Badge size="sm" link={`https://github.com/topics/${topic}`}>{topic}</Badge></li>)}
         </ul>
       </footer>
 
