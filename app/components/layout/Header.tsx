@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export default function Header({ title }: HeaderProps) {
  return (
-  <header className="flex flex-col gap-4 justify-between py-8 max-w-7xl mx-auto sm:flex-row sm:items-center">
+  <header className="flex flex-col gap-4 justify-between p-8 max-w-7xl mx-auto sm:flex-row sm:items-center">
    <Paragraph><Link href="/">{title}</Link></Paragraph>
   </header>
  )

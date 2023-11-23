@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nb">
-      <body className="m-auto max-w-7xl px-8">
+      <body>
         <Header title='Ole Jørgen' />
         {children}
         <Analytics />

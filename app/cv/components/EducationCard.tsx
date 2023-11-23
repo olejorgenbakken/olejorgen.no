@@ -8,7 +8,7 @@ export default function SchoolCard({ education }: { education: Education }) {
  return (
   <li key={education.field} className="w-full flex flex-col">
    <Heading level={3}>{education.degree} i {education.field} på <Link href={education.school.homepage_url}>{education.school.name}</Link></Heading>
-   <Paragraph muted>{formatDate(education.date_start)} - {education.date_end ? formatDate(education.date_end) : "nå"}</Paragraph>
+   <Paragraph muted className="mt-2">{formatDate(education.date_start)} - {education.date_end ? formatDate(education.date_end) : "nå"}</Paragraph>
   </li >
  )
 }

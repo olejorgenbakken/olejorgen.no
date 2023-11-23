@@ -8,18 +8,22 @@ export default function CV() {
  return (
   <Main>
    <Heading level={1}>CV</Heading>
-   <Heading level={2}>Erfaring</Heading>
-   <ul className="flex flex-col gap-16">
-    {experience.map((entry) => (
-     <BusinessCard experience={entry} key={entry.company.name} />
-    ))}
-   </ul>
-   <Heading level={2}>Utdanning</Heading>
-   <ul className="flex flex-col gap-16">
-    {education.map((entry) => (
-     <SchoolCard education={entry} key={entry.school.name} />
-    ))}
-   </ul>
+   <div>
+    <Heading level={2}>Erfaring</Heading>
+    <ul className="flex flex-col gap-16 mt-8">
+     {experience.map((entry) => (
+      <BusinessCard experience={entry} key={entry.company.name} />
+     ))}
+    </ul>
+   </div>
+   <div>
+    <Heading level={2}>Utdanning</Heading>
+    <ul className="flex flex-col gap-16 mt-8">
+     {education.map((entry) => (
+      <SchoolCard education={entry} key={entry.school.name} />
+     ))}
+    </ul>
+   </div>
   </Main>
  )
 }

@@ -1,11 +1,18 @@
 import Link from "next/link"
 import Heading from "./components/typography/Heading"
+import Main from "./components/layout/Main"
+import Paragraph from "./components/typography/Paragraph"
+import Breaker from "./components/layout/Breaker"
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-4">
+    <Main>
       <Heading level={1}>Forside</Heading>
-      <p>Nettopp begynt på denne siden, det eneste av interesse er <Link href="/cv" prefetch={true}>CVen min</Link> <span lang="en"> I guess</span>. Se <Link href="/github">Github her</Link>.</p>
-    </main>
+      <div>
+        <Heading level={2} className="mb-4">Jeg har nettopp begynt på denne siden</Heading>
+        <Paragraph className="mb-2"><Link href="/cv" prefetch={true}>CVen min</Link></Paragraph>
+        <Paragraph><Link href="/github" prefetch={true}>Github</Link></Paragraph>
+      </div>
+    </Main>
   )
 }
