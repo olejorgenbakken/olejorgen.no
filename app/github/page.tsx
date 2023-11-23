@@ -1,10 +1,11 @@
 import Heading from "../components/typography/Heading";
-import { GET as getRepo } from "../api/github/repo/route";
-import { Repo } from "../api/github/models/repo.model";
+import { Repo } from "../models/repo.model";
 import RepoCard from "./components/RepoCard";
 
 export default async function Home() {
- const repos: Repo[] = await getRepo("olejorgenbakken");
+ const repos: Repo[] = await fetch(
+  `https://api.github.com/users/olejorgenbakken/repos?sort=updated&direction=desc&per_page=100&page=1`
+ ).then(res => res.json());
 
  return (
   <section className="w-full">

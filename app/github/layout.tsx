@@ -3,14 +3,12 @@ import React from "react"
 import Heading from "../components/typography/Heading"
 import Main from "../components/layout/Main"
 import Image from "next/image"
-import { User } from "../api/github/models/user.model"
-import { GET as getUser } from "../api/github/user/route"
+import { User } from "../models/user.model"
 import Paragraph from "../components/typography/Paragraph"
 import formatDate from "../util/formatDate"
-import Breaker from "../components/layout/Breaker"
 
 export default async function GithubLayout({ children }: { children: React.ReactNode }) {
- const user: User = await getUser("olejorgenbakken");
+ const user: User = await fetch(`https://api.github.com/users/olejorgenbakken`).then(res => res.json())
 
  return (
   <Main>

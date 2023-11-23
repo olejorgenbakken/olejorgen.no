@@ -1,4 +1,4 @@
-import { Repo } from "../../github/models/repo.model";
+import { Repo } from "../../../models/repo.model";
 
 export type Company = {
   name: string;

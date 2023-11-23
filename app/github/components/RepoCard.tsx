@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Repo } from "@/app/api/github/models/repo.model";
-import { Commit } from "@/app/api/github/models/commit.model";
+import { Repo } from "@/app/models/repo.model";
+import { Commit } from "@/app/models/commit.model";
 import Heading from "@/app/components/typography/Heading";
 import Paragraph from "@/app/components/typography/Paragraph";
 import Image from "next/image";
