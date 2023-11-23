@@ -25,13 +25,12 @@ export default async function RepoCard({ repo }: RepoCardProps) {
 
       <footer className="flex flex-wrap justify-between mt-4 sm:mt-8 pt-6 gap-4 border-t border-zinc-100 dark:border-zinc-900">
         <div className="flex flex-row gap-2 items-center">
-          <Image src={repo.owner.avatar_url} alt={repo.owner.login} width={24} height={24} className="rounded-full h-5 w-5 aspect-square" />
+          <Image src={repo.owner.avatar_url} alt={repo.owner.login} width={24} height={24} className="rounded-sm h-5 w-5 aspect-square" />
           <Paragraph muted size="sm">Opprettet av <Link href={repo.owner.html_url}>{repo.owner.login}</Link> den {formatDate(repo.created_at)}</Paragraph>
         </div>
-        <div className="flex flex-row gap-2 items-center">
-
-          {repo.topics.map(topic => <Badge key={topic} size="sm" link={`https://github.com/topics/${topic}`}>{topic}</Badge>)}
-        </div>
+        <ul className="flex flex-row flex-wrap gap-2">
+          {repo.topics.map(topic => <li><Badge key={topic} size="sm" link={`https://github.com/topics/${topic}`}>{topic}</Badge></li>)}
+        </ul>
       </footer>
 
     </li >
