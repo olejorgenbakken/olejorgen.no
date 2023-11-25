@@ -1,11 +1,13 @@
 interface BreakerProps {
  children: React.ReactNode;
+ className?: string;
+ size?: "full" | "half";
 }
 
-export default function Breaker({ children }: BreakerProps) {
+export default function Breaker({ size = "full", children, className }: BreakerProps) {
  return (
-  <div className="relative before:-z-10 before:absolute before:w-screen  before:h-full  before:bg-zinc-50 dark:before:bg-zinc-950">
+  <div className={`breaker-${size} py-16 ${className}`} >
    {children}
-  </div>
+  </div >
  )
 }

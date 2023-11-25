@@ -2,9 +2,8 @@ import Link from "next/link"
 import Heading from "./components/typography/Heading"
 import Main from "./components/layout/Main"
 import Paragraph from "./components/typography/Paragraph"
-import Breaker from "./components/layout/Breaker"
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Main>
       <Heading level={1}>Forside</Heading>

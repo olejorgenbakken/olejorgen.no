@@ -1,35 +1,31 @@
-import Link from "next/link"
 import React from "react"
-import Heading from "../components/typography/Heading"
-import Main from "../components/layout/Main"
-import Image from "next/image"
-import { User } from "../models/user.model"
-import Paragraph from "../components/typography/Paragraph"
-import formatDate from "../util/formatDate"
+import { User } from "@/app/models/user.model"
+import UserHeader from "./components/user/UserHeader"
+import UserStats from "./components/user/UserStats"
+import { Octokit } from "octokit";
+import Main from "../components/layout/Main";
+import Breaker from "../components/layout/Breaker";
+import Heading from "../components/typography/Heading";
 
-export default async function GithubLayout({ children }: { children: React.ReactNode }) {
- const user: User = await fetch(`https://api.github.com/users/olejorgenbakken`).then(res => res.json())
+export default async function Layout({ children }: { children: React.ReactNode }) {
+ const octokit = new Octokit({
+  auth: process.env.githubPAT,
+ });
+
+ const userInfo: User = await octokit.request('GET /user', {
+  headers: {
+   'X-GitHub-Api-Version': '2022-11-28'
+  }
+ }).then(res => res.data);
 
  return (
   <Main>
-   <Heading level={1}>GitHub</Heading>
-   <header className="flex flex-col sm:flex-row sm:items-center w-full gap-8">
-    <Image src={user.avatar_url} alt={user.name} width={128} height={128} className="rounded-md w-28 h-full aspect-square object-cover" />
-    <div className="flex flex-col">
-     <Heading level={2}><Link href={user.html_url}>{user.name}</Link></Heading>
-     <Paragraph className="mt-2 mb-2">{user.bio}</Paragraph>
-     <Paragraph muted size="sm">{user.location}</Paragraph>
-    </div>
-   </header>
-   <div>
-    <Heading level={2}>Stats</Heading>
-    <Paragraph className="mt-4 mb-8">
-     Jeg følger <Link href={`${user.html_url}?tab=following`}>{user.following} brukere</Link>, har <Link href={`${user.html_url}?tab=followers`}>{user.followers} følgere</Link>, , og eier <Link href="/github/repos">{user.public_repos} repos</Link>.
-    </Paragraph>
-    <Paragraph size="sm">Lagde konto på GitHub {formatDate(user.created_at)}, med siste aktivitet {formatDate(user.updated_at)}.</Paragraph>
-   </div>
+   <Heading level={1}>Github</Heading>
+   <Breaker size="half" className="flex flex-col gap-16">
+    <UserHeader user={userInfo} />
+   </Breaker>
+   <UserStats user={userInfo} />
    {children}
   </Main>
  )
 }
-
