@@ -14,12 +14,11 @@ export default async function RepoList({ repos }: RepoCardProps) {
     <Table caption="Repoer">
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell width={15} className=" hidden xl:table-cell">Sist oppdatert</Table.HeaderCell>
+          <Table.HeaderCell width={15} className="hidden xl:table-cell">Sist oppdatert</Table.HeaderCell>
           <Table.HeaderCell width={20}>Navn</Table.HeaderCell>
           <Table.HeaderCell>Beskrivelse</Table.HeaderCell>
           <Table.HeaderCell className=" hidden md:table-cell">Språk</Table.HeaderCell>
           <Table.HeaderCell className=" hidden md:table-cell">Eier</Table.HeaderCell>
-
         </Table.Row>
       </Table.Header>
       <Table.Body>
@@ -30,7 +29,6 @@ export default async function RepoList({ repos }: RepoCardProps) {
             <Table.Cell>{repo.description}</Table.Cell>
             <Table.Cell className=" hidden md:table-cell">{repo.language}</Table.Cell>
             <Table.Cell className=" hidden md:table-cell">{repo.owner.login}</Table.Cell>
-
           </Table.Row>
         )}
       </Table.Body>

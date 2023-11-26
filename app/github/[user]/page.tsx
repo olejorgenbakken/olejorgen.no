@@ -2,6 +2,8 @@ import { Octokit } from "octokit";
 import { Repo } from "../../models/repo.model";
 import RepoList from "../components/RepoList";
 import Heading from "@/app/components/typography/Heading";
+import EmptyState from "@/app/components/EmptyState";
+import Link from "next/link";
 
 
 export default async function GithubPage() {
@@ -18,11 +20,13 @@ export default async function GithubPage() {
  const repos: Repo[] = data.data;
  const status = data.status;
 
- if (status !== 200) {
+ if (status !== 200 || !repos.some(repo => repo.created_at == null)) {
   return (
    <>
     <Heading level={1}>Repoer</Heading>
-    <p>Det skjedde en feil</p>
+    <EmptyState message="For mange kall til Github APIet">
+     <Link href="/">Tilbake til forsiden</Link>
+    </EmptyState>
    </>
   )
  }
