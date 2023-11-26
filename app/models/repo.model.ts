@@ -7,6 +7,7 @@ export type Repo = {
   html_url: string;
   language: string | null;
   topics?: string[] | undefined;
+  fork: boolean;
   owner: {
     login: string;
     avatar_url: string;

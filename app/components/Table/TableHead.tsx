@@ -1,15 +1,11 @@
-import TableRow from "./TableRow";
-
-interface TableHeadProps {
+interface TableHeaderProps {
  children?: React.ReactNode;
 }
 
-export default function TableHead({ children }: TableHeadProps) {
+export default function TableHeader({ children }: TableHeaderProps) {
  return (
   <thead>
-   <TableRow>
-    {children}
-   </TableRow>
+   {children}
   </thead>
  )
 }

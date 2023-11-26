@@ -1,11 +1,13 @@
 interface TableHeaderCellProps {
  children: string | number | React.ReactNode;
- width?: "auto" | "10%" | "20%" | "30%" | "40%" | "50%" | "60%" | "70%" | "80%" | "90%" | "100%";
+ width?: number;
+ align?: "left" | "center" | "right";
+ className?: string;
 }
 
-export default function TableHeaderCell({ children, width = "auto" }: TableHeaderCellProps) {
+export default function TableHeaderCell({ children, width, align = "left", className }: TableHeaderCellProps) {
  return (
-  <th className="p-4 text-left" style={{ width: width }}>
+  <th className={`p-4 text-${align} ${className}`} style={{ width: width ? `${width}%` : "auto" }}>
    {children}
   </th>
  )

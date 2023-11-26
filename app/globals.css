@@ -40,7 +40,7 @@ body {
   background: rgba(var(--foreground-rgb), 0.04);
 }
 
-a:not(.badge) {
+a:not(.badge, .tab) {
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid rgba(var(--foreground-rgb), 0.75);
