@@ -21,12 +21,13 @@ body {
   overflow-x: hidden;
 }
 
-.breaker-full {
+.breaker {
   position: relative;
 }
 
-.breaker-full::before {
+.breaker::after {
   content: '';
+  z-index: -1;
   position: absolute;
   width: 100vw;
   height: 100%;
@@ -36,25 +37,7 @@ body {
   transform: translateX(-50%);
   border-top: 1px solid rgba(var(--foreground-rgb), 0.07);
   border-bottom: 1px solid rgba(var(--foreground-rgb), 0.07);
-  background:rgba(var(--foreground-rgb), 0.04);
-}
-
-.breaker-half {
-  position: relative;
-}
-
-.breaker-half::before {
-  content: '';
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    left: 0;
-    top: 0;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    border-top: 1px solid rgba(var(--foreground-rgb), 0.07);
-    border-bottom: 1px solid rgba(var(--foreground-rgb), 0.07);
-    background: rgba(var(--foreground-rgb), 0.04);
+  background: rgba(var(--foreground-rgb), 0.04);
 }
 
 a:not(.badge) {

@@ -11,7 +11,7 @@ interface RepoHeaderProps {
 export default function RepoHeader({ repo }: RepoHeaderProps) {
  return (
   <header className="flex flex-row gap-x-12 justify-between">
-   <Heading level={3} className="text-lg"><Link href={repo.html_url}>{repo.name}</Link></Heading>
+   <Heading level={3} className="text-lg"><Link href={`github/${repo.owner.login}/${repo.name}`}>{repo.name}</Link></Heading>
    {repo.language && <Badge size="sm" link={`https://github.com/topics/${repo.language}`}>{repo.language}</Badge>}
   </header>
  )

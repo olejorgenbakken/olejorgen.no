@@ -1,7 +1,6 @@
 import React from "react"
 import { User } from "@/app/models/user.model"
 import UserHeader from "./components/user/UserHeader"
-import UserStats from "./components/user/UserStats"
 import { Octokit } from "octokit";
 import Main from "../components/layout/Main";
 import Breaker from "../components/layout/Breaker";
@@ -21,10 +20,9 @@ export default async function Layout({ children }: { children: React.ReactNode }
  return (
   <Main>
    <Heading level={1}>Github</Heading>
-   <Breaker size="half" className="flex flex-col gap-16">
+   <Breaker className="flex flex-col gap-16">
     <UserHeader user={userInfo} />
    </Breaker>
-   <UserStats user={userInfo} />
    {children}
   </Main>
  )

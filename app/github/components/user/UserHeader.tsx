@@ -3,7 +3,6 @@ import Paragraph from "@/app/components/typography/Paragraph";
 import { User } from "@/app/models/user.model";
 import Image from "next/image";
 import Link from "next/link";
-import UserStats from "./UserStats";
 
 interface UserProps {
  user: User;
@@ -16,7 +15,10 @@ export default function UserHeader({ user }: UserProps) {
    <div className="flex flex-col">
     <Heading level={2}><Link href={user.html_url}>{user.name}</Link></Heading>
     <Paragraph className="mt-2 mb-2">{user.bio}</Paragraph>
-    <Paragraph muted size="sm">{user.location}</Paragraph>
+    <div className="flex flex-row gap-4">
+     <Paragraph muted size="sm">Følgere: {user.followers}</Paragraph>
+     <Paragraph muted size="sm">Følger: {user.following}</Paragraph>
+    </div>
    </div>
 
   </header>

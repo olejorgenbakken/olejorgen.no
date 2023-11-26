@@ -1,10 +1,10 @@
-interface TableRowProps {
- children: React.ReactNode;
+interface TableRowProps extends React.HTMLAttributes<HTMLTableRowElement> {
+ children?: React.ReactNode;
 }
 
 export default function TableRow({ children }: TableRowProps) {
  return (
-  <tr className="px-2">
+  <tr className="border-b border-zinc-600">
    {children}
   </tr>
  )

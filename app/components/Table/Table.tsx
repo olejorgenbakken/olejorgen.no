@@ -1,42 +1,22 @@
-import TableCell from "./TableCell";
 import TableHead from "./TableHead";
-import TableHeader from "./TableHeader";
+import TableBody from "./TableBody";
 import TableRow from "./TableRow";
-
+import TableHeaderCell from "./TableHeaderCell";
+import TableBodyCell from "./TableBodyCell";
 interface TableProps {
- rows: any[][];
- columns?: string[];
+ children?: React.ReactNode;
 }
 
-export default function Table({ rows, columns }: TableProps) {
+export default function Table({ children }: TableProps) {
  return (
-  <table className="w-full table-fixed text-left">
-   <colgroup>
-    <col className=" w-64" />
-    <col className="w-xs" />
-   </colgroup>
-   {columns &&
-    <TableHeader>
-     <TableRow>
-      {columns.map((column, i) => (
-       <TableHead key={i}>
-        {column}
-       </TableHead>
-      ))}
-     </TableRow>
-    </TableHeader>
-   }
-   <tbody className="w-full">
-    {rows.map((columns, i) => (
-     <TableRow key={i}>
-      {columns.map((column, i) => (
-       <TableCell key={i}>
-        {column}
-       </TableCell>
-      ))}
-     </TableRow>
-    ))}
-   </tbody>
+  <table className="w-full border border-zinc-600">
+   {children}
   </table>
  )
 }
+
+Table.Head = TableHead;
+Table.Body = TableBody;
+Table.Row = TableRow;
+Table.HeaderCell = TableHeaderCell;
+Table.Cell = TableBodyCell;
