@@ -9,11 +9,23 @@ export default async function GithubPage() {
   auth: process.env.githubPAT,
  });
 
- const repos: Repo[] = await octokit.request('GET /user/repos', {
+ const data = await octokit.request('GET /user/repos', {
   headers: {
    'X-GitHub-Api-Version': '2022-11-28'
   }
- }).then(res => res.data);
+ });
+
+ const repos: Repo[] = data.data;
+ const status = data.status;
+
+ if (status !== 200) {
+  return (
+   <>
+    <Heading level={1}>Repoer</Heading>
+    <p>Det skjedde en feil</p>
+   </>
+  )
+ }
 
  return (
   <>

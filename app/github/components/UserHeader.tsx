@@ -11,11 +11,23 @@ export default async function UserHeader() {
   auth: process.env.githubPAT,
  });
 
- const user: User = await octokit.request('GET /user', {
+ const data = await octokit.request('GET /user', {
   headers: {
    'X-GitHub-Api-Version': '2022-11-28'
   }
- }).then(res => res.data);
+ });
+
+ const user: User = data.data;
+ const status = data.status;
+
+ if (status !== 200) {
+  return (
+   <Breaker className="flex flex-col gap-8 justify-center sm:flex-row sm:gap-12 sm:items-center sm:justify-start">
+    <Heading level={1}>Bruker</Heading>
+    <p>Det skjedde en feil</p>
+   </Breaker>
+  )
+ }
 
  return (
   <Breaker className="flex flex-col gap-8 justify-center sm:flex-row sm:gap-12 sm:items-center sm:justify-start">
