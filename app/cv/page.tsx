@@ -6,8 +6,7 @@ import Main from "../components/layout/Main";
 
 export default function CV() {
  return (
-  <Main>
-   <Heading level={1}>CV</Heading>
+  <>
    <div>
     <Heading level={2}>Erfaring</Heading>
     <ul className="flex flex-col gap-16 mt-8">
@@ -24,6 +23,6 @@ export default function CV() {
      ))}
     </ul>
    </div>
-  </Main>
+  </>
  )
 }

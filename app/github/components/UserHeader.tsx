@@ -22,15 +22,15 @@ export default async function UserHeader() {
 
  if (status !== 200) {
   return (
-   <Breaker className="flex flex-col gap-8 justify-center sm:flex-row sm:gap-12 sm:items-center sm:justify-start">
+   <header className="flex flex-col gap-8 justify-center sm:flex-row sm:gap-12 sm:items-center sm:justify-start">
     <Heading level={1}>Bruker</Heading>
     <p>Det skjedde en feil</p>
-   </Breaker>
+   </header>
   )
  }
 
  return (
-  <Breaker className="flex flex-col gap-8 justify-center sm:flex-row sm:gap-12 sm:items-center sm:justify-start">
+  <header className="flex flex-col gap-8 justify-center sm:flex-row sm:gap-12 sm:items-center sm:justify-start">
    <Image src={user.avatar_url} alt="" width={128} height={128} className="rounded-md w-20 sm:w-36 h-full aspect-square object-cover" />
    <div className="flex flex-col">
     <Paragraph size="2xl" bold><Link href={user.html_url}>{user.name}</Link></Paragraph>
@@ -40,6 +40,6 @@ export default async function UserHeader() {
      <Paragraph muted size="sm">Følger: {user.following}</Paragraph>
     </div>
    </div>
-  </Breaker>
+  </header>
  )
 }
