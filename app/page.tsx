@@ -9,7 +9,7 @@ import type { Experience, Project } from './models/cv.model'
 
 export default function Home() {
   return (
-    <Main>
+    <Main maxWidth="md">
       <section>
         <Heading level="h2">Prosjekter</Heading>
         <ul>
