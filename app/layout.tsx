@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import "./globals.css";
 
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
+import Footer from "./components/Layout/Footer/Footer";
+import Header from "./components/Layout/Header/Header";
 
 export const metadata: Metadata = {
   title: 'Ole Jørgen Bakken',
@@ -16,7 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="no">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
       <Analytics />
       <SpeedInsights />
     </html>

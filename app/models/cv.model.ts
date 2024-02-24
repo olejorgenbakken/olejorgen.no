@@ -1,4 +1,4 @@
-type Experience = {
+export type Experience = {
   company: string;
   position: string;
   description: string;
@@ -7,11 +7,11 @@ type Experience = {
   url: string;
 };
 
-type Project = {
+export type Project = {
   title: string;
-  company: Experience["company"];
+  company: Experience['company'];
   startDate: Date;
   endDate?: Date;
   url?: string;
-  companyURL: Experience["url"];
+  companyURL: Experience['url'];
 };

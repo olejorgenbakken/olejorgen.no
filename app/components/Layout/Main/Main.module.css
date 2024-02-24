@@ -1,0 +1,10 @@
+.main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    min-height: calc(100svh - 6rem - 6rem);
+    padding: 2rem;
+}

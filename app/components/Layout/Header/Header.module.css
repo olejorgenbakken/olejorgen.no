@@ -1,0 +1,15 @@
+.header {
+    align-items: flex-end;
+    box-sizing: border-box;
+    display: flex;
+    gap: 4rem;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    min-height: 6rem;
+    padding: 0 2rem;
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
