@@ -1,14 +1,22 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 
 import Main from "../components/Layout/Main/Main";
+import PokemonList from "../components/Pokemon/PokemonList";
 import Heading from "../components/Text/Heading/Heading";
-import Paragraph from "../components/Text/Paragraph/Paragraph";
 
 import type { Pokemon } from "../models/pokemon.model";
 function fetchPokemonCount(): Promise<any> {
     return fetch("https://pokeapi.co/api/v2/pokemon?limit=1600")
+        .then((response) => response.json())
+        .then((data) => {
+            return data.count;
+        });
+}
+
+function fetchPokemon(id: number): Promise<Pokemon> {
+    return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
@@ -17,28 +25,33 @@ function fetchPokemonCount(): Promise<any> {
 }
 
 export default function Home() {
-    const [pokemonList, setPokemonList] = React.useState<any | null>(null);
+    const [pokemonCount, setPokemonCount] = useState<any | null>(null);
+    const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
 
     React.useEffect(() => {
-        fetchPokemonCount().then((pokemonList) => setPokemonList(pokemonList));
+        fetchPokemonCount()
+            .then((pokemonCount) => setPokemonCount(pokemonCount))
+            .then(() => {
+                const ids = Array.from({ length: 20 }, (_, index) => index + 1);
+                return Promise.all(ids.map((id) => fetchPokemon(id)))
+                    .then((pokemonList) => {
+                        setPokemonList(pokemonList)
+                    })
+            })
     }, []);
 
     return (
-        <Main>
-            {pokemonList ?
+        <Main maxWidth="none">
+            {pokemonCount ?
                 <>
                     <section>
-                        <Heading level="h1">Liste med Pokémon <small>({pokemonList.count})</small></Heading>
-                        <ul>
-                            {pokemonList.results.slice(0, pokemonList.count).map((pokemon: Pokemon, index: number) => (
-                                <li key={pokemon.name}>
-                                    <Paragraph><small>No. {index + 1}:</small> {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</Paragraph>
-                                </li>
-                            ))}
-                        </ul>
+                        <Heading level="h1">Liste med Pokémon <small>({pokemonCount})</small></Heading>
+                        <PokemonList pokemonList={pokemonList} />
                     </section>
                 </>
                 : "Loading..."}
         </Main>
     );
 }
+
+
