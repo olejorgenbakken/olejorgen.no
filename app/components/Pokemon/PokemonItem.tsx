@@ -14,7 +14,7 @@ interface PokemonProps {
 export function PokemonItem({ pokemon }: PokemonProps) {
     return (
         <li className={styles.pokemon}>
-            <figure className={styles.sprite}><Image className={styles.image} src={pokemon.sprites.other.showdown.front_default} alt={pokemon.name} fill /></figure>
+            <figure className={styles.sprite}><Image className={styles.image} src={pokemon.sprites.other.showdown.front_default} alt={pokemon.name} fill sizes="64px" /></figure>
             <div className={styles.info}>
                 <header className={styles.header}>
                     <Paragraph className={styles.name}>

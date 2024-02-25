@@ -8,17 +8,14 @@ export default function Page({ params }: { params: { name: string } }) {
     const [pokemon, setPokemon] = useState<Pokemon>();
 
     useEffect(() => {
-        console.log(params.name);
         fetch(`https://pokeapi.co/api/v2/pokemon/${params.name}`)
             .then((response) => response.json())
             .then((data) => {
                 setPokemon(data);
             })
             .catch((error) => {
-
                 console.error("Error:", error);
-            }
-            )
+            })
     }, [params.name]);
 
     return (

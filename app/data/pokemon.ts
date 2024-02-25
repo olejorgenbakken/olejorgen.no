@@ -12,7 +12,6 @@ export function fetchPokemon(id: number): Promise<Pokemon> {
   return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       return data;
     });
 }
