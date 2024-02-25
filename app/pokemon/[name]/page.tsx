@@ -156,7 +156,7 @@ export default function Page({ params }: { params: { name: string } }) {
 
                     <section>
                         <Heading level="h2">Cry</Heading>
-                        <audio controls>
+                        <audio controls autoPlay>
                             <source src={`https://play.pokemonshowdown.com/audio/cries/${pokemon.name}.mp3`} type="audio/mpeg" />
                             Your browser does not support the audio element.
                         </audio>
