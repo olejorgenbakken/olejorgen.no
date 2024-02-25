@@ -26,7 +26,7 @@ export default function Home() {
 
     return (
         <Main maxWidth="none">
-            {pokemonCount ?
+            {pokemonList ?
                 <>
                     <section>
                         <Heading level="h1">Liste med Pokémon <small>({pokemonCount})</small></Heading>
