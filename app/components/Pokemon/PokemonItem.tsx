@@ -18,7 +18,7 @@ export function PokemonItem({ pokemon }: PokemonProps) {
             <div className={styles.info}>
                 <header className={styles.header}>
                     <Paragraph className={styles.name}>
-                        <Link href={`/pokemon/${pokemon.id}`}>{pokemon.name}</Link>
+                        <Link href={`/pokemon/${pokemon.name}`}>{pokemon.name}</Link>
                     </Paragraph>
                     <ul className={styles.types}>
                         {pokemon.types.map((type) => (

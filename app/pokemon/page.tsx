@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Main from "../components/Layout/Main/Main";
 import PokemonList from "../components/Pokemon/PokemonList";
@@ -15,7 +15,7 @@ function fetchPokemonCount(): Promise<any> {
         });
 }
 
-function fetchPokemon(id: number): Promise<Pokemon> {
+export function fetchPokemon(id: number): Promise<Pokemon> {
     return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((response) => response.json())
         .then((data) => {
@@ -28,11 +28,11 @@ export default function Home() {
     const [pokemonCount, setPokemonCount] = useState<any | null>(null);
     const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetchPokemonCount()
             .then((pokemonCount) => setPokemonCount(pokemonCount))
             .then(() => {
-                const ids = Array.from({ length: 20 }, (_, index) => index + 1);
+                const ids = Array.from({ length: 920 }, (_, index) => index + 1);
                 return Promise.all(ids.map((id) => fetchPokemon(id)))
                     .then((pokemonList) => {
                         setPokemonList(pokemonList)

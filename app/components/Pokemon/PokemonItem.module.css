@@ -6,23 +6,21 @@
     display: flex;
     gap: 1rem;
     overflow: hidden;
+    padding: 1rem 0.5rem 1rem 0; 
     position: relative;
     text-decoration: none;
-    transition: background-color 0.2s, border-color 0.2s ease-in-out;
+    transition: background-color 0.1s, border-color 0.17s ease-in-out;
 
     .sprite {
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
         border-radius: 8px;
         height: 64px;
         margin: 1rem;
         min-width: 64px;
-        padding: 1rem;
         position: relative;
-        transition: all 2s ease-in-out;
+        transition: transform 0.1s ease-in-out;
 
         .image {
-            object-fit: scale-down;
+            object-fit: contain;
         }
     }
 
@@ -32,11 +30,13 @@
         .header {
             align-items: center;
             display: flex;
-            gap: 1rem;
+            flex-wrap: wrap;
+            gap: 0.2rem 1rem;
+            margin: 0 0 0.6rem 0;
 
             .name {
-            margin: 0 0 0.2rem 0;
-            text-transform: capitalize;
+                margin: 0;
+                text-transform: capitalize;
 
             &.name a {
                 color: inherit;
@@ -53,13 +53,12 @@
                 width: 100%;
             }
         }
-
-            .types {
-            display: flex;
-            gap: 0.6rem;
-            list-style: none;
-            padding-left: 0;
-        }
+        .types {
+                display: flex;
+                gap: 0.6rem;
+                list-style: none;
+                padding-left: 0;
+            }
         }
 
         
@@ -77,7 +76,6 @@
     border-color: var(--border-color-strong);
 
     .sprite {
-        background-color: var(--bg);
-        transform: scale(1.01);
+        transform: scale(1.1);
     }
 }
