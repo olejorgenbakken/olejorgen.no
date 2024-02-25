@@ -6,21 +6,21 @@
     display: flex;
     gap: 1rem;
     overflow: hidden;
-    padding: 1rem 1rem 1rem 0; 
+    padding: 0.75rem 1rem 1rem 1rem; 
     position: relative;
     text-decoration: none;
     transition: background-color 0.1s, border-color 0.17s ease-in-out;
 
     .sprite {
         border-radius: 8px;
-        height: 64px;
+        height: clamp(36px, 10vw, 64px);
         margin: 1rem;
-        min-width: 64px;
         position: relative;
         transition: transform 0.1s ease-in-out;
+        width: clamp(36px, 10vw, 64px);
 
         .image {
-            object-fit: contain;
+            object-fit: scale-down;
         }
     }
 
