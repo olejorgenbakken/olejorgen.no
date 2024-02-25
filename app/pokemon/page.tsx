@@ -3,35 +3,35 @@
 import { useEffect, useState } from "react";
 
 import Main from "../components/Layout/Main/Main";
-import PokemonList from "../components/Pokemon/PokemonList";
 import Heading from "../components/Text/Heading/Heading";
-import { fetchPokemon, fetchPokemonCount } from "../data/pokemon";
+import Paragraph from "../components/Text/Paragraph/Paragraph";
+import Pokedex from "./components/Pokedex";
+import { fetchPokedex } from "./data/pokemon";
 
-import type { Pokemon } from "../models/pokemon.model";
+import type { Pokédex } from "./models/pokedex.model";
 export default function Home() {
-    const [pokemonCount, setPokemonCount] = useState<any | null>(null);
-    const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
+    const [nationalPokedex, setNationalPokedex] = useState<Pokédex>();
+
+    const pokedexId = 1;
+    const pokedexlanguage = "en";
 
     useEffect(() => {
-        fetchPokemonCount()
-            .then((pokemonCount) => setPokemonCount(pokemonCount))
-            .then(() => {
-                const ids = Array.from({ length: 920 }, (_, index) => index + 1);
-                return Promise.all(ids.map((id) => fetchPokemon(id)))
-                    .then((pokemonList) => {
-                        setPokemonList(pokemonList)
-                    })
-            })
+        fetchPokedex(pokedexId)
+            .then((data: Pokédex) => {
+                console.log(data);
+                setNationalPokedex(data);
+            });
     }, []);
 
     return (
         <Main maxWidth="none">
-            {pokemonCount ?
+            {nationalPokedex ?
                 <>
-                    <section>
-                        <Heading level="h1">Liste med Pokémon <small>({pokemonCount})</small></Heading>
-                        {pokemonList ? <PokemonList pokemonList={pokemonList} /> : "Loading..."}
-                    </section>
+                    <header>
+                        <Heading level="h1">{nationalPokedex.names.find((name) => name.language.name === pokedexlanguage)?.name} pokédex</Heading>
+                        <Paragraph muted>{nationalPokedex.descriptions.find((desc) => desc.language.name === pokedexlanguage)?.description}</Paragraph>
+                    </header>
+                    <Pokedex pokedex={nationalPokedex} />
                 </>
                 : "Loading..."}
         </Main>

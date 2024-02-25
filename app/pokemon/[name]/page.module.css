@@ -1,0 +1,13 @@
+.pokemonHeader {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.pokemonSprites {
+    overflow: auto;
+    table-layout: fixed;
+    width: 100%;
+}

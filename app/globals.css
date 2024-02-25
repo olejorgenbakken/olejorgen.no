@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wdth,wght@62.5..100,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..800&family=Noto+Sans:wdth,wght@62.5..100,100..900&display=swap');
 
 :root {
     --bg: rgb(255,255,255);
@@ -25,6 +24,6 @@ body {
     --border-color: rgb(25, 25, 25);
     --border-color-strong: rgb(50, 50, 50);
     --text: rgb(255, 255, 255);
-    --text-muted: rgb(200, 200, 200);
+    --text-muted: rgb(220, 220, 220);
   }
 }

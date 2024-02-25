@@ -3,4 +3,8 @@
   line-height: 1.5;
   margin-bottom: 1.5rem;
   max-width: 70ch;
+
+  &.muted {
+    color: var(--text-muted);
+  }
 }
