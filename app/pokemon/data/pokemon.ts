@@ -1,5 +1,5 @@
 import type { Pokemon } from '../models/pokemon.model';
-import type { PokemonColor } from '../models/pokemoncolor.model';
+import type { PokemonColor } from '../models/PokemonColor.model';
 
 export function getPokemonByName(name: string): Promise<Pokemon> {
   return fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
