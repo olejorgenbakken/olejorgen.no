@@ -8,6 +8,8 @@
     --text: rgb(0, 0, 0);
     --text-muted: rgb(100, 100, 100);
     --max-width: 800px;
+    --max-width-xl: 1096px;
+    --max-width-2xl: 1400px;
 }
 
 body {
@@ -15,6 +17,35 @@ body {
   color: var(--text);
   font-family: "Noto Sans", sans-serif;
   margin: 0;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+}
+
+table {
+  border-spacing: 0;
+  display: block;
+  margin: 0 auto;
+  overflow: auto;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 5px 10px;
+}
+
+th {
+  
+  left: 0;
+  position: sticky;
+  top: 0;
+}
+
+thead, th {
+  background: var(--bg-secondary);
 }
 
 @media (prefers-color-scheme: dark) {

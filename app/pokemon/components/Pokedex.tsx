@@ -1,5 +1,4 @@
-import type { Pokédex } from "@/app/pokemon/models/pokedex.model";
-
+import type { Pokédex } from "../models/pokedex.model";
 import styles from "./Pokedex.module.css";
 
 interface PokedexProps {

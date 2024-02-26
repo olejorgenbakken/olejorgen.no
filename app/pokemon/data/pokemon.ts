@@ -1,39 +1,46 @@
-import type { Generation } from '../models/generation.model';
 import type { Pokemon } from '../models/pokemon.model';
-import type { Pokédex } from '../models/pokedex.model';
+import type { PokemonColor } from '../models/pokemoncolor.model';
 
-export function fetchGen(id?: number): Promise<Generation> {
-  return fetch(
-    id
-      ? `https://pokeapi.co/api/v2/generation/${id}`
-      : 'https://pokeapi.co/api/v2/generation'
-  )
+export function getPokemonByName(name: string): Promise<Pokemon> {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then((response) => response.json())
     .then((data) => {
       return data;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
     });
 }
 
-export function fetchPokedex(id?: number): Promise<Pokédex> {
-  return fetch(
-    id
-      ? `https://pokeapi.co/api/v2/pokedex/${id}`
-      : 'https://pokeapi.co/api/v2/pokedex'
-  )
+export function getPokemonById(id: number): Promise<Pokemon> {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then((response) => response.json())
     .then((data) => {
       return data;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
     });
 }
 
-export function fetchPokemon(id?: number, name?: string): Promise<Pokemon> {
-  return fetch(
-    id
-      ? `https://pokeapi.co/api/v2/pokemon/${id}`
-      : `https://pokeapi.co/api/v2/pokemon/${name}`
-  )
+export function getPokemonColorByName(name: string): Promise<PokemonColor> {
+  return fetch(`https://pokeapi.co/api/v2/pokemon-color/${name}`)
     .then((response) => response.json())
     .then((data) => {
       return data;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
+
+export function getPokemonColorById(id: number): Promise<PokemonColor> {
+  return fetch(`https://pokeapi.co/api/v2/pokemon-color/${id}`)
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
     });
 }

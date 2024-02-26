@@ -3,8 +3,6 @@ h2.heading,
 h3.heading,
 h4.heading {
   font-weight: 700;
-  margin-bottom: 1rem;
-  margin-top: 0;
 }
 
 h1.heading {

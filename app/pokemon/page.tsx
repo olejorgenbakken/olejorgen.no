@@ -6,9 +6,10 @@ import Main from "../components/Layout/Main/Main";
 import Heading from "../components/Text/Heading/Heading";
 import Paragraph from "../components/Text/Paragraph/Paragraph";
 import Pokedex from "./components/Pokedex";
-import { fetchPokedex } from "./data/pokemon";
+import { fetchPokedex } from "./data/pokedex";
 
 import type { Pokédex } from "./models/pokedex.model";
+
 export default function Home() {
     const [nationalPokedex, setNationalPokedex] = useState<Pokédex>();
 
@@ -24,7 +25,7 @@ export default function Home() {
     }, []);
 
     return (
-        <Main maxWidth="none">
+        <Main maxWidth="lg">
             {nationalPokedex ?
                 <>
                     <header>
