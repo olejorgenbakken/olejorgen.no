@@ -19,5 +19,6 @@ export default defineConfig({
       app: '/app',
       components: path.resolve(__dirname, '/app/components'),
     },
+    preserveSymlinks: true,
   },
 });
