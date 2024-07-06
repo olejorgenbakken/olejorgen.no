@@ -1,4 +1,0 @@
-.small {
-    font-size: clamp(0.85rem, 1vw, 0.9rem);
-    text-transform: uppercase;
-}

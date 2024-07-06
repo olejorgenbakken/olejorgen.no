@@ -1,0 +1,27 @@
+.main {
+    background: var(--color-background);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--space-lg);
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 0 var(--space-md);
+    width: 100%;
+
+    h1.sr-only {
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    > * {
+        width: 100%;
+    }
+}

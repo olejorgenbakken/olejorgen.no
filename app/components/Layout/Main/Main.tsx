@@ -1,10 +1,30 @@
-import styles from "./Main.module.css";
+import type { MetaFunction } from '@remix-run/node';
+import type React from 'react';
 
-interface MainProps {
-    children: React.ReactNode;
-    maxWidth: "sm" | "md" | "lg" | "xl" | "none";
+import './Main.css';
+
+interface Props {
+  title: string;
+  hideTitle?: boolean;
+  children?: React.ReactNode;
 }
 
-export default function Main({ children, maxWidth }: MainProps) {
-    return <main className={`${styles.main} ${styles[maxWidth]}`}>{children}</main>;
-}
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'New Remix App' },
+    { name: 'description', content: 'Welcome to Remix!' },
+  ];
+};
+
+export const Main: React.FC<Props> = ({
+  title,
+  hideTitle = false,
+  children,
+}) => {
+  return (
+    <main className="main">
+      <h1 className={hideTitle ? 'sr-only' : ''}>{title}</h1>
+      {children}
+    </main>
+  );
+};

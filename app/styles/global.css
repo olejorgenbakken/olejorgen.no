@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --color-background: oklch(from hsl(0 0% 95%) l c h);
+    --color-text: oklch(from hsl(0 0% 0%) l c h);
+    --color-text-inverted: oklch(from hsl(0 0% 100%) l c h);
+    --color-section: oklch(from hsl(0 0% 98%) l c h);
+    --color-container: oklch(from hsl(0 0% 100%) l c h);
+    --color-border: oklch(from hsl(0 0% 90%) l c h);
+    --color-link: oklch(from hsl(235, 100%, 50%) l c h);
+
+    --space-0: 0;
+    --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+    --space-sm: clamp(0.5rem, 1vw, 1rem);
+    --space-md: clamp(1rem, 2vw, 2rem);
+    --space-lg: clamp(2rem, 4vw, 4rem);
+    --space-xl: clamp(4rem, 8vw, 8rem);
+    --space-2xl: clamp(8rem, 16vw, 16rem);
+    --space-3xl: clamp(16rem, 32vw, 32rem);
+
+    --font-size-xs: clamp(0.85rem, 1vw, 1rem);
+    --font-size-sm: clamp(1rem, 1.5vw, 1.25rem);
+    --font-size-md: clamp(1.15rem, 2vw, 1.5rem);
+    --font-size-lg: clamp(1.5rem, 3vw, 2rem);
+    --font-size-xl: clamp(2rem, 4vw, 3rem);
+
+    --letter-spacing-wide: clamp(0.05em, 0.5vw, 0.1em);
+
+    --max-width: 1260px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: oklch(from hsl(0 0% 5%) l c h);
+        --color-text: oklch(from hsl(0 0% 100%) l c h);
+        --color-text-inverted: oklch(from hsl(0 0% 0%) l c h);
+        --color-section: oklch(from hsl(0 0% 2%) l c h);
+        --color-container: oklch(from hsl(0 0% 0%) l c h);
+        --color-border: oklch(from hsl(0 0% 15%) l c h);
+        --color-link: oklch(from hsl(235, 100%, 60%) l c h);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100svh;
+    min-height: 100svh;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: var(--font-size-xl);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+p {
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+    max-width: 55ch;
+    text-wrap: pretty;
+
+    a {
+        border-bottom: 2px solid var(--color-link);
+        color: inherit;
+    }
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
