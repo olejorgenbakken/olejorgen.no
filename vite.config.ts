@@ -20,4 +20,7 @@ export default defineConfig({
       components: path.resolve(__dirname, '/app/components'),
     },
   },
+  build: {
+    outDir: 'build',
+  },
 });
