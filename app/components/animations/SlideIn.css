@@ -1,0 +1,69 @@
+.slide-in {
+    animation-direction: normal;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateY(0) translateX(0);
+}
+
+.slide-in[data-direction='up'] {
+    animation-name: slide-in-up;
+}
+
+.slide-in[data-direction='down'] {
+    animation-name: slide-in-down;
+}
+
+.slide-in[data-direction='left'] {
+    animation-name: slide-in-left;
+}
+
+.slide-in[data-direction='right'] {
+    animation-name: slide-in-right;
+}
+
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

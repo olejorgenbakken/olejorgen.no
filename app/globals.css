@@ -79,7 +79,11 @@
   --font-size-3xl: clamp(2.5rem, 1vw, 3rem);
   --font-size-4xl: clamp(3rem, 1vw, 3.5rem);
 
-  --max-width: 64rem;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1536px;
+
+  --max-width: var(--breakpoint-lg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -210,11 +214,19 @@ a:hover::after {
 }
 
 img {
-  border-radius: var(--spacing-md);
+  border-radius: var(--spacing-sm);
   max-width: 100%;
   object-fit: cover;
 }
 
 .balanced {
   text-wrap: balance;
+}
+
+.card {
+  background: var(--color-surface-1);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--spacing-md);
+  box-shadow: 0 0 var(--spacing-md) var(--color-border);
+  padding: var(--spacing-lg);
 }
