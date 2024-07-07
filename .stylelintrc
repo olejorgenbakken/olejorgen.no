@@ -22,7 +22,9 @@
       "svw",
       "vw",
       "deg",
-      "fr"
+      "fr",
+      "ch",
+      "px"
     ]
   },
   "extends": "stylelint-config-recommended"

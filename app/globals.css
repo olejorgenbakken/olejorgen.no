@@ -1,42 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+
 :root {
-    --color-surface-0: oklch(96% 0.005 300);
-    --color-surface-1: oklch(100% 0 0);
-    --color-surface-2: oklch(99% 0 0 / 85%);
-    --color-text-primary: oklch(0% 0 0);
-    --color-text-secondary: oklch(54% 0 0);
-    --color-accent: oklch(57% 0.18 286);
-    --color-danger: oklch(59% 0.23 7);
+  --hue-red: 0;
+  --hue-orange: 50;
+  --hue-yellow: 80;
+  --hue-green: 136;
+  --hue-teal: 180;
+  --hue-blue-light: 220;
+  --hue-blue-deep: 260;
+  --hue-purple: 280;
+  --hue-pink: 330;
 
-    --spacing-0: 0;
-    --spacing-xxs: clamp(0.125rem, 0.25vw, 0.25rem);
-    --spacing-xs: clamp(0.25rem, 0.5vw, 0.5rem);
-    --spacing-sm: clamp(0.5rem, 1vw, 1rem);
-    --spacing-md: clamp(1rem, 2vw, 2rem);
-    --spacing-lg: clamp(2rem, 4vw, 4rem);
-    --spacing-xl: clamp(4rem, 8vw, 8rem);
-    --spacing-2xl: clamp(8rem, 16vw, 16rem);
-    --spacing-3xl: clamp(16rem, 32vw, 32rem);
-    --spacing-4xl: clamp(32rem, 64vw, 64rem);
+  --hue-accent: var(--hue-blue-deep);
 
-    --font-family-primary: 'Inter', sans-serif;
-    --font-family-secondary: 'Merriweather', serif;
+  --color-surface-0: oklch(99% 0.005 var(--hue-accent));
+  --color-surface-1: oklch(90% 0.1 var(--hue-accent));
+  --color-surface-2: oklch(80% 0.2 var(--hue-accent));
+  --color-surface-3: oklch(70% 0.25 var(--hue-accent));
 
-    --font-size-xxs: clamp(0.5rem, 1vw, 0.75rem);
-    --font-size-xs: clamp(0.75rem, 1vw, 1rem);
-    --font-size-sm: clamp(1rem, 1vw, 1.25rem);
-    --font-size-md: clamp(1.25rem, 1vw, 1.5rem);
-    --font-size-lg: clamp(1.5rem, 1vw, 1.75rem);
-    --font-size-xl: clamp(1.75rem, 1vw, 2rem);
-    --font-size-2xl: clamp(2rem, 1vw, 2.5rem);
-    --font-size-3xl: clamp(2.5rem, 1vw, 3rem);
+  --color-text-primary: oklch(0% 0 var(--hue-accent));
+  --color-text-muted: oklch(30% 0 var(--hue-accent));
+  
+  --color-danger: oklch(59% 0.23 var(--color-red-hue));
+  --color-accent: oklch(59% 0.23 var(--hue-accent));
+
+  --color-border: oklch(90% 0.05 var(--hue-accent));
+
+  --color-gradient-stop-1: oklch(59% 0.23 var(--hue-red));
+  --color-gradient-stop-2: oklch(59% 0.23 var(--hue-orange));
+  --color-gradient-stop-3: oklch(59% 0.23 var(--hue-yellow));
+  --color-gradient-stop-4: oklch(59% 0.23 var(--hue-green));
+  --color-gradient-stop-5: oklch(59% 0.23 var(--hue-teal));
+  --color-gradient-stop-6: oklch(59% 0.23 var(--hue-blue-light));
+  --color-gradient-stop-7: oklch(59% 0.23 var(--hue-blue-deep));
+  --color-gradient-stop-8: oklch(59% 0.23 var(--hue-purple));
+  --color-gradient-stop-9: oklch(59% 0.23 var(--hue-pink));
+
+  --color-gradient: linear-gradient(
+    45deg,
+    var(--color-accent),
+    var(--color-gradient-stop-1),
+    var(--color-gradient-stop-2),
+    var(--color-gradient-stop-3),
+    var(--color-gradient-stop-4),
+    var(--color-gradient-stop-5),
+    var(--color-gradient-stop-6),
+    var(--color-gradient-stop-7),
+    var(--color-gradient-stop-8),
+    var(--color-gradient-stop-9)
+  );
+
+
+  --spacing-0: 0;
+  --spacing-xxs: clamp(0.125rem, 0.25vw, 0.25rem);
+  --spacing-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+  --spacing-sm: clamp(0.5rem, 1vw, 1rem);
+  --spacing-md: clamp(1rem, 2vw, 4rem);
+  --spacing-lg: clamp(2rem, 4vw, 4rem);
+  --spacing-xl: clamp(4rem, 8vw, 8rem);
+  --spacing-2xl: clamp(8rem, 16vw, 16rem);
+  --spacing-3xl: clamp(16rem, 32vw, 32rem);
+  --spacing-4xl: clamp(32rem, 64vw, 64rem);
+
+  --border-width: 2px;
+  --border-width-thin: 1px;
+  --border-width-thick: 4px;
+
+  --font-family-primary: 'Inter', sans-serif;
+  --font-family-secondary: 'Merriweather', serif;
+
+  --font-size-xxs: clamp(0.5rem, 1vw, 0.75rem);
+  --font-size-xs: clamp(0.75rem, 1vw, 1rem);
+  --font-size-sm: clamp(1rem, 1vw, 1.25rem);
+  --font-size-md: clamp(1.25rem, 1vw, 1.5rem);
+  --font-size-lg: clamp(1.5rem, 1vw, 1.75rem);
+  --font-size-xl: clamp(1.75rem, 1vw, 2rem);
+  --font-size-2xl: clamp(2rem, 1vw, 2.5rem);
+  --font-size-3xl: clamp(2.5rem, 1vw, 3rem);
+  --font-size-4xl: clamp(3rem, 1vw, 3.5rem);
+
+  --max-width: 64rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --surface-0: oklch(12.76% 0.0176 152.76);
-    --surface-1: oklch(29% 0.01 300);
-    --surface-2: oklch(29% 0 0 / 85%);
-    --text-primary: oklch(100% 0 0);
+    --color-surface-0: oklch(10% 0.005 var(--hue-accent));
+    --color-surface-1: oklch(20% 0.1 var(--hue-accent));
+    --color-surface-2: oklch(30% 0.2 var(--hue-accent));
+    --color-surface-3: oklch(40% 0.25 var(--hue-accent));
+
+    --color-text-primary: oklch(100% 0 var(--hue-accent));
+    --color-text-muted: oklch(80% 0 var(--hue-accent));
+
+    --color-border: oklch(20% 0.05 var(--hue-accent));
   }
 }
 
@@ -48,6 +104,7 @@
 
 html,
 body {
+  font-family: var(--font-family-primary);
   height: 100svh;
   max-width: 100vw;
   overflow-x: hidden;
@@ -60,16 +117,104 @@ body {
   flex-direction: column;
 }
 
-main {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: 2rem;
-  justify-content: center;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+h1,
+.h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-lg);
+}
+
+h5,
+.h5 {
+  font-size: var(--font-size-md);
+}
+
+h6,
+.h6,
+p {
+  font-size: var(--font-size-sm);
+}
+
+p {
+  max-width: 60ch;
+
+  @supports (text-wrap: balance) {
+    text-wrap: balance;
+  }
+}
+
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 a {
   color: inherit;
+  padding-bottom: var(--border-width);
+  position: relative;
   text-decoration: none;
+}
+
+a::after {
+  animation: none;
+  background: var(--color-accent);
+  bottom: 0;
+  content: '';
+  height: var(--border-width);
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+a:hover::after {
+  animation: animatedGradient 4s linear infinite;
+  background: var(--color-gradient);
+  background-size: 1000% 1000%;
+}
+
+img {
+  border-radius: var(--spacing-md);
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.balanced {
+  text-wrap: balance;
 }
