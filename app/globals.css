@@ -3,17 +3,16 @@
 :root {
   --hue-red: 0;
   --hue-orange: 50;
-  --hue-yellow: 80;
+  --hue-yellow: 100;
   --hue-green: 136;
   --hue-teal: 180;
-  --hue-blue-light: 220;
-  --hue-blue-deep: 260;
-  --hue-purple: 280;
-  --hue-pink: 330;
+  --hue-blue: 220;
+  --hue-purple: 320;
+  --hue-pink: 350;
 
-  --hue-accent: var(--hue-blue-deep);
+  --hue-accent: var(--hue-orange);
 
-  --color-surface-0: oklch(99% 0.005 var(--hue-accent));
+  --color-surface-0: oklch(90% 0.2 var(--hue-accent));
   --color-surface-1: oklch(90% 0.1 var(--hue-accent));
   --color-surface-2: oklch(80% 0.2 var(--hue-accent));
   --color-surface-3: oklch(70% 0.25 var(--hue-accent));
@@ -25,20 +24,20 @@
   --color-accent: oklch(59% 0.23 var(--hue-accent));
 
   --color-border: oklch(90% 0.05 var(--hue-accent));
+  --color-border-colored: oklch(40% 0.4 var(--hue-accent));
 
   --color-gradient-stop-1: oklch(59% 0.23 var(--hue-red));
   --color-gradient-stop-2: oklch(59% 0.23 var(--hue-orange));
   --color-gradient-stop-3: oklch(59% 0.23 var(--hue-yellow));
   --color-gradient-stop-4: oklch(59% 0.23 var(--hue-green));
   --color-gradient-stop-5: oklch(59% 0.23 var(--hue-teal));
-  --color-gradient-stop-6: oklch(59% 0.23 var(--hue-blue-light));
-  --color-gradient-stop-7: oklch(59% 0.23 var(--hue-blue-deep));
-  --color-gradient-stop-8: oklch(59% 0.23 var(--hue-purple));
-  --color-gradient-stop-9: oklch(59% 0.23 var(--hue-pink));
+  --color-gradient-stop-6: oklch(59% 0.23 var(--hue-blue));
+  --color-gradient-stop-7: oklch(59% 0.23 var(--hue-purple));
+  --color-gradient-stop-8: oklch(59% 0.23 var(--hue-pink));
 
-  --color-gradient: linear-gradient(
+  --rainbow-linear: linear-gradient(
     45deg,
-    var(--color-accent),
+    var(--color-border-colored),
     var(--color-gradient-stop-1),
     var(--color-gradient-stop-2),
     var(--color-gradient-stop-3),
@@ -46,8 +45,7 @@
     var(--color-gradient-stop-5),
     var(--color-gradient-stop-6),
     var(--color-gradient-stop-7),
-    var(--color-gradient-stop-8),
-    var(--color-gradient-stop-9)
+    var(--color-gradient-stop-8)
   );
 
 
@@ -64,7 +62,12 @@
 
   --border-width: 2px;
   --border-width-thin: 1px;
-  --border-width-thick: 4px;
+  --border-width-thick: 6px;
+
+  --border-radius-full: 9999px;
+  --border-radius-sm: var(--spacing-xs);
+  --border-radius-md: var(--spacing-sm);
+  --border-radius-lg: var(--spacing-md);
 
   --font-family-primary: 'Inter', sans-serif;
   --font-family-secondary: 'Merriweather', serif;
@@ -88,7 +91,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-surface-0: oklch(10% 0.005 var(--hue-accent));
+    --color-surface-0: oklch(5% 0.2 var(--hue-accent));
     --color-surface-1: oklch(20% 0.1 var(--hue-accent));
     --color-surface-2: oklch(30% 0.2 var(--hue-accent));
     --color-surface-3: oklch(40% 0.25 var(--hue-accent));
@@ -169,12 +172,14 @@ p {
   font-size: var(--font-size-sm);
 }
 
-p {
-  max-width: 60ch;
-
+p, .balanced {
   @supports (text-wrap: balance) {
     text-wrap: balance;
   }
+}
+
+p {
+  max-width: 60ch;
 }
 
 @keyframes animatedGradient {
@@ -191,42 +196,38 @@ p {
 
 a {
   color: inherit;
-  padding-bottom: var(--border-width);
+  padding-bottom: calc(var(--border-width) * 2);
   position: relative;
   text-decoration: none;
+  transition: padding-bottom .1s ease-in-out;
 }
 
 a::after {
   animation: none;
-  background: var(--color-accent);
+  background: var(--color-border-colored);
+  border-radius: var(--border-radius-full);
   bottom: 0;
   content: '';
   height: var(--border-width);
   left: 0;
   position: absolute;
   right: 0;
+  transition: height .1s ease-in-out;
+}
+
+a:hover {
+  padding-bottom: var(--border-width-thick);
 }
 
 a:hover::after {
   animation: animatedGradient 4s linear infinite;
-  background: var(--color-gradient);
+  background: var(--rainbow-linear);
   background-size: 1000% 1000%;
+  height: var(--border-width-thick);
 }
 
 img {
   border-radius: var(--spacing-sm);
   max-width: 100%;
   object-fit: cover;
-}
-
-.balanced {
-  text-wrap: balance;
-}
-
-.card {
-  background: var(--color-surface-1);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--spacing-md);
-  box-shadow: 0 0 var(--spacing-md) var(--color-border);
-  padding: var(--spacing-lg);
 }

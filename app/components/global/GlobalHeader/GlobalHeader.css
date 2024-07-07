@@ -12,11 +12,6 @@
     }
 
     .name {
-        padding-bottom: calc(var(--border-width-thick) * 2);
         text-transform: uppercase;
-    }
-
-    .name::after {
-        height: var(--border-width-thick);
     }
 }
