@@ -10,8 +10,4 @@
         padding: var(--spacing-md) var(--spacing-lg);
         width: 100%;
     }
-
-    .name {
-        text-transform: uppercase;
-    }
 }

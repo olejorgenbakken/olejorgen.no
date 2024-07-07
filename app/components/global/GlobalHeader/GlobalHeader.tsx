@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import './GlobalHeader.css';
+import { Logo } from '../Logo';
 
 type Color = {
   label: string;
@@ -16,13 +17,7 @@ export const GlobalHeader = () => {
     return (
       <header className="global-header">
         <div className="content">
-          <p className="h5">
-            <Link
-              href="/"
-              className="name">
-              Ole Jørgen Bakken
-            </Link>
-          </p>
+          <Logo />
         </div>
       </header>
     );

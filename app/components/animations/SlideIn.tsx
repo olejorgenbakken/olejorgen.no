@@ -18,7 +18,6 @@ export const SlideIn: React.FC<SlideInFromBottomProps> = ({
       className="slide-in"
       data-direction={direction}>
       {children}
-      <style jsx>{``}</style>
     </div>
   );
 };

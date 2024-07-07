@@ -65,7 +65,7 @@
 
   --border-width: 2px;
   --border-width-thin: 1px;
-  --border-width-thick: 6px;
+  --border-width-thick: 4px;
 
   --border-radius-full: 9999px;
   --border-radius-sm: var(--spacing-xs);
@@ -129,6 +129,7 @@ body {
   color: var(--color-text-primary);
   display: flex;
   flex-direction: column;
+  line-height: 1.5;
 }
 
 h1,
@@ -203,7 +204,7 @@ p {
 
 a {
   color: inherit;
-  padding-bottom: calc(var(--border-width) * 2);
+  padding-bottom: var(--border-width);
   position: relative;
   text-decoration: none;
   
@@ -229,7 +230,7 @@ a::after {
 }
 
 a:hover {
-  padding-bottom: var(--border-width-thick);
+  padding-bottom: var(--border-width);
 }
 
 a:hover::after {
