@@ -1,0 +1,21 @@
+.theme-picker {
+    align-items: center;
+    background: var(--color-accent);
+    border: var(--border-width) solid var(--color-border-colored);
+    border-radius: var(--border-radius-md);
+    box-sizing: border-box;
+    color: var(--color-text-inverted);
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    width: max-content;
+
+    input {
+        background-color: transparent;
+        border: none;
+        border-radius: var(--border-radius-sm);
+        outline: none;
+        overflow: hidden;
+    }
+}

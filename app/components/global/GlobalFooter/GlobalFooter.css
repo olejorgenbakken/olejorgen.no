@@ -1,0 +1,13 @@
+.global-footer {
+    background: var(--color-surface-2);
+    border-top: var(--border-width-thin) dotted var(--color-border-colored);
+    width: 100%;
+    
+    .content {    
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: var(--max-width);
+        padding: var(--spacing-lg);
+        width: 100%;
+    }
+}

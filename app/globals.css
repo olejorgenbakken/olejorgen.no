@@ -11,7 +11,7 @@
   --hue-purple: 320;
   --hue-pink: 350;
 
-  --hue-accent: var(--hue-blue);
+  --hue-accent: var(--hue-green);
 
   --color-surface-0: oklch(90% 0.2 var(--hue-accent));
   --color-surface-1: oklch(90% 0.1 var(--hue-accent));
@@ -21,6 +21,7 @@
   --color-text-primary: oklch(0% 0 var(--hue-accent));
   --color-text-muted: oklch(30% 0 var(--hue-accent));
   --color-text-colored: oklch(30% 0.1 var(--hue-accent));
+  --color-text-inverted: oklch(100% 0 var(--hue-accent));
   
   --color-danger: oklch(59% 0.23 var(--color-red-hue));
   --color-accent: oklch(59% 0.23 var(--hue-accent));
@@ -94,15 +95,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-surface-0: oklch(10% 0.3 var(--hue-accent));
-    --color-surface-1: oklch(20% 0.1 var(--hue-accent));
-    --color-surface-2: oklch(30% 0.2 var(--hue-accent));
-    --color-surface-3: oklch(40% 0.25 var(--hue-accent));
+    --color-surface-0: oklch(10% 0.2 var(--hue-accent));
+    --color-surface-1: oklch(10% 0.16 var(--hue-accent));
+    --color-surface-2: oklch(8% 0.12 var(--hue-accent));
+    --color-surface-3: oklch(6% 0.1 var(--hue-accent));
 
     --color-text-primary: oklch(100% 0 var(--hue-accent));
     --color-text-muted: oklch(80% 0 var(--hue-accent));
+    --color-text-colored: oklch(80% 0.2 var(--hue-accent));
+    --color-text-inverted: oklch(100% 0 var(--hue-accent));
 
     --color-border: oklch(20% 0.05 var(--hue-accent));
+    --color-border-colored: oklch(50% 0.2 var(--hue-accent));
   }
 }
 
@@ -202,7 +206,10 @@ a {
   padding-bottom: calc(var(--border-width) * 2);
   position: relative;
   text-decoration: none;
-  transition: padding-bottom .1s ease-in-out;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    transition: padding-bottom .1s ease-in-out;
+  } 
 }
 
 a::after {
@@ -215,7 +222,10 @@ a::after {
   left: 0;
   position: absolute;
   right: 0;
-  transition: height .1s ease-in-out;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: height .1s ease-in-out;
+  } 
 }
 
 a:hover {
@@ -223,7 +233,10 @@ a:hover {
 }
 
 a:hover::after {
-  animation: animatedGradient 4s linear infinite;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: animatedGradient 4s linear infinite;
+  }
+
   background: var(--rainbow-linear);
   background-size: 1000% 1000%;
   height: var(--border-width-thick);
@@ -237,6 +250,30 @@ img {
 
 .colored {
   color: var(--color-text-colored);
+  position: relative;
+  z-index: 1;
+}
+
+.colored::after {
+  aspect-ratio: 1 / 1;
+  background: var(--rainbow-linear);
+  border-radius: var(--border-radius-full);
+  content: '';
+  display: block;
+  filter: blur(200px);
+  left: 40%;
+  margin-top: var(--spacing-xs);
+  opacity: 0.3;
+  position: absolute;
+  -webkit-text-fill-color: transparent;
+  top: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: -1;
+
+  @media (prefers-color-scheme: dark) {
+    opacity: 0.1;
+  }
 }
 
 .huge {
@@ -244,10 +281,22 @@ img {
   font-weight: 900;
 }
 
+.animated-background {
+  background: var(--rainbow-linear);
+  background-size: 1000% 1000%;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: animatedGradient 12s linear infinite;
+  }
+}
+
 .animated-text {
-  animation: animatedGradient 12s linear infinite;
   background: var(--rainbow-linear);
   background-clip: text;
   background-size: 1000% 1000%;
   -webkit-text-fill-color: transparent;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: animatedGradient 12s linear infinite;
+  }
 }

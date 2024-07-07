@@ -10,7 +10,7 @@ export default function Home() {
       description="Må ha et sted å teste ting"
       hideHeader>
       <SlideIn>
-        <p className="colored huge animated-text">Testing, testing...</p>
+        <p className="colored huge">Testing, testing...</p>
       </SlideIn>
       <Grid>
         <SlideIn direction="down">

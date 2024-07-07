@@ -1,12 +1,17 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { SlideIn } from '../../animations/SlideIn';
 
 import './GlobalHeader.css';
 
+type Color = {
+  label: string;
+  value: number;
+};
+
 export const GlobalHeader = () => {
   const path = usePathname();
+
   if (path === '/') {
     return (
       <header className="global-header">

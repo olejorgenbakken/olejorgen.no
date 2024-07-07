@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { GlobalHeader } from './components/global';
 
 import './globals.css';
+import { GlobalFooter } from './components/global/GlobalFooter/GlobalFooter';
 
 export const metadata: Metadata = {
   title: 'Ole Jørgen Bakken',
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body>
         <GlobalHeader />
         {children}
+        <GlobalFooter />
         <SpeedInsights />
         <Analytics />
       </body>
