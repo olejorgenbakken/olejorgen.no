@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { Main } from './components/layout';
+import { Main, Grid } from './components/layout';
 import { SlideIn } from './components/animations';
-import { Grid } from './components/layout/Grid/Grid';
 
 export default function Home() {
   return (

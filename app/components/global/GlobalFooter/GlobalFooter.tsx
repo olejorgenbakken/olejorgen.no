@@ -1,4 +1,4 @@
-import { ThemePicker } from '../../ThemePicker';
+import { ThemePicker } from '.';
 
 import './GlobalFooter.css';
 
