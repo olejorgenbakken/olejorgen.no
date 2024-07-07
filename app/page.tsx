@@ -9,6 +9,9 @@ export default function Home() {
       title="Ole Jørgen Bakken"
       description="Må ha et sted å teste ting"
       hideHeader>
+      <SlideIn>
+        <p className="colored huge animated-text">Testing, testing...</p>
+      </SlideIn>
       <Grid>
         <SlideIn direction="down">
           <Image

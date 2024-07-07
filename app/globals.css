@@ -6,11 +6,12 @@
   --hue-yellow: 100;
   --hue-green: 136;
   --hue-teal: 180;
-  --hue-blue: 220;
+  --hue-cyan: 220;
+  --hue-blue: 260;
   --hue-purple: 320;
   --hue-pink: 350;
 
-  --hue-accent: var(--hue-orange);
+  --hue-accent: var(--hue-blue);
 
   --color-surface-0: oklch(90% 0.2 var(--hue-accent));
   --color-surface-1: oklch(90% 0.1 var(--hue-accent));
@@ -19,6 +20,7 @@
 
   --color-text-primary: oklch(0% 0 var(--hue-accent));
   --color-text-muted: oklch(30% 0 var(--hue-accent));
+  --color-text-colored: oklch(30% 0.1 var(--hue-accent));
   
   --color-danger: oklch(59% 0.23 var(--color-red-hue));
   --color-accent: oklch(59% 0.23 var(--hue-accent));
@@ -81,6 +83,7 @@
   --font-size-2xl: clamp(2rem, 1vw, 2.5rem);
   --font-size-3xl: clamp(2.5rem, 1vw, 3rem);
   --font-size-4xl: clamp(3rem, 1vw, 3.5rem);
+  --font-size-5xl: clamp(5rem, 1vw, 7rem);
 
   --breakpoint-sm: 640px;
   --breakpoint-md: 1024px;
@@ -91,7 +94,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-surface-0: oklch(5% 0.2 var(--hue-accent));
+    --color-surface-0: oklch(10% 0.3 var(--hue-accent));
     --color-surface-1: oklch(20% 0.1 var(--hue-accent));
     --color-surface-2: oklch(30% 0.2 var(--hue-accent));
     --color-surface-3: oklch(40% 0.25 var(--hue-accent));
@@ -230,4 +233,21 @@ img {
   border-radius: var(--spacing-sm);
   max-width: 100%;
   object-fit: cover;
+}
+
+.colored {
+  color: var(--color-text-colored);
+}
+
+.huge {
+  font-size: var(--font-size-5xl);
+  font-weight: 900;
+}
+
+.animated-text {
+  animation: animatedGradient 12s linear infinite;
+  background: var(--rainbow-linear);
+  background-clip: text;
+  background-size: 1000% 1000%;
+  -webkit-text-fill-color: transparent;
 }

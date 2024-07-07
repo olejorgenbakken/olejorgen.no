@@ -10,17 +10,15 @@ export const GlobalHeader = () => {
   if (path === '/') {
     return (
       <header className="global-header">
-        <SlideIn>
-          <div className="content">
-            <p className="h5">
-              <Link
-                href="/"
-                className="name">
-                Ole Jørgen Bakken
-              </Link>
-            </p>
-          </div>
-        </SlideIn>
+        <div className="content">
+          <p className="h5">
+            <Link
+              href="/"
+              className="name">
+              Ole Jørgen Bakken
+            </Link>
+          </p>
+        </div>
       </header>
     );
   }
