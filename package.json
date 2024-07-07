@@ -6,14 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "eslint . && stylelint **/*.css"
   },
   "dependencies": {
     "@vercel/analytics": "^1.3.1",
     "@vercel/speed-insights": "^1.0.12",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "stylelint": "^16.6.1",
+    "stylelint-gamut": "^1.3.4"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -21,6 +24,9 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "postcss": "^8.4.39",
+    "postcss-preset-env": "^9.5.16",
+    "stylelint-config-recommended": "^14.0.1",
     "typescript": "^5"
   }
 }
