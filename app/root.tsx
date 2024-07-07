@@ -7,8 +7,9 @@ import {
 } from '@remix-run/react';
 
 import { GlobalHeader } from './components/global/GlobalHeader/GlobalHeader';
-import './styles/global.css';
 import { GlobalFooter } from './components/global/GlobalFooter/GlobalFooter';
+
+import './styles/global.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
