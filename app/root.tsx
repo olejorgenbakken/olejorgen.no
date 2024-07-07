@@ -6,8 +6,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
-import { GlobalHeader } from './components/global/GlobalHeader/GlobalHeader';
-import { GlobalFooter } from './components/global/GlobalFooter/GlobalFooter';
+import { GlobalFooter, GlobalHeader } from './components/global/';
 
 import './styles/global.css';
 
