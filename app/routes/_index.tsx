@@ -1,30 +1,48 @@
-import type { MetaFunction } from '@remix-run/node';
-import { Main, Section } from '../components/layout';
+import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Ole Jørgen Bakken' },
-    {
-      name: 'description',
-      content: 'Et slags forsøk på å teste ny teknologi tror jeg...',
-    },
+    { title: "New Remix App" },
+    { name: "description", content: "Welcome to Remix!" },
   ];
 };
 
 export default function Index() {
   return (
-    <Main
-      title="Ole Jørgen"
-      hideTitle>
-      <Section
-        heading="Hva er denne siden?"
-        backgroundImage="https://images.unsplash.com/photo-1718715463369-ee0f12f06847?q=80&w=3055&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <p>Et slags forsøk på å teste ny teknologi tror jeg.</p>
-      </Section>
-      <p>
-        Jeg er på <a href="https://github.com/olejorgenbakken">GitHub</a> og{' '}
-        <a href="https://twitter.com/olejorgenbakken">Twitter</a>.
-      </p>
-    </Main>
+    <div className="font-sans p-4">
+      <h1 className="text-3xl">Welcome to Remix</h1>
+      <ul className="list-disc mt-4 pl-6 space-y-2">
+        <li>
+          <a
+            className="text-blue-700 underline visited:text-purple-900"
+            target="_blank"
+            href="https://remix.run/start/quickstart"
+            rel="noreferrer"
+          >
+            5m Quick Start
+          </a>
+        </li>
+        <li>
+          <a
+            className="text-blue-700 underline visited:text-purple-900"
+            target="_blank"
+            href="https://remix.run/start/tutorial"
+            rel="noreferrer"
+          >
+            30m Tutorial
+          </a>
+        </li>
+        <li>
+          <a
+            className="text-blue-700 underline visited:text-purple-900"
+            target="_blank"
+            href="https://remix.run/docs"
+            rel="noreferrer"
+          >
+            Remix Docs
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 }
