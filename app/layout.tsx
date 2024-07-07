@@ -6,8 +6,8 @@ import { GlobalHeader } from './components/global/GlobalHeader/GlobalHeader';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'heyo',
-  description: 'heyo',
+  title: 'Ole Jørgen Bakken',
+  description: 'Utvikler hos Fremtind',
 };
 
 export default function RootLayout({
