@@ -20,6 +20,7 @@ export const ThemePicker = () => {
       className="theme-picker">
       <input
         type="color"
+        defaultValue={'#ffffff'}
         id="theme-picker"
         onChange={handleColorSelection}
       />
