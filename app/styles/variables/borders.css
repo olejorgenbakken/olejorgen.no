@@ -1,0 +1,23 @@
+:root {
+    --border-width: 2px;
+    --border-width-thin: 1px;
+    --border-width-thick: 4px;
+
+    --border-radius-full: 9999px;
+    --border-radius-sm: var(--spacing-xs);
+    --border-radius-md: var(--spacing-sm);
+    --border-radius-lg: var(--spacing-md);
+
+    --color-border: oklch(90% 0.05 var(--hue-accent));
+    --color-border-colored: oklch(40% 0.4 var(--hue-accent));
+
+    --border: var(--border-width) solid var(--color-border-colored);
+    --border-thin: var(--border-width-thin) solid var(--color-border-colored);
+    --border-thick: var(--border-width-thick) solid var(--color-border-colored);
+    --border-dotted: var(--border-width) dotted var(--color-border-colored);
+    --border-dotted-thin: var(--border-width-thin) dotted var(--color-border-colored);
+    --border-dotted-thick: var(--border-width-thick) dotted var(--color-border-colored);
+    --border-dashed: var(--border-width) dashed var(--color-border-colored);
+    --border-dashed-thin: var(--border-width-thin) dashed var(--color-border-colored);
+    --border-dashed-thick: var(--border-width-thick) dashed var(--color-border-colored);
+}

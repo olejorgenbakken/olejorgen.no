@@ -1,50 +1,45 @@
-import Image from 'next/image';
-import { Main, Grid } from './components/layout';
-import { SlideIn } from './components/animations';
+import { Main } from './components/layout';
+import { getRepos } from './features/Github/functions';
+import { RepositoryCard } from './features/Github/components/RepositoryCard';
+import Link from 'next/link';
 
-export default function Home() {
+import './page.css';
+
+export default async function Home() {
+  const twoYearsAgo = new Date().getTime() - 1000 * 60 * 60 * 24 * 365 * 2;
+  const reposUpdatedLastTwoYears = (await getRepos('updated'))
+    .filter((repo) => new Date(repo.updated_at).getTime() > twoYearsAgo)
+    .slice(0, 4);
+
   return (
     <Main
       title="Ole Jørgen Bakken"
       description="Må ha et sted å teste ting"
       hideHeader>
-      <SlideIn>
-        <p className="colored huge">Testing, testing...</p>
-      </SlideIn>
-      <Grid>
-        <SlideIn>
-          <Image
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2Fb2%2Fe6%2Fb8%2Fb2e6b847b97a43adabc468253dcc191e.jpg&f=1&nofb=1&ipt=9f7281f488cce49047f51858b09fa512b255ce328fce5d32686c8259b81c1b4f&ipo=images"
-            alt="brainrot cat"
-            width={500}
-            height={500}
-          />
-        </SlideIn>
-        <SlideIn>
-          <Image
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2Fb2%2Fe6%2Fb8%2Fb2e6b847b97a43adabc468253dcc191e.jpg&f=1&nofb=1&ipt=9f7281f488cce49047f51858b09fa512b255ce328fce5d32686c8259b81c1b4f&ipo=images"
-            alt="brainrot cat"
-            width={500}
-            height={500}
-          />
-        </SlideIn>
-        <SlideIn>
-          <Image
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2Fb2%2Fe6%2Fb8%2Fb2e6b847b97a43adabc468253dcc191e.jpg&f=1&nofb=1&ipt=9f7281f488cce49047f51858b09fa512b255ce328fce5d32686c8259b81c1b4f&ipo=images"
-            alt="brainrot cat"
-            width={500}
-            height={500}
-          />
-        </SlideIn>
-        <SlideIn>
-          <Image
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2Fb2%2Fe6%2Fb8%2Fb2e6b847b97a43adabc468253dcc191e.jpg&f=1&nofb=1&ipt=9f7281f488cce49047f51858b09fa512b255ce328fce5d32686c8259b81c1b4f&ipo=images"
-            alt="brainrot cat"
-            width={500}
-            height={500}
-          />
-        </SlideIn>
-      </Grid>
+      <p className="colored-text huge slide-down">
+        Frontend-utvikler hos <Link href="https://fremtind.no">Fremtind</Link>.
+        Tidligere produkt&shy;designer hos{' '}
+        <Link href="https://www.detsombetyrnoe.no">NAV</Link>.
+      </p>
+      {reposUpdatedLastTwoYears && (
+        <section className="repos">
+          <h2 className="h3">Siste jeg har jobbet med</h2>
+
+          <ul className="repos-list no-style">
+            {reposUpdatedLastTwoYears.map((newestRepo) => (
+              <li key={newestRepo.name}>
+                <RepositoryCard repository={newestRepo} />
+              </li>
+            ))}
+          </ul>
+
+          <Link
+            className="cta"
+            href="https://github.com/olejorgenbakken">
+            Gå til GitHub
+          </Link>
+        </section>
+      )}
     </Main>
   );
 }

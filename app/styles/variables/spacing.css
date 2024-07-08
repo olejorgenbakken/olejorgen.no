@@ -1,0 +1,20 @@
+:root {
+    --spacing-0: 0;
+  --spacing-xxs: clamp(0.125rem, 0.25rem, 0.25rem);
+  --spacing-xs: clamp(0.25rem, 0.5rem, 0.5rem);
+  --spacing-sm: clamp(0.5rem, 1rem, 1rem);
+  --spacing-md: clamp(1rem, 2rem, 4rem);
+  --spacing-lg: clamp(2rem, 4rem, 4rem);
+  --spacing-xl: clamp(4rem, 8rem, 8rem);
+  --spacing-2xl: clamp(8rem, 16rem, 16rem);
+  --spacing-3xl: clamp(16rem, 32rem, 32rem);
+  --spacing-4xl: clamp(32rem, 64rem, 64rem);
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1536px;
+
+  --max-width: var(--breakpoint-lg);
+
+  --padding-horizontal: var(--spacing-md);
+}

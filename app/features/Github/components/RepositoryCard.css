@@ -1,0 +1,13 @@
+.repository-card {
+    box-sizing: border-box;
+    margin-bottom: var(--spacing-md);
+    max-width: var(--max-width);
+    position: relative;
+    width: 100%;
+
+    .updated {
+        color: var(--color-text-muted);
+        font-size: var(--font-size-xs);
+        margin: var(--spacing-xs) 0;
+    }
+}

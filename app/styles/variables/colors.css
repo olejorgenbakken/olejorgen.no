@@ -1,0 +1,115 @@
+:root {
+    --hue-red: 0;
+    --hue-orange: 50;
+    --hue-yellow: 100;
+    --hue-green: 136;
+    --hue-teal: 180;
+    --hue-cyan: 220;
+    --hue-blue: 260;
+    --hue-purple: 320;
+    --hue-pink: 350;
+
+    --hue-accent: var(--hue-cyan);
+
+    --color-surface-0: oklch(90% 0.2 var(--hue-accent));
+    --color-surface-1: oklch(90% 0.1 var(--hue-accent));
+    --color-surface-2: oklch(80% 0.2 var(--hue-accent));
+    --color-surface-3: oklch(70% 0.25 var(--hue-accent));
+    --color-gradient-surfaces-linear: linear-gradient(
+        180deg,
+        var(--color-surface-0),
+        var(--color-surface-1),
+        var(--color-surface-2),
+        var(--color-surface-3)
+    );
+    --color-gradient-surfaces-radial: radial-gradient(
+        circle,
+        var(--color-surface-0),
+        var(--color-surface-1),
+        var(--color-surface-2),
+        var(--color-surface-3)
+    ); 
+
+    --color-text: oklch(0% 0 var(--hue-accent));
+    --color-text-muted: oklch(30% 0 var(--hue-accent));
+    --color-text-colored: oklch(30% 0.1 var(--hue-accent));
+    --color-text-inverted: oklch(100% 0 var(--hue-accent));
+    --color-text-inverted-muted: oklch(30% 0 var(--hue-accent));
+    --color-text-inverted-colored: oklch(100% 0.04 var(--hue-accent));
+
+    --color-danger: oklch(59% 0.23 var(--color-red-hue));
+    --color-accent: oklch(90% 0.9 var(--hue-accent));
+
+    --color-gradient-stop-1: oklch(59% 0.23 var(--hue-red));
+    --color-gradient-stop-2: oklch(59% 0.23 var(--hue-orange));
+    --color-gradient-stop-3: oklch(59% 0.23 var(--hue-yellow));
+    --color-gradient-stop-4: oklch(59% 0.23 var(--hue-green));
+    --color-gradient-stop-5: oklch(59% 0.23 var(--hue-teal));
+    --color-gradient-stop-6: oklch(59% 0.23 var(--hue-blue));
+    --color-gradient-stop-7: oklch(59% 0.23 var(--hue-purple));
+    --color-gradient-stop-8: oklch(59% 0.23 var(--hue-pink));
+
+    --color-rainbow-linear: linear-gradient(
+        0deg,
+        var(--color-accent),
+        var(--color-gradient-stop-1),
+        var(--color-gradient-stop-2),
+        var(--color-gradient-stop-3),
+        var(--color-gradient-stop-4),
+        var(--color-gradient-stop-5),
+        var(--color-gradient-stop-6),
+        var(--color-gradient-stop-7),
+        var(--color-gradient-stop-8)
+    );
+    --color-rainbow-radial: radial-gradient(
+        circle,
+        var(--color-border-colored),
+        var(--color-gradient-stop-1),
+        var(--color-gradient-stop-2),
+        var(--color-gradient-stop-3),
+        var(--color-gradient-stop-4),
+        var(--color-gradient-stop-5),
+        var(--color-gradient-stop-6),
+        var(--color-gradient-stop-7),
+        var(--color-gradient-stop-8)
+    );
+    --color-rainbow-conic: conic-gradient(
+        var(--color-border-colored),
+        var(--color-gradient-stop-1),
+        var(--color-gradient-stop-2),
+        var(--color-gradient-stop-3),
+        var(--color-gradient-stop-4),
+        var(--color-gradient-stop-5),
+        var(--color-gradient-stop-6),
+        var(--color-gradient-stop-7),
+        var(--color-gradient-stop-8)
+    );
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface-0: oklch(10% 0.2 var(--hue-accent));
+    --color-surface-1: oklch(10% 0.16 var(--hue-accent));
+    --color-surface-2: oklch(8% 0.12 var(--hue-accent));
+    --color-surface-3: oklch(6% 0.1 var(--hue-accent));
+
+    --color-text: oklch(100% 0 var(--hue-accent));
+    --color-text-muted: oklch(80% 0 var(--hue-accent));
+    --color-text-colored: oklch(80% 0.2 var(--hue-accent));
+    --color-text-inverted: oklch(100% 0 var(--hue-accent));
+    --color-text-inverted-muted: oklch(80% 0 var(--hue-accent));
+    --color-text-inverted-colored: oklch(10% 0 var(--hue-accent));
+
+    --color-accent: oklch(20% 0.7 var(--hue-accent));
+
+    --color-border: oklch(20% 0.05 var(--hue-accent));
+    --color-border-colored: oklch(50% 0.2 var(--hue-accent));
+  }
+}
+
+.colored-text {
+  color: var(--color-text-colored);
+  position: relative;
+  z-index: 1;
+}

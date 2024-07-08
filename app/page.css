@@ -1,0 +1,15 @@
+.repos {
+    padding: var(--spacing-md) 0;
+    position: relative;
+
+    .repos-list {
+        margin-top: var(--spacing-sm);
+        li {
+            margin-bottom: var(--spacing-md);
+        }
+    }
+}
+
+.repos::after {
+    background: var(--color-surface-1);
+}

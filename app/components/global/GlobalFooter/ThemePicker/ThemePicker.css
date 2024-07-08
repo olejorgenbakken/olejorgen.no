@@ -1,7 +1,7 @@
 .theme-picker {
     align-items: center;
     background: var(--color-accent);
-    border: var(--border-width) solid var(--color-border-colored);
+    border: var(--border);
     border-radius: var(--border-radius-md);
     box-sizing: border-box;
     color: var(--color-text-inverted);
@@ -18,7 +18,7 @@
         appearance: none;
         aspect-ratio: 1 / 1;
         background-color: transparent;
-        border: var(--border-width) solid var(--color-border-colored);
+        border: var(--border);
         border-radius: var(--border-radius-full);
         box-sizing: border-box;
         height: 32px;

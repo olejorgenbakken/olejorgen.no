@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import { ThemePicker } from '.';
+import { Logo } from '../Logo';
 
 import './GlobalFooter.css';
-import { List, ListItem } from '../../List/';
-import { Logo } from '../Logo';
 
 export const GlobalFooter = () => {
   return (
@@ -12,19 +11,19 @@ export const GlobalFooter = () => {
         <Logo />
         <div className="footer-links">
           <p className="h6">Lenker</p>
-          <List noStyle>
-            <ListItem>
+          <ul className="no-style">
+            <li>
               <Link href="https://twitter.com/olejorgenbakken">Twitter</Link>
-            </ListItem>
-            <ListItem>
+            </li>
+            <li>
               <Link href="https://github.com/olejorgenbakken">GitHub</Link>
-            </ListItem>
-            <ListItem>
+            </li>
+            <li>
               <Link href="https://linkedin.com/in/olejorgenbakken">
                 LinkedIn
               </Link>
-            </ListItem>
-          </List>
+            </li>
+          </ul>
         </div>
         <ThemePicker />
       </div>

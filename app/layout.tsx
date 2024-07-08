@@ -3,7 +3,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { GlobalHeader, GlobalFooter } from './components/global';
 
-import './globals.css';
+import './styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'Ole Jørgen Bakken',
