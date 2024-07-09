@@ -19,16 +19,4 @@
   --border-dashed: var(--border-width) dashed var(--color-border);
   --border-dashed-thin: var(--border-width-thin) dashed var(--color-border);
   --border-dashed-thick: var(--border-width-thick) dashed var(--color-border);
-
-  --border-gradient: linear-gradient(
-    90deg,
-    var(--color-gradient-stop-1),
-    var(--color-gradient-stop-2),
-    var(--color-gradient-stop-3),
-    var(--color-gradient-stop-4),
-    var(--color-gradient-stop-5),
-    var(--color-gradient-stop-6),
-    var(--color-gradient-stop-7),
-    var(--color-gradient-stop-8)
-  );
 }

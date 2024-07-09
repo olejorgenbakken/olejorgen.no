@@ -69,6 +69,12 @@ input[type='color']::-webkit-color-swatch {
   position: relative;
 }
 
+@media (prefers-color-scheme: dark) {
+  .theme-picker:hover::after {
+    filter: blur(40px) brightness(6);
+  }
+}
+
 @media (prefers-reduced-motion) {
   .theme-picker::after {
     transition: none;

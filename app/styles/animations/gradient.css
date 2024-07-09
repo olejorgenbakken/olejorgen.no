@@ -1,3 +1,69 @@
+:root {
+  --color-surface-gradient-linear: linear-gradient(
+    45deg,
+    var(--color-surface-0),
+    var(--color-surface-1),
+    var(--color-surface-2),
+    var(--color-surface-3)
+  );
+
+  --color-gradient-stop-1: oklch(59% 0.23 var(--hue-red));
+  --color-gradient-stop-2: oklch(59% 0.23 var(--hue-orange));
+  --color-gradient-stop-3: oklch(59% 0.23 var(--hue-yellow));
+  --color-gradient-stop-4: oklch(59% 0.23 var(--hue-green));
+  --color-gradient-stop-5: oklch(59% 0.23 var(--hue-teal));
+  --color-gradient-stop-6: oklch(59% 0.23 var(--hue-blue));
+  --color-gradient-stop-7: oklch(59% 0.23 var(--hue-purple));
+  --color-gradient-stop-8: oklch(59% 0.23 var(--hue-pink));
+
+  --color-rainbow-linear: linear-gradient(
+    45deg,
+    var(--color-gradient-stop-1),
+    var(--color-gradient-stop-2),
+    var(--color-gradient-stop-3),
+    var(--color-gradient-stop-4),
+    var(--color-gradient-stop-5),
+    var(--color-gradient-stop-6),
+    var(--color-gradient-stop-7),
+    var(--color-gradient-stop-8)
+  );
+  --color-rainbow-radial: radial-gradient(
+    circle,
+    var(--color-border),
+    var(--color-gradient-stop-1),
+    var(--color-gradient-stop-2),
+    var(--color-gradient-stop-3),
+    var(--color-gradient-stop-4),
+    var(--color-gradient-stop-5),
+    var(--color-gradient-stop-6),
+    var(--color-gradient-stop-7),
+    var(--color-gradient-stop-8)
+  );
+  --color-rainbow-conic: conic-gradient(
+    var(--color-border),
+    var(--color-gradient-stop-1),
+    var(--color-gradient-stop-2),
+    var(--color-gradient-stop-3),
+    var(--color-gradient-stop-4),
+    var(--color-gradient-stop-5),
+    var(--color-gradient-stop-6),
+    var(--color-gradient-stop-7),
+    var(--color-gradient-stop-8)
+  );
+
+  --border-gradient: linear-gradient(
+    45deg,
+    var(--color-gradient-stop-1),
+    var(--color-gradient-stop-2),
+    var(--color-gradient-stop-3),
+    var(--color-gradient-stop-4),
+    var(--color-gradient-stop-5),
+    var(--color-gradient-stop-6),
+    var(--color-gradient-stop-7),
+    var(--color-gradient-stop-8)
+  );
+}
+
 @keyframes animated-background {
   0% {
     background: var(--color-rainbow-linear) 0% 50% / 400% 400%;
