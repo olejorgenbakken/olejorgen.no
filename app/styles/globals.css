@@ -17,7 +17,7 @@ body {
 }
 
 body {
-  background: var(--color-surface-0);
+  background: var(--color-surface-gradient-linear);
   color: var(--color-text);
   display: flex;
   flex-direction: column;
@@ -45,21 +45,17 @@ main {
 }
 
 main::before {
-  background: linear-gradient(
-    0deg,
-    var(--color-surface-3),
-    var(--color-surface-0)
-  );
   content: '';
-  min-height: 50vh;
   aspect-ratio: 1 / 1;
-  left: 50vw;
+  left: 30%;
   border-radius: var(--border-radius-full);
   position: absolute;
-  top: 0;
-  max-width: 50vw;
+  top: -140%;
+  opacity: 0.2;
+  width: clamp(50vw, 100vw, 150vw);
   z-index: -1;
-  filter: blur(80px);
+  filter: blur(150px);
+  animation: animated-background 30s linear alternate infinite;
 }
 
 section {

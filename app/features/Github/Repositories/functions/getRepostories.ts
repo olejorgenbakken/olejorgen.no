@@ -1,9 +1,9 @@
 import { Octokit } from 'octokit';
-import type { Repository } from '../models/repo.model';
+import type { Repository } from '../models/repository.model';
 
 const octokit = new Octokit();
 
-export async function getRepos(
+export async function getRepositories(
   sort: 'created' | 'updated' | 'pushed' | 'full_name' = 'pushed'
 ) {
   const repos = await octokit.request('GET /users/olejorgenbakken/repos', {

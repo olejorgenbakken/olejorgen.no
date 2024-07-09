@@ -4,8 +4,8 @@
   --font-family-primary: 'Inter', sans-serif;
   --font-family-secondary: 'Merriweather', serif;
 
-  --font-size-xxs: clamp(0.5rem, 1vw, 0.75rem);
-  --font-size-xs: clamp(0.85rem, 0.7857rem + 0.2857vw, 1rem);
+  --font-size-xxs: clamp(0.85rem, 1vw, 0.9rem);
+  --font-size-xs: clamp(0.9rem, 0.7857rem + 0.2857vw, 1rem);
   --font-size-sm: clamp(1rem, 0.9571rem + 0.1905vw, 1.1rem);
   --font-size-md: clamp(1.1rem, 1.0357rem + 0.2857vw, 1.25rem);
   --font-size-lg: clamp(1.25rem, 1.1429rem + 0.4762vw, 1.5rem);
@@ -91,28 +91,33 @@ p {
   }
 }
 
+small {
+  font-size: var(--font-size-xxs);
+}
+
 ul,
 ol {
   margin-top: var(--spacing-sm);
   padding-left: var(--spacing-md);
+}
 
-  &.no-style {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+li {
+  margin-bottom: var(--spacing-sm);
+}
 
-  li {
-    margin-bottom: var(--spacing-sm);
-  }
+li:last-child {
+  margin-bottom: 0;
+}
 
-  li:last-child {
-    margin-bottom: 0;
-  }
+li::marker {
+  color: var(--color-text-colored);
+}
 
-  li::marker {
-    color: var(--color-text-colored);
-  }
+ul.no-style,
+ul.no-style li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -121,6 +126,8 @@ a {
   position: relative;
   text-decoration: none;
   transition: padding-bottom 0.1s ease-in-out;
+  box-sizing: border-box;
+  max-width: max-content;
 }
 
 a::after {
@@ -140,32 +147,34 @@ a:hover {
 }
 
 a:hover::after {
-  animation: animated-background 2s linear infinite;
+  animation: animated-border 2s ease-in-out alternate infinite;
   height: 0.3rem;
 }
 
 a.cta {
-  background: var(--color-accent);
-  border: var(--border-dashed);
+  border: var(--border-dotted-thin);
   border-radius: var(--border-radius-full);
-  color: var(--color-text);
   font-weight: 500;
   min-height: 44px;
-  padding: var(--spacing-xs) var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  overflow: hidden;
 }
 
 a.cta::after {
-  display: none;
-  transition: all 0.4s ease-in-out;
-}
-
-a.cta:hover {
-  border-radius: var(--border-radius-sm);
+  height: 100%;
+  background: var(--border-gradient);
+  background-size: 400% 400%;
+  z-index: -1;
+  filter: blur(10px);
+  transition: filter 0.3s ease-in-out;
 }
 
 a.cta:hover::after {
-  animation: none;
-  display: none;
+  filter: blur(14px);
 }
 
 .huge {

@@ -28,7 +28,7 @@ export const formatDateTime = (
       return new Date(date).toLocaleString('nb-NO', {
         year: 'numeric',
         month: 'long',
-        day: '2-digit',
+        day: 'numeric',
       });
   }
 };

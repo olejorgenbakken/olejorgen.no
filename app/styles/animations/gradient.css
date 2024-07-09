@@ -10,26 +10,33 @@
   }
 }
 
+@keyframes animated-border {
+  0% {
+    background: var(--border-gradient) 0% 100% / 400% 400%;
+  }
+  100% {
+    background: var(--border-gradient) 100% 0% / 400% 400%;
+  }
+}
+
 .animated-background {
-  animation: animated-background 5s linear infinite;
-  background: var(--color-rainbow-linear);
-  background-size: 1000% 1000%;
+  animation: 5s linear infinite alternate animated-background;
 }
 
 .animated-gradient-text {
-  animation: animated-background 12s linear infinite;
-  background: var(--color-rainbow-linear);
+  animation: 12s linear infinite alternate animated-background;
   background-clip: text;
-  background-size: 1000% 1000%;
   -webkit-text-fill-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .animated-background {
-    animation: none;
-  }
+.animated-border {
+  animation: 2s ease-in-out infinite alternate animated-border;
+}
 
-  .animated-gradient-text {
+@media (prefers-reduced-motion: no-preference) {
+  .animated-background,
+  .animated-gradient-text,
+  .animated-border {
     animation: none;
   }
 }
