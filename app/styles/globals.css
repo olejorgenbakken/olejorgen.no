@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
 @import './variables/variables.css';
-@import "./animations/animations.css";
+@import './animations/animations.css';
 
 * {
   box-sizing: border-box;
@@ -30,6 +30,38 @@ img {
   object-fit: cover;
 }
 
+main {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--spacing-lg);
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: var(--padding-horizontal);
+  width: 100%;
+}
+
+main::before {
+  background: linear-gradient(
+    0deg,
+    var(--color-surface-3),
+    var(--color-surface-0)
+  );
+  content: '';
+  min-height: 50vh;
+  aspect-ratio: 1 / 1;
+  left: 50vw;
+  border-radius: var(--border-radius-full);
+  position: absolute;
+  top: 0;
+  max-width: 50vw;
+  z-index: -1;
+  filter: blur(80px);
+}
+
 section {
   margin: 0 auto;
   max-width: var(--max-width);
@@ -37,12 +69,12 @@ section {
 }
 
 section::after {
-    content: '';
-    height: 100%;
-    left: 0;
-    left: -50vw;
-    position: absolute;
-    top: 0;
-    width: 150vw;
-    z-index: -1;
+  content: '';
+  height: 100%;
+  left: 0;
+  left: -50vw;
+  position: absolute;
+  top: 0;
+  width: 150vw;
+  z-index: -1;
 }

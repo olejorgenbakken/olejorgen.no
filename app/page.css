@@ -1,15 +1,20 @@
-.repos {
-    padding: var(--spacing-md) 0;
-    position: relative;
-
-    .repos-list {
-        margin-top: var(--spacing-sm);
-        li {
-            margin-bottom: var(--spacing-md);
-        }
-    }
+.page-home {
+  header {
+    min-height: clamp(20vh, 50vw, 40vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-.repos::after {
-    background: var(--color-surface-1);
+.repos {
+  padding: var(--spacing-md) 0;
+  position: relative;
+
+  .repos-list {
+    margin-top: var(--spacing-sm);
+    li {
+      margin-bottom: var(--spacing-md);
+    }
+  }
 }

@@ -1,56 +1,35 @@
-@keyframes animated-gradient-background-linear {
+@keyframes animated-background {
   0% {
-    background-position: 0% 50%;
+    background: var(--color-rainbow-linear) 0% 50% / 400% 400%;
   }
   50% {
-    background-position: 100% 50%;
+    background: var(--color-rainbow-linear) 100% 50% / 400% 400%;
   }
   100% {
-    background-position: 0% 50%;
+    background: var(--color-rainbow-linear) 50% 0% / 400% 400%;
   }
 }
 
-@keyframes animated-gradient-background-radial {
-  0% {
-    background-position: 50% 50%;
-  }
-  50% {
-    background-position: 50% 50%;
-  }
-  100% {
-    background-position: 50% 50%;
-  }
-}
-
-.animated-gradient-background-linear,
-.animated-gradient-background-radial {
-  animation: none;
-  background: var(--color-surface-3);
+.animated-background {
+  animation: animated-background 5s linear infinite;
+  background: var(--color-rainbow-linear);
+  background-size: 1000% 1000%;
 }
 
 .animated-gradient-text {
-  animation: none;
-  color: inherit;
+  animation: animated-background 12s linear infinite;
+  background: var(--color-rainbow-linear);
+  background-clip: text;
+  background-size: 1000% 1000%;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .animated-gradient-background-linear {
-    animation: animated-gradient-background-linear 15s linear infinite;
-    background: var(--color-rainbow-linear);
-    background-size: 1000% 1000%;
-  }
-
-  .animated-gradient-background-radial {
-    animation: animated-gradient-background-radial 15s linear infinite;
-    background: var(--color-rainbow-radial);
-    background-size: 1000% 1000%;
+  .animated-background {
+    animation: none;
   }
 
   .animated-gradient-text {
-    animation: animated-gradient-background-linear 12s linear infinite;
-    background: var(--color-rainbow-linear);
-    background-clip: text;
-    background-size: 1000% 1000%;
-    -webkit-text-fill-color: transparent;
+    animation: none;
   }
 }

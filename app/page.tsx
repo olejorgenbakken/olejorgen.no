@@ -1,9 +1,14 @@
-import { Main } from './components/layout';
 import { getRepos } from './features/Github/functions';
 import { RepositoryCard } from './features/Github/components/RepositoryCard';
 import Link from 'next/link';
 
 import './page.css';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Ole Jørgen Bakken',
+  description: 'Må ha et sted å teste ting',
+};
 
 export default async function Home() {
   const twoYearsAgo = new Date().getTime() - 1000 * 60 * 60 * 24 * 365 * 2;
@@ -12,15 +17,14 @@ export default async function Home() {
     .slice(0, 4);
 
   return (
-    <Main
-      title="Ole Jørgen Bakken"
-      description="Må ha et sted å teste ting"
-      hideHeader>
-      <p className="colored-text huge slide-down">
-        Frontend-utvikler hos <Link href="https://fremtind.no">Fremtind</Link>.
-        Tidligere produkt&shy;designer hos{' '}
-        <Link href="https://www.detsombetyrnoe.no">NAV</Link>.
-      </p>
+    <main className="page-home">
+      <header>
+        <p className="huge slide-down">
+          Frontend-utvikler hos <Link href="https://fremtind.no">Fremtind</Link>
+          . Tidligere produkt&shy;designer hos{' '}
+          <Link href="https://www.detsombetyrnoe.no">NAV</Link>.
+        </p>
+      </header>
       {reposUpdatedLastTwoYears && (
         <section className="repos">
           <h2 className="h3">Siste jeg har jobbet med</h2>
@@ -40,6 +44,6 @@ export default async function Home() {
           </Link>
         </section>
       )}
-    </Main>
+    </main>
   );
 }

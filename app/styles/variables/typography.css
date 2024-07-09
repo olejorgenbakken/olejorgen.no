@@ -1,17 +1,19 @@
-:root {
-    --font-family-primary: 'Inter', sans-serif;
-    --font-family-secondary: 'Merriweather', serif;
+@import '../animations/gradient.css';
 
-    --font-size-xxs: clamp(0.5rem, 1vw, 0.75rem);
-    --font-size-xs: clamp(0.85rem, 0.7857rem + 0.2857vw, 1rem);
-    --font-size-sm: clamp(1rem, 0.9571rem + 0.1905vw, 1.1rem);
-    --font-size-md: clamp(1.1rem, 1.0357rem + 0.2857vw, 1.25rem);
-    --font-size-lg: clamp(1.25rem, 1.1429rem + 0.4762vw, 1.5rem);
-    --font-size-xl: clamp(1.5rem, 1.2857rem + 0.9524vw, 2rem);
-    --font-size-2xl: clamp(1.85rem, 1.5714rem + 1.2381vw, 2.5rem);
-    --font-size-3xl: clamp(2rem, 1.6786rem + 1.4286vw, 2.75rem);
-    --font-size-4xl: clamp(2.5rem, 2.2857rem + 0.9524vw, 3rem);
-    --font-size-5xl: clamp(2.5rem, 1.8571rem + 2.8571vw, 4rem);
+:root {
+  --font-family-primary: 'Inter', sans-serif;
+  --font-family-secondary: 'Merriweather', serif;
+
+  --font-size-xxs: clamp(0.5rem, 1vw, 0.75rem);
+  --font-size-xs: clamp(0.85rem, 0.7857rem + 0.2857vw, 1rem);
+  --font-size-sm: clamp(1rem, 0.9571rem + 0.1905vw, 1.1rem);
+  --font-size-md: clamp(1.1rem, 1.0357rem + 0.2857vw, 1.25rem);
+  --font-size-lg: clamp(1.25rem, 1.1429rem + 0.4762vw, 1.5rem);
+  --font-size-xl: clamp(1.5rem, 1.2857rem + 0.9524vw, 2rem);
+  --font-size-2xl: clamp(1.85rem, 1.5714rem + 1.2381vw, 2.5rem);
+  --font-size-3xl: clamp(2rem, 1.6786rem + 1.4286vw, 2.75rem);
+  --font-size-4xl: clamp(2.5rem, 2.2857rem + 0.9524vw, 3rem);
+  --font-size-5xl: clamp(2.5rem, 1.8571rem + 2.8571vw, 4rem);
 }
 
 h1,
@@ -27,7 +29,7 @@ h5,
 h6,
 .h6,
 p {
-    width: 100%;
+  width: 100%;
 }
 
 h1,
@@ -118,18 +120,19 @@ a {
   padding-bottom: var(--border-width);
   position: relative;
   text-decoration: none;
+  transition: padding-bottom 0.1s ease-in-out;
 }
 
 a::after {
-  animation: none;
   background: var(--color-border-colored);
   border-radius: var(--border-radius-full);
   bottom: 0;
   content: '';
-  height: clamp(1%, 10%, 10%);
+  height: 0.1rem;
   left: 0;
   position: absolute;
   right: 0;
+  transition: height 0.1s ease-in-out;
 }
 
 a:hover {
@@ -137,9 +140,8 @@ a:hover {
 }
 
 a:hover::after {
-  background: var(--color-rainbow-linear);
-  background-size: 1000% 1000%;
-  height: calc(clamp(1%, 10%, 10%) + 8%);
+  animation: animated-background 2s linear infinite;
+  height: 0.3rem;
 }
 
 a.cta {
@@ -154,38 +156,53 @@ a.cta {
 
 a.cta::after {
   display: none;
+  transition: all 0.4s ease-in-out;
 }
 
 a.cta:hover {
   border-radius: var(--border-radius-sm);
 }
 
+a.cta:hover::after {
+  animation: none;
+  display: none;
+}
+
 .huge {
+  color: var(--color-text-colored);
   font-size: var(--font-size-5xl);
   font-weight: 900;
   max-width: none;
   text-wrap: balance;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    a {
-        transition: padding-bottom 0.1s ease-in-out;
-    }
+.huge a::after {
+  height: 0.3rem;
+}
 
-    a::after {
-        transition: height 0.1s ease-in-out;
-    }
+.huge a:hover::after {
+  height: 0.6rem;
+}
 
-    a:hover::after  {
-        animation: animated-gradient-background-linear 3s linear infinite;
-    }
+@media (prefers-reduced-motion) {
+  a {
+    transition: none;
+  }
 
-    a.cta {
-        transition: all 0.4s ease-in-out;
-    }
+  a::after {
+    transition: none;
+  }
 
-    a.cta:hover::after {
-        animation: none;
-        display: none;
-    }
+  a:hover::after {
+    animation: none;
+  }
+
+  a.cta {
+    transition: none;
+  }
+
+  a.cta:hover::after {
+    animation: none;
+    display: none;
+  }
 }
