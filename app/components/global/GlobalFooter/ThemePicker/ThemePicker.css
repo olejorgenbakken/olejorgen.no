@@ -1,36 +1,76 @@
 .theme-picker {
   align-items: center;
-  background: var(--color-text-inverted);
-  border: var(--border);
-  border-radius: var(--border-radius-md);
+  border: var(--border-thin);
+  border-radius: var(--border-radius-sm);
   box-sizing: border-box;
-  color: var(--color-text);
   display: flex;
   gap: var(--spacing-sm);
-  height: max-content;
   justify-content: center;
   padding: var(--spacing-xs) var(--spacing-sm);
+  position: relative;
   width: max-content;
+  overflow: hidden;
+  background: transparent;
+  height: max-content;
+  cursor: pointer;
+  min-height: 44px;
+}
 
-  input {
-    -webkit-appearance: none;
-    appearance: none;
-    aspect-ratio: 1 / 1;
-    background-color: transparent;
-    border: var(--border);
-    border-radius: var(--border-radius-full);
-    box-sizing: border-box;
-    height: 32px;
-    outline: none;
-    overflow: hidden;
-    width: 32px;
-  }
+.theme-picker::after {
+  background: var(--color-surface-gradient-linear);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  filter: blur(50px);
+  transition: filter 0.3s ease-in-out;
+}
 
-  input::-webkit-color-swatch-wrapper {
-    padding: 0;
-  }
+.theme-picker:hover::after {
+  filter: blur(40px) brightness(0.5);
+}
 
-  input::-webkit-color-swatch {
-    border: none;
+.theme-picker label {
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
+  cursor: pointer;
+}
+
+input[type='color'] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--border-radius-full);
+  box-sizing: border-box;
+  height: 28px;
+  outline: none;
+  overflow: hidden;
+  width: 28px;
+  z-index: 2;
+  position: relative;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+  z-index: 2;
+  position: relative;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border-radius: var(--border-radius-full);
+  z-index: 2;
+  position: relative;
+}
+
+@media (prefers-reduced-motion) {
+  .theme-picker::after {
+    transition: none;
   }
 }

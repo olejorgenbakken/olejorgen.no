@@ -7,14 +7,24 @@
   --hue-cyan: 220;
   --hue-blue: 260;
   --hue-purple: 320;
-  --hue-pink: 350;
+  --hue-pink: 360;
 
   --hue-accent: var(--hue-cyan);
+
+  --lightness-light: 90%;
+  --lightness-dark: 10%;
+
+  --chroma-light: 0.2;
+  --chroma-dark: 0.25;
+
+  --color-surface-light: oklch(var(--lightness-light) 0.1 var(--hue-accent));
+  --color-surface-dark: oklch(10% 0.2 var(--hue-accent));
 
   --color-surface-0: oklch(90% 0.2 var(--hue-accent));
   --color-surface-1: oklch(90% 0.1 var(--hue-accent));
   --color-surface-2: oklch(80% 0.2 var(--hue-accent));
   --color-surface-3: oklch(70% 0.25 var(--hue-accent));
+
   --color-surface-gradient-linear: linear-gradient(
     45deg,
     var(--color-surface-0),
@@ -23,7 +33,9 @@
     var(--color-surface-3)
   );
 
-  --color-text: oklch(0% 0 var(--hue-accent));
+  --color-text-light: oklch(100% 0 var(--hue-accent));
+  --color-text-dark: oklch(0% 0 var(--hue-accent));
+  --color-text: var(--color-text-dark);
   --color-text-muted: oklch(30% 0 var(--hue-accent));
   --color-text-colored: oklch(30% 0.1 var(--hue-accent));
   --color-text-inverted: oklch(100% 0 var(--hue-accent));
@@ -32,6 +44,10 @@
 
   --color-danger: oklch(59% 0.23 var(--color-red-hue));
   --color-accent: oklch(90% 0.9 var(--hue-accent));
+
+  --color-border-light: oklch(30% 0.45 var(--hue-accent));
+  --color-border-dark: oklch(50% 0.25 var(--hue-accent));
+  --color-border: var(--color-border-dark);
 
   --color-gradient-stop-1: oklch(59% 0.23 var(--hue-red));
   --color-gradient-stop-2: oklch(59% 0.23 var(--hue-orange));
@@ -55,7 +71,7 @@
   );
   --color-rainbow-radial: radial-gradient(
     circle,
-    var(--color-border-colored),
+    var(--color-border),
     var(--color-gradient-stop-1),
     var(--color-gradient-stop-2),
     var(--color-gradient-stop-3),
@@ -66,7 +82,7 @@
     var(--color-gradient-stop-8)
   );
   --color-rainbow-conic: conic-gradient(
-    var(--color-border-colored),
+    var(--color-border),
     var(--color-gradient-stop-1),
     var(--color-gradient-stop-2),
     var(--color-gradient-stop-3),
@@ -85,16 +101,16 @@
     --color-surface-2: oklch(8% 0.12 var(--hue-accent));
     --color-surface-3: oklch(6% 0.1 var(--hue-accent));
 
-    --color-text: oklch(100% 0 var(--hue-accent));
+    --color-text: var(--color-text-light);
     --color-text-muted: oklch(80% 0 var(--hue-accent));
     --color-text-colored: oklch(80% 0.2 var(--hue-accent));
-    --color-text-inverted: oklch(0% 0 var(--hue-accent));
+
+    --color-text-inverted: var(--color-text-dark);
     --color-text-inverted-muted: oklch(20% 0 var(--hue-accent));
     --color-text-inverted-colored: oklch(10% 0.3 var(--hue-accent));
 
     --color-accent: oklch(20% 0.7 var(--hue-accent));
 
-    --color-border: oklch(20% 0.05 var(--hue-accent));
-    --color-border-colored: oklch(50% 0.2 var(--hue-accent));
+    --color-border: var(--color-border-dark);
   }
 }

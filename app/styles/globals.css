@@ -74,3 +74,9 @@ section::after {
   width: 150vw;
   z-index: -1;
 }
+
+@media (prefers-color-scheme: dark) {
+  main::before {
+    opacity: 0.12;
+  }
+}

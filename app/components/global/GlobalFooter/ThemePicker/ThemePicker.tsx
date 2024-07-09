@@ -15,17 +15,15 @@ export const ThemePicker = () => {
   };
 
   return (
-    <label
-      htmlFor="theme-picker"
-      className="theme-picker">
+    <div className="theme-picker">
       <input
         type="color"
         defaultValue={'#ffffff'}
         id="theme-picker"
         onChange={handleColorSelection}
       />
-      Velg fargetema
-    </label>
+      <label htmlFor="theme-picker">Velg fargetema</label>
+    </div>
   );
 };
 

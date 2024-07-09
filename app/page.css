@@ -14,7 +14,7 @@
   gap: var(--spacing-md);
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 640px) {
   .page-home .repos {
     display: grid;
     grid-template-columns: 1fr auto;

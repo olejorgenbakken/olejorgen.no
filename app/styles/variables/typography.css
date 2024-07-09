@@ -131,7 +131,7 @@ a {
 }
 
 a::after {
-  background: var(--color-border-colored);
+  background: var(--color-border);
   border-radius: var(--border-radius-full);
   bottom: 0;
   content: '';
@@ -204,14 +204,14 @@ a.cta:hover::after {
 
   a:hover::after {
     animation: none;
+    background: var(--color-border);
   }
 
-  a.cta {
+  a.cta::after {
     transition: none;
   }
 
   a.cta:hover::after {
     animation: none;
-    display: none;
   }
 }
