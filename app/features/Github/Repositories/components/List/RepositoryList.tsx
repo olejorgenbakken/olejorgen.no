@@ -13,7 +13,9 @@ export const RepositoryList: React.FC<RepositoryListProps> = ({
   return (
     <ul className="repository-list no-style">
       {repositories.map((repository) => (
-        <li key={repository.name}>
+        <li
+          key={repository.name}
+          className="slide-up">
           <RepositoryCard repository={repository} />
         </li>
       ))}

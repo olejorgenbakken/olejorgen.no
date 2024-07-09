@@ -137,7 +137,7 @@ a::after {
   left: 0;
   position: absolute;
   right: 0;
-  transition: height 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   filter: brightness(1);
 }
 
