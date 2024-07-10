@@ -1,18 +1,15 @@
 import { Octokit } from 'octokit';
 import type { Repository } from '../models/repository.model';
 import { mockRepositories } from '../models/repository.mock';
+import { useRateLimit } from '../../Meta/hooks/useRateLimit';
 
 const octokit = new Octokit();
 
-export async function getRepositories(
+export async function useRepositories(
   sort: 'created' | 'updated' | 'pushed' | 'full_name' = 'pushed'
 ) {
-  const ratelimit = await octokit.request('GET /rate_limit');
-  if (ratelimit.data.rate.remaining < 1) {
-    console.error('Rate limit exceeded');
-
-    return mockRepositories;
-  }
+  const ratelimit = await useRateLimit();
+  if (ratelimit.remaining < 1) return mockRepositories;
 
   const repos = await octokit.request('GET /users/olejorgenbakken/repos', {
     username: 'olejorgenbakken',

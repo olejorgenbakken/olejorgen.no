@@ -32,3 +32,7 @@ export const formatDateTime = (
       });
   }
 };
+
+export const fromUnixEpochTime = (epoch: number) => {
+  return formatDateTime(new Date(epoch * 1000).toISOString(), 'long');
+};

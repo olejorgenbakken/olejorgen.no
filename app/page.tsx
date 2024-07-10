@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  getRepositories,
+  useRepositories,
   RepositoryList,
 } from './features/Github/Repositories';
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const twoYearsAgo = new Date().getTime() - 1000 * 60 * 60 * 24 * 365 * 2;
-  const reposUpdatedLastTwoYears = (await getRepositories('updated'))
+  const reposUpdatedLastTwoYears = (await useRepositories('updated'))
     .filter((repo) => new Date(repo.updated_at).getTime() > twoYearsAgo)
     .slice(0, 6);
 

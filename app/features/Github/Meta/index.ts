@@ -1,1 +1,1 @@
-export { getRateLimit } from './functions/getRateLimit';
+export { getRateLimit } from './hooks/useRateLimit';

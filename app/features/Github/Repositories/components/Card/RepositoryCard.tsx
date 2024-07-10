@@ -5,14 +5,17 @@ import type { Repository } from '../../models/repository.model';
 
 import './RepositoryCard.css';
 import { Tag } from '@/app/components/Tag/Tag';
+import { useCommitHistory } from '../../functions';
 
 interface RepoProps {
-  repository: Repository;
+  readonly repository: Repository;
 }
 
-export const RepositoryCard: React.FC<RepoProps> = ({ repository }) => {
+export default async function RepositoryCard({ repository }: RepoProps) {
   const { name, description, html_url, topics, language, updated_at } =
     repository;
+
+  const commits = await useCommitHistory(name);
 
   return (
     <div className="repository-card">
@@ -23,10 +26,15 @@ export const RepositoryCard: React.FC<RepoProps> = ({ repository }) => {
         <p className="topics">{topics?.map((topic) => topic).join(', ')}</p>
       </header>
       {description && <p className="description">{description}</p>}
+      {commits && (
+        <p className="commits">
+          <small>Commits: {commits.total}</small>
+        </p>
+      )}
       <footer className="repository-footer">
         <Tag>{language}</Tag>
         <small>Oppdatert {formatDateTime(updated_at)}</small>
       </footer>
     </div>
   );
-};
+}
