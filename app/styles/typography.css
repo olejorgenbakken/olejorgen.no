@@ -161,14 +161,14 @@ a.cta::after {
   height: 100%;
   background: var(--gradient-rainbow);
   z-index: -1;
-  filter: blur(20px) brightness(3);
+  filter: brightness(3);
   transition: all 0.5s ease-in-out;
-  animation: animated-background 10s linear alternate infinite;
+  animation: animated-background 25s linear alternate infinite;
 }
 
 a.cta:hover::after,
 .cta:active::after {
-  filter: blur(30px) brightness(5);
+  filter: brightness(5);
 }
 
 .huge {
@@ -190,7 +190,7 @@ a.cta:hover::after,
 
 @media (prefers-color-scheme: dark) {
   a.cta::after {
-    filter: blur(20px) brightness(1.4);
+    filter: brightness(1.4);
   }
 
   a.cta:hover {
@@ -198,7 +198,7 @@ a.cta:hover::after,
   }
 
   a.cta:hover::after {
-    filter: blur(10px) brightness(5);
+    filter: brightness(5);
   }
 }
 

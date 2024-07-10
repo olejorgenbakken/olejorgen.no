@@ -89,7 +89,7 @@
     var(--lightness-dark) var(--chroma-2) var(--hue-accent) / 0.5
   );
   --color-border: oklch(
-    var(--lightness) var(--chroma-2) var(--hue-accent) / 0.5
+    var(--lightness-inverted) var(--chroma-2) var(--hue-accent) / 0.5
   );
   --color-border-inverted: oklch(
     var(--lightness-inverted) var(--chroma-2) var(--hue-accent) / 0.5
@@ -143,7 +143,6 @@
 
   --gradient-rainbow: radial-gradient(
     circle,
-    var(--color-accent),
     var(--color-red),
     var(--color-orange),
     var(--color-yellow),
