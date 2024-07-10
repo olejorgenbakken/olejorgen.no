@@ -160,8 +160,8 @@
   --font-size-xl: clamp(1.5rem, 1.2857rem + 0.9524vw, 2rem);
   --font-size-2xl: clamp(1.85rem, 1.5714rem + 1.2381vw, 2.5rem);
   --font-size-3xl: clamp(2rem, 1.6786rem + 1.4286vw, 2.75rem);
-  --font-size-4xl: clamp(2.5rem, 2.2857rem + 0.9524vw, 3rem);
-  --font-size-5xl: clamp(2.5rem, 1.8571rem + 2.8571vw, 4rem);
+  --font-size-4xl: clamp(2.3rem, 2.2857rem + 0.9524vw, 3rem);
+  --font-size-5xl: clamp(2.3rem, 1.8571rem + 2.8571vw, 4rem);
 
   --line-height-normal: 1.5;
   --line-height-tight: 1.25;

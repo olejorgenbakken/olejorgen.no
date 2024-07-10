@@ -128,7 +128,8 @@ a:hover {
   padding-bottom: var(--border-width);
 }
 
-a:hover::after {
+a:hover::after,
+a:active::after {
   animation: animated-background 6s linear alternate infinite;
   height: 0.2rem;
   filter: brightness(2);
@@ -148,7 +149,8 @@ a.cta {
   transition: all 0.2s ease-in-out;
 }
 
-a.cta:hover {
+a.cta:hover,
+.cta:active {
   color: var(--color-text-dark);
   border: var(--border-thin);
   transform: scale(1.03);
@@ -164,7 +166,8 @@ a.cta::after {
   animation: animated-background 10s linear alternate infinite;
 }
 
-a.cta:hover::after {
+a.cta:hover::after,
+.cta:active::after {
   filter: blur(30px) brightness(5);
 }
 
@@ -180,7 +183,8 @@ a.cta:hover::after {
   height: 0.3rem;
 }
 
-.huge a:hover::after {
+.huge a:hover::after,
+.huge a:active::after {
   height: 0.6rem;
 }
 
@@ -207,7 +211,8 @@ a.cta:hover::after {
     transition: none;
   }
 
-  a:hover::after {
+  a:hover::after,
+  a:active::after {
     animation: none;
     background: var(--color-border);
   }
@@ -216,7 +221,8 @@ a.cta:hover::after {
     transition: none;
   }
 
-  a.cta:hover::after {
+  a.cta:hover::after,
+  a.cta:active::after {
     animation: none;
   }
 }
