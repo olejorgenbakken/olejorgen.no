@@ -26,7 +26,7 @@ export default async function RepositoryCard({ repository }: RepoProps) {
         <p className="topics">{topics?.map((topic) => topic).join(', ')}</p>
       </header>
       {description && <p className="description">{description}</p>}
-      {commits.total && (
+      {commits.total > 0 && (
         <p className="commits">
           <small>Commits: {commits.total}</small>
         </p>
