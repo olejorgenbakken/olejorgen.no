@@ -22,7 +22,7 @@ export const RepositoryCard: React.FC<RepoProps> = ({ repository }) => {
         </p>
         <p className="topics">{topics?.map((topic) => topic).join(', ')}</p>
       </header>
-      <p className="description">{description}</p>
+      {description && <p className="description">{description}</p>}
       <footer className="repository-footer">
         <Tag>{language}</Tag>
         <small>Oppdatert {formatDateTime(updated_at)}</small>
