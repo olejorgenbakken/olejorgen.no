@@ -5,4 +5,6 @@ export type Repository = {
   updated_at: string;
   created_at: string;
   pushed_at: string;
+  topics?: string[];
+  language?: string;
 };

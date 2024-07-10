@@ -16,7 +16,7 @@ export default async function Home() {
   const twoYearsAgo = new Date().getTime() - 1000 * 60 * 60 * 24 * 365 * 2;
   const reposUpdatedLastTwoYears = (await getRepositories('updated'))
     .filter((repo) => new Date(repo.updated_at).getTime() > twoYearsAgo)
-    .slice(0, 4);
+    .slice(0, 6);
 
   return (
     <main className="page-home">

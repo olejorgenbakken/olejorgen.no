@@ -1,0 +1,9 @@
+.tag {
+  display: inline-block;
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  background: var(--gradient-surface);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-text);
+  border: var(--border-thin);
+  font-size: var(--font-size-xxs);
+}

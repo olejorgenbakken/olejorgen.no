@@ -1,0 +1,13 @@
+.flex-column,
+.flex-row {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
