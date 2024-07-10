@@ -1,6 +1,6 @@
 .global-footer {
   background: var(--color-surface-dark);
-  border-top: var(--border-inverted-thick);
+  border-top: var(--border-light-thick);
   color: var(--color-text-light);
   width: 100%;
 }
@@ -28,8 +28,8 @@
   }
 
   .footer-links {
-    border-left: var(--border-dotted-thin-inverted);
-    border-right: var(--border-dotted-thin-inverted);
+    border-left: var(--border-dotted-light-thin);
+    border-right: var(--border-dotted-light-thin);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);

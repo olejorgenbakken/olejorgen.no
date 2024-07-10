@@ -83,16 +83,16 @@
   );
 
   --color-border-light: oklch(
-    var(--lightness) var(--chroma-2) var(--hue-accent) / 0.5
+    var(--lightness-light) var(--chroma-2) var(--hue-accent) / 0.5
   );
   --color-border-dark: oklch(
-    var(--lightness-inverted) var(--chroma-2) var(--hue-accent) / 0.5
+    var(--lightness-dark) var(--chroma-2) var(--hue-accent) / 0.5
   );
   --color-border: oklch(
-    var(--lightness-inverted) var(--chroma-2) var(--hue-accent) / 0.5
+    var(--lightness) var(--chroma-2) var(--hue-accent) / 0.5
   );
   --color-border-inverted: oklch(
-    var(--lightness) var(--chroma-2) var(--hue-accent) / 0.5
+    var(--lightness-inverted) var(--chroma-2) var(--hue-accent) / 0.5
   );
 
   --border: var(--border-width) solid var(--color-border);
@@ -103,6 +103,10 @@
     var(--color-border-inverted);
   --border-inverted-thick: var(--border-width-thick) solid
     var(--color-border-inverted);
+  --border-light: var(--border-width) solid var(--color-border-light);
+  --border-light-thin: var(--border-width-thin) solid var(--color-border-light);
+  --border-light-thick: var(--border-width-thick) solid
+    var(--color-border-light);
 
   --border-dotted: var(--border-width) dotted var(--color-border);
   --border-dotted-thin: var(--border-width-thin) dotted var(--color-border);
@@ -113,6 +117,11 @@
     var(--color-border-inverted);
   --border-dotted-thick-inverted: var(--border-width-thick) dotted
     var(--color-border-inverted);
+  --border-dotted-light: var(--border-width) dotted var(--color-border-light);
+  --border-dotted-light-thin: var(--border-width-thin) dotted
+    var(--color-border-light);
+  --border-dotted-light-thick: var(--border-width-thick) dotted
+    var(--color-border-light);
 
   --border-dashed: var(--border-width) dashed var(--color-border);
   --border-dashed-thin: var(--border-width-thin) dashed var(--color-border);
@@ -123,6 +132,10 @@
     var(--color-border-inverted);
   --border-dashed-thick-inverted: var(--border-width-thick) dashed
     var(--color-border-inverted);
+  --border-dashed-light: var(--border-width) dashed var(--color-border-light);
+  --border-dashed-light-thin: var(--border-width-thin) dashed
+    var(--color-border-light);
+  --border-dashed-light-thick: var(--border-width-thick) dashed
 
   --shadow-1: 0 0px 5px 0px var(--color-accent);
   --shadow-2: 0 4px 6px -1px var(--color-accent);

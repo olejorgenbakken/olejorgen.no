@@ -11,7 +11,7 @@ export async function useRateLimit() {
   });
 
   const ratelimit = rate.data.resources.core;
-  const errorText = `Rate limit exceeded (${
+  const errorText = `For mange kall på kort tid (${
     ratelimit.limit
   } requests per hour). Neste kall: ${fromUnixEpochTime(ratelimit.reset)}.`;
 
