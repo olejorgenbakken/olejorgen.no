@@ -34,6 +34,7 @@ h6,
 h1,
 .h1 {
   font-size: var(--font-size-3xl);
+  font-weight: 900;
 }
 
 h2,
@@ -44,6 +45,7 @@ h2,
 h3,
 .h3 {
   font-size: var(--font-size-xl);
+  font-weight: 600;
 }
 
 h4,
@@ -143,6 +145,7 @@ a.cta {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-text-light);
   padding: var(--spacing-xs) var(--spacing-md);
   overflow: hidden;
   transform: scale(1);
@@ -154,21 +157,20 @@ a.cta:hover,
   color: var(--color-text-dark);
   border: var(--border-thin);
   transform: scale(1.03);
-  box-shadow: 0 0 1rem 0 var(--color-accent-light);
+  box-shadow: 0 0 1rem 0 var(--color-accent);
 }
 
 a.cta::after {
   height: 100%;
-  background: var(--gradient-rainbow);
   z-index: -1;
-  filter: brightness(3);
+  filter: brightness(1.4);
   transition: all 0.5s ease-in-out;
-  animation: animated-background 25s linear alternate infinite;
+  animation: animated-background 10s linear alternate infinite;
 }
 
 a.cta:hover::after,
 .cta:active::after {
-  filter: brightness(5);
+  filter: brightness(2.3);
 }
 
 .huge {
@@ -186,20 +188,6 @@ a.cta:hover::after,
 .huge a:hover::after,
 .huge a:active::after {
   height: 0.6rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  a.cta::after {
-    filter: brightness(1.4);
-  }
-
-  a.cta:hover {
-    box-shadow: 0 0 1rem 0 var(--color-accent-dark);
-  }
-
-  a.cta:hover::after {
-    filter: brightness(5);
-  }
 }
 
 @media (prefers-reduced-motion) {

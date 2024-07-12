@@ -1,9 +1,6 @@
-'use client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
 import './GlobalHeader.css';
 import { Logo } from '../Logo';
+import Link from 'next/link';
 
 type Color = {
   label: string;
@@ -11,15 +8,18 @@ type Color = {
 };
 
 export const GlobalHeader = () => {
-  const path = usePathname();
-
-  if (path === '/') {
-    return (
-      <header className="global-header">
-        <div className="content">
-          <Logo />
-        </div>
-      </header>
-    );
-  }
+  return (
+    <header className="global-header">
+      <div className="content">
+        <Logo />
+        <nav>
+          <ul className="no-style">
+            <li>
+              <Link href="/forecast">Vær</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 };

@@ -1,4 +1,4 @@
-import { fromUnixEpochTime } from '@/app/features/utils/formatters';
+import { fromUnixEpochTime } from '@/app/features/utils/formatDateTime';
 import { Octokit } from 'octokit';
 
 const octokit = new Octokit();

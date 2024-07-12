@@ -1,0 +1,26 @@
+export type Units = {
+  air_pressure_at_sea_level: 'hPa';
+  air_temperature: 'celsius';
+  air_temperature_max: 'celsius';
+  air_temperature_min: 'celsius';
+  air_temperature_percentile_10: 'celsius';
+  air_temperature_percentile_90: 'celsius';
+  cloud_area_fraction: '%';
+  cloud_area_fraction_high: '%';
+  cloud_area_fraction_low: '%';
+  cloud_area_fraction_medium: '%';
+  dew_point_temperature: 'celsius';
+  fog_area_fraction: '%';
+  precipitation_amount: 'mm';
+  precipitation_amount_max: 'mm';
+  precipitation_amount_min: 'mm';
+  probability_of_precipitation: '%';
+  probability_of_thunder: '%';
+  relative_humidity: '%';
+  ultraviolet_index_clear_sky: '1';
+  wind_from_direction: 'degrees';
+  wind_speed: 'm/s';
+  wind_speed_of_gust: 'm/s';
+  wind_speed_percentile_10: 'm/s';
+  wind_speed_percentile_90: 'm/s';
+};

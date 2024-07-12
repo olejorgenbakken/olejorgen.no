@@ -1,0 +1,14 @@
+.forecast-hour {
+  padding: var(--spacing-md);
+  background: var(--color-surface-2);
+  border-radius: var(--border-radius-md);
+  border: var(--border-thin);
+
+  & .details {
+    gap: var(--spacing-sm);
+
+    & p {
+      width: max-content;
+    }
+  }
+}

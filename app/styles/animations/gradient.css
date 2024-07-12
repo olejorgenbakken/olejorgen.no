@@ -1,9 +1,12 @@
 @keyframes animated-background {
   0% {
-    background: var(--gradient-rainbow) -400% -100% / 700% 400%;
+    background: var(--gradient-rainbow) 400% 400% / 400% 400%;
+  }
+  50% {
+    background: var(--gradient-rainbow) 400% 400% / 600% 600%;
   }
   100% {
-    background: var(--gradient-rainbow) -200% 40% / 200% 600%;
+    background: var(--gradient-rainbow) 400% 400% / 490% 490%;
   }
 }
 

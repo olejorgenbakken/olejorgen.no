@@ -21,11 +21,11 @@ export default async function Home() {
   return (
     <main className="page-home">
       <header className="home-header">
-        <p className="huge slide-down">
+        <h1 className="huge slide-down">
           Frontend-utvikler hos <Link href="https://fremtind.no">Fremtind</Link>
           . Tidligere produkt&shy;designer hos{' '}
           <Link href="https://www.detsombetyrnoe.no">NAV</Link>.
-        </p>
+        </h1>
       </header>
       {reposUpdatedLastTwoYears && (
         <section className="repos">

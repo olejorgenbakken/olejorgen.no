@@ -1,0 +1,5 @@
+.forecast-detail {
+  & img {
+    border-radius: 0;
+  }
+}
