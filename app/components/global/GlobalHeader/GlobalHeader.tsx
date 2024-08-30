@@ -12,13 +12,6 @@ export const GlobalHeader = () => {
     <header className="global-header">
       <div className="content">
         <Logo />
-        <nav>
-          <ul className="no-style">
-            <li>
-              <Link href="/forecast">Vær</Link>
-            </li>
-          </ul>
-        </nav>
       </div>
     </header>
   );

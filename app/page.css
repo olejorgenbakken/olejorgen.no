@@ -1,37 +1,10 @@
 .page-home {
   padding-bottom: var(--spacing-xl);
-}
-.page-home .home-header {
-  min-height: clamp(20vh, 50vw, 40vh);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.page-home .repos {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-
-@media (min-width: 640px) {
-  .page-home .repos {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      'title link'
-      'list list';
-  }
-
-  .page-home .repos .title {
-    grid-area: title;
-  }
-
-  .page-home .repos .github-link {
-    grid-area: link;
-  }
-
-  .page-home .repos ul {
-    grid-area: list;
+  .home-header {
+    min-height: clamp(20vh, 50vw, 40vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }

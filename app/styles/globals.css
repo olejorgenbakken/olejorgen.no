@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
 @import './typography.css';
 @import './animations/animations.css';
-@import './utils.css';
 
 :root {
   --hue-red: 0;
@@ -288,17 +287,17 @@ section {
   position: relative;
   padding: var(--padding-lg) 0;
   box-sizing: border-box;
-}
 
-section::after {
-  content: '';
-  height: 100%;
-  left: 0;
-  left: -50vw;
-  position: absolute;
-  top: 0;
-  width: 150vw;
-  z-index: -1;
+  &::after {
+    content: '';
+    height: 100%;
+    left: 0;
+    left: -50vw;
+    position: absolute;
+    top: 0;
+    width: 150vw;
+    z-index: -1;
+  }
 }
 
 button {
@@ -316,4 +315,11 @@ button {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    animation: none;
+    transition: none;
+  }
 }

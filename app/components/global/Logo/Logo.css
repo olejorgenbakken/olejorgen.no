@@ -1,8 +1,8 @@
 .logo {
   text-transform: uppercase;
-}
 
-.logo::after {
-  background: var(--gradient-rainbow);
-  background-size: 400% 400%;
+  &::after {
+    background: var(--gradient-rainbow);
+    background-size: 400% 400%;
+  }
 }
