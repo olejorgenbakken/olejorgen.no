@@ -13,7 +13,7 @@
   --hue-purple: 320;
   --hue-pink: 360;
 
-  --hue-accent: var(--hue-green);
+  --hue-accent: var(--hue-yellow);
 
   --lightness-100: 100%;
   --lightness-95: 95%;
@@ -139,7 +139,7 @@
   --border-dashed-light: var(--border-width) dashed var(--color-border-light);
   --border-dashed-light-thin: var(--border-width-thin) dashed
     var(--color-border-light);
-  --border-dashed-light-thick: var(--border-width-thick) dashed
+  --border-dashed-light-thick: var(--border-width-thick) dashed;
 
   --shadow-1: 0 0px 5px 0px var(--color-accent);
   --shadow-2: 0 4px 6px -1px var(--color-accent);
@@ -236,7 +236,6 @@
     --lightness-inverted: var(--lightness-light);
   }
 }
-
 
 * {
   box-sizing: border-box;
