@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import { GlobalFooter, GlobalHeader } from './components/Global';
+import { GlobalFooter, GlobalHeader } from './components/global';
 
 import './styles/globals.css';
 
