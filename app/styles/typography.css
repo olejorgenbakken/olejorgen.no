@@ -131,7 +131,8 @@ a {
     transition: background 0.2s ease-in-out;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:active::after {
     background: color-mix(
       in oklch,
       var(--color-border) 25%,

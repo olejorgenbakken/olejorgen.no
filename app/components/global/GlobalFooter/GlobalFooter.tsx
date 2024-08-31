@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Logo } from '../Logo';
-import { ThemePicker } from '.';
 
 import './GlobalFooter.css';
 
@@ -24,7 +23,6 @@ export const GlobalFooter = () => {
             </li>
           </ul>
         </nav>
-        <ThemePicker />
       </div>
     </footer>
   );

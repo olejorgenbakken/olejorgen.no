@@ -1,7 +1,5 @@
 .global-footer {
-  background: var(--color-surface-dark);
-  border-top: var(--border-light);
-  color: var(--color-text-light);
+  background: var(--color-surface-3);
   width: 100%;
   container-type: inline-size;
 
@@ -22,9 +20,6 @@
       ul {
         display: flex;
         gap: var(--spacing-md);
-        a::after {
-          background: var(--color-border-light);
-        }
       }
     }
   }

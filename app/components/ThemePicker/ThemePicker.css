@@ -1,5 +1,0 @@
-.theme-picker {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: var(--spacing-sm) var(--spacing-xs);
-}
