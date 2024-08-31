@@ -11,7 +11,13 @@ export const GlobalHeader = () => {
   return (
     <header className="global-header">
       <div className="content">
-        <Logo />
+        <nav className="navigation">
+          <ul className="links">
+            <li>
+              <Logo />
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

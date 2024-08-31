@@ -7,24 +7,26 @@ export const ThemePicker = () => {
     <div className="theme-picker">
       <input
         type="range"
-        min="0"
-        max="360"
+        min={0}
+        max={360}
+        step={10}
+        defaultValue={0}
         id="theme-hue"
         name="theme-hue"
-        defaultValue={0}
         onChange={handleHueSelection}
       />
-      <label htmlFor="theme-hue">Velg hue</label>
+      <label htmlFor="theme-hue">Velg fargetone</label>
       <input
         type="range"
-        min="0"
-        max="100"
+        min={0}
+        max={100}
+        step={5}
+        defaultValue={0}
         id="theme-lightness"
         name="theme-lightness"
-        defaultValue={0}
         onChange={handleLightnessSelection}
       />
-      <label htmlFor="theme-lightness">Velg lightness</label>
+      <label htmlFor="theme-lightness">Velg lyshet</label>
     </div>
   );
 };
