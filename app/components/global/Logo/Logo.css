@@ -1,7 +1,8 @@
 .logo {
   text-transform: uppercase;
+  padding: 0;
 
   &::after {
-    background: var(--color-border);
+    display: none;
   }
 }
