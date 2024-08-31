@@ -128,9 +128,14 @@ a {
     height: 0.1em;
     background: var(--color-border);
     border-radius: var(--border-radius-full);
+    transition: background 0.2s ease-in-out;
   }
 
   &:hover::after {
-    height: 0.2em;
+    background: color-mix(
+      in oklch,
+      var(--color-border) 25%,
+      var(--color-text) 75%
+    );
   }
 }
