@@ -9,17 +9,21 @@ export const GlobalFooter = () => {
     <footer className="global-footer">
       <div className="content">
         <Logo />
-        <ul className="no-style">
-          <li>
-            <Link href="https://twitter.com/olejorgenbakken">Twitter</Link>
-          </li>
-          <li>
-            <Link href="https://github.com/olejorgenbakken">GitHub</Link>
-          </li>
-          <li>
-            <Link href="https://linkedin.com/in/olejorgenbakken">LinkedIn</Link>
-          </li>
-        </ul>
+        <nav className="navigation">
+          <ul className="no-style external-links">
+            <li>
+              <Link href="https://twitter.com/olejorgenbakken">Twitter</Link>
+            </li>
+            <li>
+              <Link href="https://github.com/olejorgenbakken">GitHub</Link>
+            </li>
+            <li>
+              <Link href="https://linkedin.com/in/olejorgenbakken">
+                LinkedIn
+              </Link>
+            </li>
+          </ul>
+        </nav>
         <ThemePicker />
       </div>
     </footer>

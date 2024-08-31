@@ -22,6 +22,9 @@
       ul {
         display: flex;
         gap: var(--spacing-md);
+        a::after {
+          background: var(--color-border-light);
+        }
       }
     }
   }

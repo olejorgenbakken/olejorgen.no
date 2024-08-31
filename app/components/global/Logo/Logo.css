@@ -2,7 +2,6 @@
   text-transform: uppercase;
 
   &::after {
-    background: var(--gradient-rainbow);
-    background-size: 400% 400%;
+    background: var(--color-border);
   }
 }

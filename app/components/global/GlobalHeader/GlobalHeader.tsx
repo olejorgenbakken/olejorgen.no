@@ -2,19 +2,17 @@ import './GlobalHeader.css';
 import { Logo } from '../Logo';
 import Link from 'next/link';
 
-type Color = {
-  label: string;
-  value: number;
-};
-
 export const GlobalHeader = () => {
   return (
     <header className="global-header">
       <div className="content">
         <nav className="navigation">
-          <ul className="links">
+          <ul className="no-style links">
             <li>
               <Logo />
+            </li>
+            <li>
+              <Link href={'/blog'}>Blogg</Link>
             </li>
           </ul>
         </nav>
