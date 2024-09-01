@@ -1,0 +1,19 @@
+.article-header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm) var(--spacing-md);
+
+  @container (min-width: 700px) {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  > hgroup {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  > p {
+    width: max-content;
+  }
+}

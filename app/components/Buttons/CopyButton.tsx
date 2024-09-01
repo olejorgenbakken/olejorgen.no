@@ -1,13 +1,13 @@
-import type { HTMLAttributes, ReactNode } from 'react';
+import { useState, type HTMLAttributes } from 'react';
 import { LinkIcon } from '../icons/LinkIcon';
 import { CopyIcon } from '../icons/CopyIcon';
 
 import './CopyButton.css';
+import { CheckIcon } from '../icons/CheckIcon';
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
   content: string;
-  contentType: 'link';
-  children?: ReactNode;
+  contentType?: 'link' | 'generic';
 }
 
 export default async function copyText(text: string): Promise<void> {
@@ -20,8 +20,7 @@ export default async function copyText(text: string): Promise<void> {
 
 export const CopyButton = ({
   content,
-  contentType,
-  children,
+  contentType = 'link',
   ...rest
 }: Props) => {
   let icon = undefined;
@@ -31,14 +30,22 @@ export const CopyButton = ({
     icon = <CopyIcon />;
   }
 
+  const [copied, setCopied] = useState(false);
+
   return (
     <button
       title={`Kopièr ${contentType}`}
-      aria-label={`Kopièr ${contentType}`}
-      onClick={() => copyText(content)}
-      className="copy-button"
+      aria-label={copied ? 'Kopiert' : `Kopièr ${contentType}`}
+      onClick={() => {
+        copyText(content);
+        setCopied(true);
+        setTimeout(() => {
+          setCopied(false);
+        }, 1500);
+      }}
+      className={`copy-button ${contentType}`}
       {...rest}>
-      {children ?? icon}
+      {copied ? <CheckIcon /> : icon}
     </button>
   );
 };

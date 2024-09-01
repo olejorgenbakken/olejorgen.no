@@ -35,11 +35,6 @@
   --color-surface-2: oklch(
     var(--lightness-surface) var(--chroma-strong) var(--active-accent)
   );
-  --color-surface-contrast: color-mix(
-    in oklch,
-    var(--color-surface-1) 20%,
-    var(--color-text) 80%
-  );
 
   --color-text: oklch(
     var(--lightness-text) var(--chroma-weak) var(--active-accent)
@@ -57,8 +52,8 @@
 
   --color-border: color-mix(
     in oklch,
-    var(--color-text) 60%,
-    var(--color-surface-1) 40%
+    var(--color-text) 10%,
+    var(--color-surface-1) 90%
   );
   --color-border-hover: color-mix(
     in oklch,
@@ -222,7 +217,7 @@ h5,
 h6,
 .h6,
 p {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
 }
 
 p {
@@ -289,6 +284,31 @@ main {
   max-width: var(--max-width);
   padding: var(--padding-horizontal);
   width: 100%;
+  container-type: inline-size;
+}
+
+article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  align-items: center;
+  container-type: inline-size;
+
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p {
+    max-width: 1080px;
+  }
+
+  > p {
+    @container (min-width: 720px) {
+      columns: 2;
+    }
+  }
 }
 
 section {
@@ -298,6 +318,7 @@ section {
   position: relative;
   padding: var(--padding-lg) 0;
   box-sizing: border-box;
+  container-type: inline-size;
 
   &::after {
     content: '';
@@ -312,7 +333,7 @@ section {
 }
 
 button {
-  background: var(--color-surface-contrast);
+  background: var(--color-text);
   color: var(--color-text-inverted);
   border: none;
   border-radius: var(--border-radius-sm);
@@ -322,7 +343,7 @@ button {
   padding: var(--spacing-xs) var(--spacing-sm);
   min-height: 44px;
   min-width: 44px;
-  transition: filter 0.14s ease-in-out;
+  transition: all 0.14s ease-in-out;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -330,6 +351,8 @@ button {
   box-sizing: border-box;
 
   &:hover {
+    background: var(--color-text);
+    color: var(--color-text-inverted);
     filter: brightness(1.6);
 
     @media (prefers-color-scheme: dark) {

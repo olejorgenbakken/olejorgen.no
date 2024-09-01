@@ -1,4 +1,7 @@
 .copy-button {
+  background: transparent;
+  color: var(--color-text);
   margin-left: var(--spacing-xs);
   padding: var(--spacing-xs);
+  position: relative;
 }

@@ -12,6 +12,7 @@
     max-width: var(--max-width);
     padding: var(--spacing-lg) var(--padding-horizontal);
     width: 100%;
+    border-top: 1px solid var(--color-border);
 
     @container (min-width: 1024px) {
       grid-template-columns: auto 1fr auto;
