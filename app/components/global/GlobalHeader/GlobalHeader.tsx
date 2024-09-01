@@ -12,7 +12,7 @@ export const GlobalHeader = () => {
               <Logo />
             </li>
             <li>
-              <Link href={'/blog'}>Blogg</Link>
+              <Link href={'/lekegrind'}>Lekegrind</Link>
             </li>
           </ul>
         </nav>

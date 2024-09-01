@@ -1,0 +1,4 @@
+.copy-button {
+  margin-left: var(--spacing-xs);
+  padding: var(--spacing-xs);
+}

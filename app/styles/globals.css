@@ -1,4 +1,3 @@
-@import './typography.css';
 @import './animations/slide-in.css';
 
 :root {
@@ -12,137 +11,60 @@
   --hue-purple: 320;
   --hue-pink: 360;
 
-  --hue-accent: var(--hue-yellow);
+  --red: oklch(50% 0.2 var(--hue-red));
+  --orange: oklch(50% 0.2 var(--hue-orange));
+  --yellow: oklch(50% 0.2 var(--hue-yellow));
+  --green: oklch(50% 0.2 var(--hue-green));
+  --teal: oklch(50% 0.2 var(--hue-teal));
+  --cyan: oklch(50% 0.2 var(--hue-cyan));
+  --blue: oklch(50% 0.2 var(--hue-blue));
+  --purple: oklch(50% 0.2 var(--hue-purple));
+  --pink: oklch(50% 0.2 var(--hue-pink));
 
-  --lightness-100: 100%;
-  --lightness-95: 95%;
-  --lightness-90: 90%;
-  --lightness-85: 85%;
-  --lightness-80: 80%;
-  --lightness-75: 75%;
-  --lightness-70: 70%;
-  --lightness-65: 65%;
-  --lightness-60: 60%;
-  --lightness-55: 55%;
-  --lightness-50: 50%;
-  --lightness-45: 45%;
-  --lightness-40: 40%;
-  --lightness-35: 35%;
-  --lightness-30: 30%;
-  --lightness-25: 25%;
-  --lightness-20: 20%;
-  --lightness-15: 15%;
-  --lightness-10: 10%;
-  --lightness-5: 5%;
-  --lightness-0: 0%;
+  --active-accent: var(--hue-red);
 
-  --lightness-dark: var(--lightness-10);
-  --lightness-light: var(--lightness-95);
-  --lightness: var(--lightness-light);
-  --lightness-inverted: var(--lightness-dark);
+  --lightness-surface: 95%;
+  --lightness-text: 20%;
 
-  --chroma-1: 0.05;
-  --chroma-2: 0.1;
-  --chroma-3: 0.15;
-  --chroma-4: 0.2;
+  --chroma-weak: 0.1;
+  --chroma-strong: 0.17;
 
-  --color-red: oklch(var(--lightness-50) var(--chroma-3) var(--hue-red));
-  --color-orange: oklch(var(--lightness-50) var(--chroma-3) var(--hue-orange));
-  --color-yellow: oklch(var(--lightness-50) var(--chroma-3) var(--hue-yellow));
-  --color-green: oklch(var(--lightness-50) var(--chroma-3) var(--hue-green));
-  --color-teal: oklch(var(--lightness-50) var(--chroma-3) var(--hue-teal));
-  --color-cyan: oklch(var(--lightness-50) var(--chroma-3) var(--hue-cyan));
-  --color-blue: oklch(var(--lightness-50) var(--chroma-3) var(--hue-blue));
-  --color-purple: oklch(var(--lightness-50) var(--chroma-3) var(--hue-purple));
-  --color-pink: oklch(var(--lightness-50) var(--chroma-3) var(--hue-pink));
-
-  --color-accent: oklch(var(--lightness) var(--chroma-3) var(--hue-accent));
-  --color-accent-light: oklch(
-    var(--lightness-90) var(--chroma-2) var(--hue-accent)
+  --color-surface-1: oklch(
+    var(--lightness-surface) var(--chroma-weak) var(--active-accent)
   );
-  --color-accent-dark: oklch(
-    var(--lightness-50) var(--chroma-4) var(--hue-accent)
+  --color-surface-2: oklch(
+    var(--lightness-surface) var(--chroma-strong) var(--active-accent)
+  );
+  --color-surface-contrast: color-mix(
+    in oklch,
+    var(--color-surface-1) 20%,
+    var(--color-text) 80%
   );
 
-  --color-surface-light: oklch(
-    var(--lightness-light) var(--chroma-2) var(--hue-accent)
+  --color-text: oklch(
+    var(--lightness-text) var(--chroma-weak) var(--active-accent)
   );
-  --color-surface-dark: oklch(
-    var(--lightness-dark) var(--chroma-4) var(--hue-accent)
+  --color-text-colored: color-mix(
+    in oklch,
+    var(--color-text) 90%,
+    var(--color-surface-1) 10%
   );
-  --color-surface-1: oklch(var(--lightness) var(--chroma-1) var(--hue-accent));
-  --color-surface-2: oklch(var(--lightness) var(--chroma-2) var(--hue-accent));
-  --color-surface-3: oklch(var(--lightness) var(--chroma-3) var(--hue-accent));
-  --color-surface-inverted: oklch(
-    var(--lightness-inverted) var(--chroma-3) var(--hue-accent)
-  );
-
-  --color-text-light: oklch(var(--lightness-light) 0 var(--hue-accent));
-  --color-text-dark: oklch(var(--lightness-dark) 0 var(--hue-accent));
-  --color-text: oklch(var(--lightness-inverted) 0 var(--hue-accent));
-  --color-text-inverted: oklch(var(--lightness) 0 var(--hue-accent));
-  --color-text-colored: oklch(
-    var(--lightness-inverted) var(--chroma-3) var(--hue-accent)
+  --color-text-inverted: color-mix(
+    in oklch,
+    var(--color-text) 10%,
+    var(--color-surface-1) 90%
   );
 
-  --color-border-light: oklch(
-    var(--lightness-light) var(--chroma-2) var(--hue-accent) / 0.5
+  --color-border: color-mix(
+    in oklch,
+    var(--color-text) 60%,
+    var(--color-surface-1) 40%
   );
-  --color-border-dark: oklch(
-    var(--lightness-dark) var(--chroma-2) var(--hue-accent) / 0.5
+  --color-border-hover: color-mix(
+    in oklch,
+    var(--color-text) 100%,
+    var(--color-surface-1) 0%
   );
-  --color-border: oklch(
-    var(--lightness-inverted) var(--chroma-2) var(--hue-accent) / 0.5
-  );
-  --color-border-inverted: oklch(
-    var(--lightness-inverted) var(--chroma-2) var(--hue-accent) / 0.5
-  );
-
-  --border: var(--border-width) solid var(--color-border);
-  --border-thin: var(--border-width-thin) solid var(--color-border);
-  --border-thick: var(--border-width-thick) solid var(--color-border);
-  --border-inverted: var(--border-width) solid var(--color-border-inverted);
-  --border-inverted-thin: var(--border-width-thin) solid
-    var(--color-border-inverted);
-  --border-inverted-thick: var(--border-width-thick) solid
-    var(--color-border-inverted);
-  --border-light: var(--border-width) solid var(--color-border-light);
-  --border-light-thin: var(--border-width-thin) solid var(--color-border-light);
-  --border-light-thick: var(--border-width-thick) solid
-    var(--color-border-light);
-
-  --border-dotted: var(--border-width) dotted var(--color-border);
-  --border-dotted-thin: var(--border-width-thin) dotted var(--color-border);
-  --border-dotted-thick: var(--border-width-thick) dotted var(--color-border);
-  --border-dotted-inverted: var(--border-width) dotted
-    var(--color-border-inverted);
-  --border-dotted-thin-inverted: var(--border-width-thin) dotted
-    var(--color-border-inverted);
-  --border-dotted-thick-inverted: var(--border-width-thick) dotted
-    var(--color-border-inverted);
-  --border-dotted-light: var(--border-width) dotted var(--color-border-light);
-  --border-dotted-light-thin: var(--border-width-thin) dotted
-    var(--color-border-light);
-  --border-dotted-light-thick: var(--border-width-thick) dotted
-    var(--color-border-light);
-
-  --border-dashed: var(--border-width) dashed var(--color-border);
-  --border-dashed-thin: var(--border-width-thin) dashed var(--color-border);
-  --border-dashed-thick: var(--border-width-thick) dashed var(--color-border);
-  --border-dashed-inverted: var(--border-width) dashed
-    var(--color-border-inverted);
-  --border-dashed-thin-inverted: var(--border-width-thin) dashed
-    var(--color-border-inverted);
-  --border-dashed-thick-inverted: var(--border-width-thick) dashed
-    var(--color-border-inverted);
-  --border-dashed-light: var(--border-width) dashed var(--color-border-light);
-  --border-dashed-light-thin: var(--border-width-thin) dashed
-    var(--color-border-light);
-  --border-dashed-light-thick: var(--border-width-thick) dashed;
-
-  --shadow-1: 0 0px 5px 0px var(--color-accent);
-  --shadow-2: 0 4px 6px -1px var(--color-accent);
-  --shadow-3: 0 1px 3px 0 var(--color-accent);
 
   --font-family-primary: 'Arial', sans-serif;
   --font-family-secondary: 'Times New Roman', serif;
@@ -189,30 +111,15 @@
   --max-width: var(--breakpoint-lg);
 
   --padding-horizontal: var(--spacing-md);
-
-  --direction: normal;
-  --duration: 0.6s;
-  --timing: cubic-bezier(0.075, 0.82, 0.165, 1);
-  --fill-mode: backwards;
-  --distance: 15%;
-  --iterations: 1;
-  --transform-start: translateY(0) translateX(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --direction: alternate;
-    --duration: 0.8s;
-    --timing: ease-in-out;
-    --fill-mode: both;
-    --iterations: infinite;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --lightness: var(--lightness-dark);
-    --lightness-inverted: var(--lightness-light);
+    --lightness-surface: 18%;
+    --lightness-text: 95%;
+
+    --chroma-weak: 0.02;
+    --chroma-strong: 0.1;
   }
 }
 
@@ -241,6 +148,127 @@ body {
   display: flex;
   flex-direction: column;
   line-height: var(--line-height-normal);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p {
+  width: 100%;
+
+  &.huge {
+    color: var(--color-text-colored);
+    font-size: var(--font-size-5xl);
+    font-weight: 900;
+    max-width: none;
+    text-wrap: balance;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+h1,
+.h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  color: var(--color-text-colored);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-lg);
+}
+
+h5,
+.h5 {
+  font-size: var(--font-size-md);
+}
+
+h6,
+.h6,
+p {
+  font-size: var(--font-size-sm);
+}
+
+p {
+  max-width: 60ch;
+}
+
+@supports (text-wrap: balance) {
+  p,
+  .balanced {
+    text-wrap: balance;
+  }
+}
+
+small {
+  font-size: var(--font-size-xxs);
+}
+
+ul,
+ol {
+  margin-top: var(--spacing-sm);
+  padding-left: var(--spacing-md);
+}
+
+li {
+  margin-bottom: var(--spacing-sm);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::marker {
+    color: var(--color-text-colored);
+  }
+}
+
+ul.no-style,
+ul.no-style li {
+  list-style-type: '';
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
 }
 
 img {
@@ -284,8 +312,8 @@ section {
 }
 
 button {
-  background: var(--color-accent-dark);
-  color: var(--color-text-light);
+  background: var(--color-surface-contrast);
+  color: var(--color-text-inverted);
   border: none;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
@@ -293,11 +321,21 @@ button {
   font-weight: 400;
   padding: var(--spacing-xs) var(--spacing-sm);
   min-height: 44px;
-  transition: background 0.2s ease-in-out;
+  min-width: 44px;
+  transition: filter 0.14s ease-in-out;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
+  box-sizing: border-box;
+
+  &:hover {
+    filter: brightness(1.6);
+
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(1.1);
+    }
+  }
 }
 
 @media (prefers-reduced-motion) {
