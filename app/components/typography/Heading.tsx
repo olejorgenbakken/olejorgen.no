@@ -2,6 +2,7 @@
 
 import type { ElementType, HTMLAttributes, ReactNode } from 'react';
 import { CopyButton } from '../Buttons/CopyButton';
+import { usePathname } from 'next/navigation';
 
 interface Props extends HTMLAttributes<HTMLHeadingElement> {
   level: '1' | '2' | '3' | '4' | '5' | '6';
@@ -24,7 +25,7 @@ export const Heading = ({
     .replaceAll(' ', '-')
     .toLowerCase();
 
-  const url = document.URL.split('#')[0];
+  const url = usePathname();
 
   return (
     <HeadingTag
@@ -33,7 +34,7 @@ export const Heading = ({
       {children}
       {!hideCopyButton && (
         <CopyButton
-          content={`${url}#${sanitizedId}`}
+          content={`https:olejorgen.dev${url}#${sanitizedId}`}
           contentType="link"
         />
       )}
