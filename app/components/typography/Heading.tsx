@@ -7,14 +7,14 @@ interface Props extends HTMLAttributes<HTMLHeadingElement> {
   level: '1' | '2' | '3' | '4' | '5' | '6';
   children: ReactNode;
   id?: string;
-  copyButton?: boolean;
+  hideCopyButton?: boolean;
 }
 
 export const Heading = ({
   level,
   id,
   children,
-  copyButton,
+  hideCopyButton,
   ...rest
 }: Props) => {
   const HeadingTag = `h${level}` as ElementType;
@@ -31,7 +31,7 @@ export const Heading = ({
       id={id ?? sanitizedId}
       {...rest}>
       {children}
-      {copyButton && (
+      {!hideCopyButton && (
         <CopyButton
           content={`${url}#${sanitizedId}`}
           contentType="link"

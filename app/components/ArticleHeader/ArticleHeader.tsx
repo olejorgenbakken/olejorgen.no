@@ -51,7 +51,7 @@ export default function ArticleHeader({
       <hgroup>
         <Heading
           level="1"
-          lang="en">
+          hideCopyButton>
           {title}
         </Heading>
         <p>{subtitle}</p>

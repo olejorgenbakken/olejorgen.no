@@ -15,7 +15,8 @@ export default async function Home() {
       <header className="home-header">
         <Heading
           level="1"
-          className="slide-down">
+          className="slide-down"
+          hideCopyButton>
           Frontend-utvikler hos <Link href="https://fremtind.no">Fremtind</Link>
           .
         </Heading>

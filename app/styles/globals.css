@@ -21,7 +21,7 @@
   --purple: oklch(50% 0.2 var(--hue-purple));
   --pink: oklch(50% 0.2 var(--hue-pink));
 
-  --active-accent: var(--hue-red);
+  --active-accent: var(--hue-green);
 
   --lightness-surface: 95%;
   --lightness-text: 20%;
