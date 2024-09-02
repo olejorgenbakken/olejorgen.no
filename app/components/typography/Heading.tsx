@@ -34,7 +34,7 @@ export const Heading = ({
       {children}
       {!hideCopyButton && (
         <CopyButton
-          content={`https:olejorgen.dev${url}#${sanitizedId}`}
+          content={`https://www.olejorgen.dev${url}#${sanitizedId}`}
           contentType="link"
         />
       )}
