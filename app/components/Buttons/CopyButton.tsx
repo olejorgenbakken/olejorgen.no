@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, type HTMLAttributes } from 'react';
 import { LinkIcon } from '../icons/LinkIcon';
 import { CopyIcon } from '../icons/CopyIcon';
