@@ -4,24 +4,20 @@
   container-type: inline-size;
   border-top: var(--border);
 
-  .content {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+  .navigation ul {
     margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
     max-width: var(--max-width);
-    padding: var(--spacing-lg) var(--padding-horizontal);
+    padding-inline: var(--spacing-sm);
+    padding-block: var(--spacing-md);
     width: 100%;
 
-    @container (min-width: 1024px) {
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-
-      ul {
-        display: flex;
-        gap: var(--spacing-md);
-      }
+    li:first-of-type {
+      flex-grow: 1;
+      width: 100%;
     }
   }
 }

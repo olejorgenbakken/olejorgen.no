@@ -5,16 +5,16 @@ import './page.css';
 
 export default function Page() {
   return (
-    <main id="scroll-based-animations">
-      <article id="container">
+    <main>
+      <article id="scroll-based-animations">
         <ArticleHeader
           title="Scroll-baserte animasjoner"
           subtitle="noe"
           written={new Date()}
           updated={new Date()}
         />
-        <div id="square">Content</div>
-        <div id="stretcher"></div>
+        <Heading level="2">hello</Heading>
+        <div>Content</div>
       </article>
     </main>
   );

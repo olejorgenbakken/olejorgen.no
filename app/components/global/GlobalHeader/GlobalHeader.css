@@ -7,7 +7,8 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: var(--max-width);
-    padding: var(--spacing-md) var(--padding-horizontal);
+    padding-block: var(--spacing-md);
+    padding-inline: var(--spacing-sm);
     width: 100%;
 
     .navigation {

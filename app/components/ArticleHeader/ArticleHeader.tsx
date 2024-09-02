@@ -50,23 +50,26 @@ export default function ArticleHeader({
 
   return (
     <header className="article-header">
-      <hgroup>
-        <Heading
-          level="1"
-          hideCopyButton>
-          {title}
-        </Heading>
-        <Body>{subtitle}</Body>
-      </hgroup>
-      <Small muted>
-        Skrevet <time dateTime={writtenDates.meta}>{writtenDates.printed}</time>
-      </Small>
-      {updated && updated !== written && (
-        <Small muted>
-          Oppdatert{' '}
-          <time dateTime={updatedDates.meta}>{updatedDates.printed}</time>
-        </Small>
-      )}
+      <div className="content">
+        <hgroup>
+          <Heading
+            level="1"
+            hideCopyButton>
+            {title}
+          </Heading>
+          <Body>{subtitle}</Body>
+        </hgroup>
+        <Body muted>
+          Skrevet{' '}
+          <time dateTime={writtenDates.meta}>{writtenDates.printed}</time>
+        </Body>
+        {updated && updated !== written && (
+          <Body muted>
+            Oppdatert{' '}
+            <time dateTime={updatedDates.meta}>{updatedDates.printed}</time>
+          </Body>
+        )}
+      </div>
     </header>
   );
 }
