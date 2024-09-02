@@ -21,63 +21,55 @@
   --purple: oklch(50% 0.2 var(--hue-purple));
   --pink: oklch(50% 0.2 var(--hue-pink));
 
-  --active-accent: var(--hue-green);
+  --active-accent: var(--hue-cyan);
 
-  --lightness-surface: 95%;
-  --lightness-text: 20%;
+  --lightness-surface: 100%;
+  --lightness-text: 30%;
+  --lightness-border: 90%;
 
-  --chroma-weak: 0.1;
-  --chroma-strong: 0.17;
+  --chroma-surface-1: 0;
+  --chroma-surface-2: 0.03;
+  --chroma-text: 0.2;
+  --chroma-border: 0.7;
+
+  --muted-opacity: 0.7;
+
+  --color-base: oklch(30% 0.5 var(--active-accent));
 
   --color-surface-1: oklch(
-    var(--lightness-surface) var(--chroma-weak) var(--active-accent)
+    var(--lightness-surface) var(--chroma-surface-1) var(--active-accent)
   );
   --color-surface-2: oklch(
-    var(--lightness-surface) var(--chroma-strong) var(--active-accent)
+    var(--lightness-surface) var(--chroma-surface-2) var(--active-accent)
   );
 
   --color-text: oklch(
-    var(--lightness-text) var(--chroma-weak) var(--active-accent)
+    var(--lightness-text) var(--chroma-text) var(--active-accent)
   );
-  --color-text-colored: color-mix(
-    in oklch,
-    var(--color-text) 90%,
-    var(--color-surface-1) 10%
+  --color-text-muted: oklch(
+    var(--lightness-text) var(--chroma-text) var(--active-accent) /
+      var(--muted-opacity)
   );
-  --color-text-inverted: color-mix(
-    in oklch,
-    var(--color-text) 10%,
-    var(--color-surface-1) 90%
+  --color-text-inverted: var(--color-surface-1);
+
+  --color-border: oklch(
+    var(--lightness-border) var(--chroma-border) var(--active-accent)
   );
 
-  --color-border: color-mix(
-    in oklch,
-    var(--color-text) 10%,
-    var(--color-surface-1) 90%
-  );
-  --color-border-hover: color-mix(
-    in oklch,
-    var(--color-text) 100%,
-    var(--color-surface-1) 0%
-  );
+  --border: 1px solid var(--color-border);
 
   --font-family-primary: 'Arial', sans-serif;
   --font-family-secondary: 'Times New Roman', serif;
 
-  --font-size-xxs: clamp(0.85rem, 1vw, 0.9rem);
   --font-size-xs: clamp(0.9rem, 1vw, 1rem);
-  --font-size-sm: clamp(1rem, 1vw, 1.1rem);
-  --font-size-md: clamp(1.1rem, 1vw, 1.25rem);
-  --font-size-lg: clamp(1.25rem, 1vw, 1.5rem);
-  --font-size-xl: clamp(1.5rem, 2vw, 2rem);
-  --font-size-2xl: clamp(1.85rem, 3vw, 2.5rem);
-  --font-size-3xl: clamp(2rem, 3vw, 2.75rem);
-  --font-size-4xl: clamp(2.3rem, 4vw, 3rem);
-  --font-size-5xl: clamp(2rem, 5vw, 4rem);
+  --font-size-sm: clamp(1.1rem, 1vw, 1.3rem);
+  --font-size-md: clamp(1.3rem, 2vw, 1.5rem);
+  --font-size-lg: clamp(1.75rem, 2vw, 2rem);
+  --font-size-xl: clamp(2rem, 3vw, 3.2rem);
 
-  --line-height-normal: 1.5;
+  --line-height-normal: 1.65;
   --line-height-tight: 1.25;
-  --line-height-loose: 1.75;
+  --line-height-loose: 1.85;
 
   --border-width: 2px;
   --border-width-thin: 1px;
@@ -89,15 +81,11 @@
   --border-radius-lg: var(--spacing-md);
 
   --spacing-0: 0;
-  --spacing-xxs: clamp(0.125rem, 0.25rem, 0.25rem);
-  --spacing-xs: clamp(0.25rem, 0.5rem, 0.5rem);
+  --spacing-xs: clamp(0.125rem, 0.25rem, 0.25rem);
   --spacing-sm: clamp(0.5rem, 1rem, 1rem);
-  --spacing-md: clamp(1rem, 2rem, 4rem);
-  --spacing-lg: clamp(2rem, 4rem, 4rem);
-  --spacing-xl: clamp(4rem, 8rem, 8rem);
-  --spacing-2xl: clamp(8rem, 16rem, 16rem);
-  --spacing-3xl: clamp(16rem, 32rem, 32rem);
-  --spacing-4xl: clamp(32rem, 64rem, 64rem);
+  --spacing-md: clamp(1rem, 2rem, 2rem);
+  --spacing-lg: clamp(2rem, 3rem, 3rem);
+  --spacing-xl: clamp(3rem, 6rem, 6rem);
 
   --breakpoint-sm: 640px;
   --breakpoint-md: 1024px;
@@ -108,13 +96,45 @@
   --padding-horizontal: var(--spacing-md);
 }
 
+@media (prefers-reduced-transparency) {
+  :root {
+    --muted-opacity: 1;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --lightness-surface: 100%;
+    --lightness-text: 0%;
+    --lightness-border: 0%;
+
+    --chroma-surface-1: 0;
+    --chroma-surface-2: 0;
+    --chroma-text: 0;
+    --chroma-border: 1;
+
+    --border: 3px solid var(--color-border);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --lightness-surface: 18%;
-    --lightness-text: 95%;
+    --lightness-surface: 13%;
+    --lightness-text: 97%;
+    --lightness-border: 24%;
 
-    --chroma-weak: 0.02;
-    --chroma-strong: 0.1;
+    --chroma-surface-1: 0.02;
+    --chroma-surface-2: 0.05;
+    --chroma-text: 0.04;
+    --chroma-border: 0.2;
+  }
+
+  @media (prefers-contrast: more) {
+    :root {
+      --lightness-surface: 0%;
+      --lightness-text: 100%;
+      --lightness-border: 100%;
+    }
   }
 }
 
@@ -124,7 +144,7 @@
   padding: 0;
 
   &:focus {
-    outline: 4px solid var(--color-text);
+    outline: 4px solid var(--color-base);
     outline-offset: 4px;
   }
 }
@@ -162,7 +182,7 @@ p {
 
   &.huge {
     color: var(--color-text-colored);
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-xl);
     font-weight: 900;
     max-width: none;
     text-wrap: balance;
@@ -188,40 +208,45 @@ h6,
 
 h1,
 .h1 {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-xl);
   font-weight: 900;
   color: var(--color-text-colored);
 }
 
 h2,
 .h2 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
 }
 
 h3,
 .h3 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-md);
   font-weight: 600;
 }
 
 h4,
 .h4 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-sm);
 }
 
 h5,
 .h5 {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
 }
 
 h6,
 .h6,
 p {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
 }
 
 p {
   max-width: 60ch;
+
+  &[data-muted='true'] {
+    color: var(--color-text-muted);
+  }
 }
 
 @supports (text-wrap: balance) {
@@ -232,7 +257,11 @@ p {
 }
 
 small {
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
+
+  &[data-muted='true'] {
+    color: var(--color-text-muted);
+  }
 }
 
 ul,
@@ -291,7 +320,6 @@ article {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
   align-items: center;
   container-type: inline-size;
 
@@ -305,8 +333,11 @@ article {
   }
 
   > p {
+    margin-bottom: var(--spacing-xl);
+
     @container (min-width: 720px) {
       columns: 2;
+      column-gap: var(--spacing-lg);
     }
   }
 }

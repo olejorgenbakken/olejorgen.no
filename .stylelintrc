@@ -24,7 +24,8 @@
       "deg",
       "fr",
       "ch",
-      "px"
+      "px",
+      "ms"
     ]
   },
   "extends": "stylelint-config-recommended"

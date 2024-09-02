@@ -11,9 +11,6 @@ export const GlobalHeader = () => {
             <li>
               <Logo />
             </li>
-            <li>
-              <Link href={'/lekegrind'}>Lekegrind</Link>
-            </li>
           </ul>
         </nav>
       </div>

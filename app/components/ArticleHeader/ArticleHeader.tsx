@@ -1,6 +1,8 @@
 import { Heading } from '@/app/components/typography/Heading';
 
 import './ArticleHeader.css';
+import { Body } from '../typography/Body';
+import { Small } from '../typography/Small';
 
 interface Props {
   title: string;
@@ -54,17 +56,16 @@ export default function ArticleHeader({
           hideCopyButton>
           {title}
         </Heading>
-        <p>{subtitle}</p>
+        <Body>{subtitle}</Body>
       </hgroup>
-      <p>
-        Skrevet:{' '}
-        <time dateTime={writtenDates.meta}>{writtenDates.printed}</time>
-      </p>
+      <Small muted>
+        Skrevet <time dateTime={writtenDates.meta}>{writtenDates.printed}</time>
+      </Small>
       {updated && updated !== written && (
-        <p>
-          Oppdatert:{' '}
+        <Small muted>
+          Oppdatert{' '}
           <time dateTime={updatedDates.meta}>{updatedDates.printed}</time>
-        </p>
+        </Small>
       )}
     </header>
   );
