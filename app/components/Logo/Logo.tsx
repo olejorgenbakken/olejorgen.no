@@ -4,7 +4,7 @@ import './Logo.css';
 
 export const Logo = () => {
   return (
-    <p className="h5">
+    <p className="h5 logo">
       <Link
         href="/"
         className="logo"

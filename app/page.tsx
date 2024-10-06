@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import './page.css';
 import { Heading } from './components/typography/Heading';
+import { Logo } from './components/Logo';
 
 export const metadata: Metadata = {
   title: 'Ole Jørgen Bakken',
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <main className="page-home">
+      <Logo />
       <header className="home-header">
         <Heading
           level="1"
@@ -21,6 +23,19 @@ export default async function Home() {
           .
         </Heading>
       </header>
+      <nav className="navigation">
+        <ul className="no-style external-links">
+          <li>
+            <Link href="https://twitter.com/olejorgenbakken">Twitter</Link>
+          </li>
+          <li>
+            <Link href="https://github.com/olejorgenbakken">GitHub</Link>
+          </li>
+          <li>
+            <Link href="https://linkedin.com/in/olejorgenbakken">LinkedIn</Link>
+          </li>
+        </ul>
+      </nav>
     </main>
   );
 }

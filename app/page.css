@@ -1,10 +1,35 @@
 .page-home {
-  padding-bottom: var(--spacing-xl);
+  padding-block: var(--spacing-lg);
+  .logo {
+    margin: 0 auto;
+    text-align: center;
+  }
 
   .home-header {
     min-height: clamp(20vh, 50vw, 40vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .navigation {
+    margin: 0 auto;
+  }
+
+  .navigation ul {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    max-width: var(--max-width);
+    width: 100%;
   }
 }

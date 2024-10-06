@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { GlobalFooter, GlobalHeader } from './components/global';
 
 import './styles/globals.css';
 
@@ -15,11 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nb-no">
-      <body>
-        <GlobalHeader />
-        {children}
-        <GlobalFooter />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
